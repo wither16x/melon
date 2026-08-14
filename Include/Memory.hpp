@@ -2,11 +2,13 @@
 
 #include "Typing.hpp"
 
-namespace Melon::Memory {
-        namespace C {
-                #include <string.h>
-        } // anonymous namespace
+namespace Melon::C
+{
+        #include <string.h>
+} // namespace Melon::C
 
+namespace Melon::Memory 
+{
         template<typename T>
         class Buffer
         {

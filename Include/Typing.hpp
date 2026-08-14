@@ -1,12 +1,12 @@
 #pragma once
 
+namespace Melon::C {
+        #include <stdint.h>
+        #include <stddef.h>
+} // namespace Melon::C
+
 namespace Melon::Typing
 {
-        namespace C {
-                #include <stdint.h>
-                #include <stddef.h>
-        } // anonymous namespace
-
         // signed types
         using Int8              = C::int8_t;
         using Int16             = C::int16_t;
