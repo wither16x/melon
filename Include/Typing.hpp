@@ -1,6 +1,7 @@
 #pragma once
 
-namespace Melon::C {
+namespace Melon::C
+{
         #include <stdint.h>
         #include <stddef.h>
 } // namespace Melon::C
