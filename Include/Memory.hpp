@@ -3,6 +3,9 @@
 #include "Typing.hpp"
 
 namespace Melon::Memory {
+        namespace C {
+                #include <string.h>
+        } // anonymous namespace
 
         template<typename T>
         class Buffer
@@ -15,16 +18,12 @@ namespace Melon::Memory {
                         : data(data), size(size)
                 {}
 
-                T *copy(this Buffer<T> &self, T *dest, const T *src, Typing::Size size)
+                const Buffer<T> &copy(this Buffer<T> &self, const Buffer<T> &dest, Typing::Size size)
                 {
                         if (size > self.size)
-                                return nullptr;
+                                return self;
 
-                        T *pdest = dest;
-                        const T *psrc = src;
-
-                        for (Typing::Size i = 0; i < size; i++)
-                                pdest[i] = psrc[i];
+                        C::memcpy(dest.data, self.data, size);
 
                         return dest;
                 }
