@@ -23,7 +23,7 @@ ASM_OBJS := $(patsubst $(SRC)/%,$(BUILD)/%,$(ASM_SRCS:.asm=.o))
 CXX_OBJS := $(patsubst $(SRC)/%,$(BUILD)/%,$(CXX_SRCS:.cpp=.o))
 
 OBJS := $(ASM_OBJS) $(CXX_OBJS)
-TARGET := $(BUILD)/melon.a
+TARGET := $(BUILD)/libmelon.a
 
 .PHONY: all clean re install build-install
 
