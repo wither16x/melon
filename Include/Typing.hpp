@@ -20,5 +20,6 @@ namespace Melon::Typing
         using Uint16            = C::uint16_t;
         using Uint32            = C::uint32_t;
         using Uint64            = C::uint64_t;
+        using UPointer          = C::uintptr_t;
         using Size              = C::size_t;
 } // namespace Melon::Typing
