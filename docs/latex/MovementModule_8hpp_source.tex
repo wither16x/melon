@@ -1,0 +1,55 @@
+\doxysection{Movement\+Module.\+hpp}
+\hypertarget{MovementModule_8hpp_source}{}\label{MovementModule_8hpp_source}\index{tarwi/TestProject/Test/RobotPackage/MovementModule.hpp@{tarwi/TestProject/Test/RobotPackage/MovementModule.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Tarwi.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <TarwiGlobals.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <Robot/Direction.hpp>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <Robot/Robot.hpp>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ TARWI\_MODULE(MovementModule)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classRobot}{Robot}}\ \&robot;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ TARWI\_SET\_NAME(\textcolor{stringliteral}{"{}MovementModule"{}});}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ TARWI\_UNIT(unitCheckHorizontalMovements)}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ old\_x\ =\ robot.getX();}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ robot.move(Direction::Left);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_x1\ =\ robot.getX();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ robot.move(Direction::Right);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_x2\ =\ robot.getX();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_EXPECT(new\_x1\ ==\ old\_x\ -\/\ 1\ \&\&\ new\_x2\ ==\ new\_x1\ +\ 1);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ TARWI\_UNIT(unitCheckVerticalMovements)}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ old\_y\ =\ robot.getY();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ robot.move(Direction::Down);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_y1\ =\ robot.getY();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ robot.move(Direction::Up);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ new\_y2\ =\ robot.getY();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_EXPECT(new\_y1\ ==\ old\_y\ -\/\ 1\ \&\&\ new\_y2\ ==\ new\_y1\ +\ 1);\ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ MovementModule(\doxymbox{\hyperlink{classRobot}{Robot}}\ \&robot)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ robot(robot)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ TARWI\_MODULE\_MAIN()}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_CALL\_UNIT(unitCheckHorizontalMovements);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_CALL\_UNIT(unitCheckVerticalMovements);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \};}
+
+\end{DoxyCode}

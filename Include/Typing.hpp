@@ -5,6 +5,7 @@
 #include <sys/types.h>
 #include <stddef.h>
 
+/// @brief Contains fixed-size types.
 namespace Melon::Typing
 {
         // signed types

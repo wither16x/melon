@@ -1,0 +1,47 @@
+\doxysection{Integers\+Module.\+hpp}
+\hypertarget{IntegersModule_8hpp_source}{}\label{IntegersModule_8hpp_source}\index{tarwi/TestProject/Test/MathPackage/IntegersModule.hpp@{tarwi/TestProject/Test/MathPackage/IntegersModule.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Tarwi.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <TarwiGlobals.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <Math/Integers.hpp>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ TARWI\_MODULE(IntegersModule)\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ TARWI\_SET\_NAME(\textcolor{stringliteral}{"{}IntegersModule"{}});}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ TARWI\_UNIT(unitAddition)}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ result\ =\ Math::add(3,\ 4);}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_EXPECT(result\ ==\ 7);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ TARWI\_UNIT(unitSubstraction)}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ result\ =\ Math::sub(5,\ 8);}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_EXPECT(result\ ==\ -\/3);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ TARWI\_UNIT(unitMultiplication)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ result\ =\ Math::mul(4,\ 2);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_EXPECT(result\ ==\ 8);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ TARWI\_UNIT(unitDivision)}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ result\ =\ Math::div(10,\ 2);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_EXPECT(result\ ==\ 5);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ TARWI\_MODULE\_MAIN()}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_CALL\_UNIT(unitAddition);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_CALL\_UNIT(unitSubstraction);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_CALL\_UNIT(unitMultiplication);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TARWI\_CALL\_UNIT(unitDivision);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}
