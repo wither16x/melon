@@ -45,7 +45,7 @@ namespace Melon::Memory
 
                         memmove(dest.data, self.data, size);
 
-                        return self;
+                        return dest;
                 }
 
                 int compare(this const Buffer<T> &self, const Buffer<T> &other, Typing::USize size)
