@@ -112,6 +112,11 @@ namespace Melon::Memory
                         return self.__size == other.__size and self.compare(other, self.__size) == 0;
                 }
 
+                bool operator !=(this const Buffer<T> &self, const Buffer<T> &other)
+                {
+                        return not (self == other);
+                }
+
                 bool operator <(this const Buffer<T> &self, const Buffer<T> &other)
                 {
                         Typing::USize size = self.__size < other.__size ? self.__size : other.__size;
