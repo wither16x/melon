@@ -1,6 +1,7 @@
 var namespaces_dup =
 [
     [ "Melon", null, [
+      [ "Exceptions", "namespaceMelon_1_1Exceptions.html", "namespaceMelon_1_1Exceptions" ],
       [ "Typing", "namespaceMelon_1_1Typing.html", [
         [ "Int16", "namespaceMelon_1_1Typing.html#aaefef88591c010903b38788aee335b01", null ],
         [ "Int32", "namespaceMelon_1_1Typing.html#ad71927750fa617dbe237e12f87acf169", null ],

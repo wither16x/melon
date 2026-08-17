@@ -117,22 +117,27 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('Exceptions_8hp
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Typing.hpp&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;exception&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>Melon::Exceptions</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classMelon_1_1Exceptions_1_1BufferOverflow.html">    9</a></span>        <span class="keyword">class </span>BufferOverflow : <span class="keyword">public</span> std::exception</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> requested_size;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> buffer_size;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                BufferOverflow(<a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> requested_size, <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> buffer_size);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> *what() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        };</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespaceMelon_1_1Exceptions.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceMelon_1_1Exceptions.html">Melon::Exceptions</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classMelon_1_1Exceptions_1_1BufferOverflow.html">   14</a></span>        <span class="keyword">class </span><a class="code hl_function" href="classMelon_1_1Exceptions_1_1BufferOverflow.html#a78a8c33621b13bf920c76034341c1955">BufferOverflow</a> : <span class="keyword">public</span> std::exception</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> requested_size;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> buffer_size;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                <a class="code hl_function" href="classMelon_1_1Exceptions_1_1BufferOverflow.html#a78a8c33621b13bf920c76034341c1955">BufferOverflow</a>(<a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> requested_size, <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> buffer_size);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="classMelon_1_1Exceptions_1_1BufferOverflow.html#a52087b72546021f2eeab45bc6e17cf13">what</a>() <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        };</div>
 </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>} <span class="comment">// namespace Melon::Exceptions</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>} <span class="comment">// namespace Melon::Exceptions</span></div>
+</div>
+<div class="ttc" id="aclassMelon_1_1Exceptions_1_1BufferOverflow_html_a52087b72546021f2eeab45bc6e17cf13"><div class="ttname"><a href="classMelon_1_1Exceptions_1_1BufferOverflow.html#a52087b72546021f2eeab45bc6e17cf13">Melon::Exceptions::BufferOverflow::what</a></div><div class="ttdeci">const char * what() const noexcept</div><div class="ttdoc">Returns a formatted message describing the error.</div><div class="ttdef"><b>Definition</b> Exceptions.cpp:11</div></div>
+<div class="ttc" id="aclassMelon_1_1Exceptions_1_1BufferOverflow_html_a78a8c33621b13bf920c76034341c1955"><div class="ttname"><a href="classMelon_1_1Exceptions_1_1BufferOverflow.html#a78a8c33621b13bf920c76034341c1955">Melon::Exceptions::BufferOverflow::BufferOverflow</a></div><div class="ttdeci">BufferOverflow(Typing::USize requested_size, Typing::USize buffer_size)</div><div class="ttdoc">Main constructor for class BufferOverflow.</div><div class="ttdef"><b>Definition</b> Exceptions.cpp:7</div></div>
+<div class="ttc" id="anamespaceMelon_1_1Exceptions_html"><div class="ttname"><a href="namespaceMelon_1_1Exceptions.html">Melon::Exceptions</a></div><div class="ttdoc">Contains custom exceptions.</div><div class="ttdef"><b>Definition</b> Exceptions.hpp:12</div></div>
 <div class="ttc" id="anamespaceMelon_1_1Typing_html_a2429ada77c523bea640978c88ce4f9ce"><div class="ttname"><a href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Melon::Typing::USize</a></div><div class="ttdeci">size_t USize</div><div class="ttdoc">Biggest unsigned type.</div><div class="ttdef"><b>Definition</b> Typing.hpp:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

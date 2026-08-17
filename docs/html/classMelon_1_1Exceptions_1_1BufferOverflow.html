@@ -112,6 +112,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
   <div class="headertitle"><div class="title">Melon::Exceptions::BufferOverflow Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Thrown when a buffer overflows.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Exceptions_8hpp_source.html">Exceptions.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Melon::Exceptions::BufferOverflow:</div>
 <div class="dyncontent">
@@ -121,11 +126,45 @@ Inheritance diagram for Melon::Exceptions::BufferOverflow:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a78a8c33621b13bf920c76034341c1955" id="r_a78a8c33621b13bf920c76034341c1955"><td class="memItemLeft"><a id="a78a8c33621b13bf920c76034341c1955" name="a78a8c33621b13bf920c76034341c1955"></a>
-&#160;</td><td class="memItemRight"><b>BufferOverflow</b> (<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> requested_size, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> buffer_size)</td></tr>
+<tr class="memitem:a78a8c33621b13bf920c76034341c1955" id="r_a78a8c33621b13bf920c76034341c1955"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a78a8c33621b13bf920c76034341c1955">BufferOverflow</a> (<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> requested_size, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> buffer_size)</td></tr>
+<tr class="memdesc:a78a8c33621b13bf920c76034341c1955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main constructor for class <a class="el" href="classMelon_1_1Exceptions_1_1BufferOverflow.html" title="Thrown when a buffer overflows.">BufferOverflow</a>.  <br /></td></tr>
 <tr class="memitem:a52087b72546021f2eeab45bc6e17cf13" id="r_a52087b72546021f2eeab45bc6e17cf13"><td class="memItemLeft"><a id="a52087b72546021f2eeab45bc6e17cf13" name="a52087b72546021f2eeab45bc6e17cf13"></a>
 const char *&#160;</td><td class="memItemRight"><b>what</b> () const noexcept</td></tr>
+<tr class="memdesc:a52087b72546021f2eeab45bc6e17cf13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a formatted message describing the error. <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Thrown when a buffer overflows. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a78a8c33621b13bf920c76034341c1955" name="a78a8c33621b13bf920c76034341c1955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78a8c33621b13bf920c76034341c1955">&#9670;&#160;</a></span>BufferOverflow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Melon::Exceptions::BufferOverflow::BufferOverflow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>requested_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>buffer_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Main constructor for class <a class="el" href="classMelon_1_1Exceptions_1_1BufferOverflow.html" title="Thrown when a buffer overflows.">BufferOverflow</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">requested_size</td><td>size requested by the user </td></tr>
+    <tr><td class="paramname">buffer_size</td><td>size of the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Include/<a class="el" href="Exceptions_8hpp_source.html">Exceptions.hpp</a></li>
 <li>Source/<b>Exceptions.cpp</b></li>
@@ -143,7 +182,7 @@ const char *&#160;</td><td class="memItemRight"><b>what</b> () const noexcept</t
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Melon</b></li><li class="navelem"><b>Exceptions</b></li><li class="navelem"><a href="classMelon_1_1Exceptions_1_1BufferOverflow.html">BufferOverflow</a></li>
+    <li class="navelem"><b>Melon</b></li><li class="navelem"><a href="namespaceMelon_1_1Exceptions.html">Exceptions</a></li><li class="navelem"><a href="classMelon_1_1Exceptions_1_1BufferOverflow.html">BufferOverflow</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>

@@ -1,9 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "bimu",
+  0: "bimuw",
   1: "b",
   2: "m",
-  3: "iu"
+  3: "bw",
+  4: "iu"
 };
 
 var indexSectionNames =
@@ -11,7 +12,8 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "namespaces",
-  3: "typedefs"
+  3: "functions",
+  4: "typedefs"
 };
 
 var indexSectionLabels =
@@ -19,6 +21,7 @@ var indexSectionLabels =
   0: "All",
   1: "Classes",
   2: "Namespaces",
-  3: "Typedefs"
+  3: "Functions",
+  4: "Typedefs"
 };
 
