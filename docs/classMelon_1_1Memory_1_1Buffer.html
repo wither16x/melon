@@ -112,6 +112,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
   <div class="headertitle"><div class="title">Melon::Memory::Buffer&lt; T &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Container for raw memory.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Memory_8hpp_source.html">Memory.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -140,7 +145,12 @@ bool&#160;</td><td class="memItemRight"><b>operator&lt;=</b> (this const Buffer&
 <tr class="memitem:ab053f8469286e491aeb9d93838468b35" id="r_ab053f8469286e491aeb9d93838468b35"><td class="memItemLeft"><a id="ab053f8469286e491aeb9d93838468b35" name="ab053f8469286e491aeb9d93838468b35"></a>
 bool&#160;</td><td class="memItemRight"><b>operator&gt;=</b> (this const Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other)</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
+requires std::is_trivially_constructible_v&lt;T&gt;<br />
+class Melon::Memory::Buffer&lt; T &gt;</div><p>Container for raw memory. </p>
+<p>This container stores allocated raw memory and the size of the allocated area. Know that as you can see below, <span class="tt">T</span> must be trivially constructible. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>Include/<a class="el" href="Memory_8hpp_source.html">Memory.hpp</a></li>
 </ul>
 </div><!-- contents -->
