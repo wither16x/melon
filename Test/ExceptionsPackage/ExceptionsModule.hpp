@@ -16,7 +16,7 @@ namespace Melon::Test
                         bool caught = false;
 
                         try {
-                                throw Exceptions::BufferOverflow("buffer overflow detected");
+                                throw Exceptions::BufferOverflow(10, 5);
                         } catch (const Exceptions::BufferOverflow &e) {
                                 TARWI_OUTPUT("caught exception: %s\n", e.what());
                                 caught = true;

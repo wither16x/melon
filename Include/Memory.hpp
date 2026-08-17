@@ -1,11 +1,9 @@
 #pragma once
 
 #include "Typing.hpp"
+#include "Exceptions.hpp"
 
-namespace Melon::C
-{
-        #include <string.h>
-} // namespace Melon::C
+#include <string.h>
 
 namespace Melon::Memory 
 {
@@ -23,9 +21,9 @@ namespace Melon::Memory
                 const Buffer<T> &copy(this Buffer<T> &self, const Buffer<T> &dest, Typing::Size size)
                 {
                         if (size > self.size)
-                                return self;
+                                throw Exceptions::BufferOverflow(size, self.size);
 
-                        C::memcpy(dest.data, self.data, size);
+                        memcpy(dest.data, self.data, size);
 
                         return dest;
                 }

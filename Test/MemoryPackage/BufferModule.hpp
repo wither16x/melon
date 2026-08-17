@@ -14,9 +14,9 @@ namespace Melon::Test
                 TARWI_UNIT(unitCheckInit)
                 {
                         char data[] = "abcdefg";
-                        Memory::Buffer<char> buf(data, C::strlen(data));
+                        Memory::Buffer<char> buf(data, strlen(data));
 
-                        TARWI_EXPECT(C::strcmp(buf.get(), data) == 0);
+                        TARWI_EXPECT(strcmp(buf.get(), data) == 0);
                 }
 
                 TARWI_UNIT(unitCheckCopy)
@@ -24,12 +24,12 @@ namespace Melon::Test
                         char a_data[] = "01234";
                         char b_data[] = "abcde";
 
-                        Memory::Buffer<char> a(a_data, C::strlen(a_data));
-                        Memory::Buffer<char> b(b_data, C::strlen(b_data));
+                        Memory::Buffer<char> a(a_data, strlen(a_data));
+                        Memory::Buffer<char> b(b_data, strlen(b_data));
 
-                        a.copy(b, C::strlen(a.get()));
+                        a.copy(b, strlen(a.get()));
 
-                        TARWI_EXPECT(C::strcmp(a.get(), b.get()) == 0);
+                        TARWI_EXPECT(strcmp(a.get(), b.get()) == 0);
                 }
 
                 TARWI_MODULE_MAIN()
