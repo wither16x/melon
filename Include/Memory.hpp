@@ -18,7 +18,7 @@ namespace Melon::Memory
                         : data(data), size(size)
                 {}
 
-                const Buffer<T> &copy(this Buffer<T> &self, const Buffer<T> &dest, Typing::Size size)
+                Buffer<T> &copy(this Buffer<T> &self, Buffer<T> &dest, Typing::Size size)
                 {
                         if (size > self.size)
                                 throw Exceptions::BufferOverflow(size, self.size);
@@ -28,9 +28,14 @@ namespace Melon::Memory
                         return dest;
                 }
 
-                T *set(this Buffer<T> &self, T *s, int c, Typing::Size size)
+                Buffer<T> &set(this Buffer<T> &self, T c, Typing::Size size)
                 {
-                        // TODO
+                        if (size > self.size)
+                                throw Exceptions::BufferOverflow(size, self.size);
+
+                        memset(self.data, c, size);
+
+                        return self;
                 }
 
                 T *move(this Buffer<T> &self, T *dest, const T *src, Typing::Size size)

@@ -50,11 +50,25 @@ namespace Melon::Test
                         TARWI_EXPECT(strcmp(a.get(), b.get()) != 0);
                 }
 
+                TARWI_UNIT(unitCheckSet)
+                {
+                        Typing::Uint8 data[5];
+                        Memory::Buffer<Typing::Uint8> buf(data, sizeof(data));
+
+                        buf.set(12, sizeof(data));
+
+                        TARWI_EXPECT(
+                                data[0] == 12 and data[1] == 12 and data[2] == 12 and
+                                data[3] == 12 and data[4] == 12
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
                         TARWI_CALL_UNIT(unitCheckCopy);
                         TARWI_CALL_UNIT(unitCopyOverflow);
+                        TARWI_CALL_UNIT(unitCheckSet);
                 }
         };
 } // namespace Melon::Test
