@@ -6,21 +6,33 @@
 #include <stddef.h>
 
 /// @brief Contains fixed-size types.
+///
+/// The types defined in this namespace ensure the size of the data.
 namespace Melon::Typing
 {
-        // signed types
+        /// @brief Signed 8-bit integer
         using Int8              = int8_t;
+        /// @brief Signed 16-bit integer
         using Int16             = int16_t;
+        /// @brief Signed 32-bit integer
         using Int32             = int32_t;
+        /// @brief Signed 64-bit integer
         using Int64             = int64_t;
+        /// @brief Biggest signed pointer type
         using IntPointer        = intptr_t;
+        /// @brief Biggest signed type
         using ISize             = ssize_t;
 
-        // unsigned types
+        /// @brief Unsigned 8-bit integer
         using Uint8             = uint8_t;
+        /// @brief Unsigned 16-bit integer
         using Uint16            = uint16_t;
+        /// @brief Unsigned 32-bit integer
         using Uint32            = uint32_t;
+        /// @brief Unsigned 64-bit integer
         using Uint64            = uint64_t;
+        /// @brief Biggest unsigned pointer type
         using UPointer          = uintptr_t;
+        /// @brief Biggest unsigned type
         using USize             = size_t;
 } // namespace Melon::Typing
