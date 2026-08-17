@@ -1,6 +1,8 @@
+
 #pragma once
 
 #include <stdint.h>
+#include <sys/types.h>
 #include <stddef.h>
 
 namespace Melon::Typing
@@ -11,6 +13,7 @@ namespace Melon::Typing
         using Int32             = int32_t;
         using Int64             = int64_t;
         using IntPointer        = intptr_t;
+        using ISize             = ssize_t;
 
         // unsigned types
         using Uint8             = uint8_t;
@@ -18,5 +21,5 @@ namespace Melon::Typing
         using Uint32            = uint32_t;
         using Uint64            = uint64_t;
         using UPointer          = uintptr_t;
-        using Size              = size_t;
+        using USize             = size_t;
 } // namespace Melon::Typing

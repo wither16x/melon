@@ -83,7 +83,7 @@ namespace Melon::Test
                         char equal_data0[] = "Equal";
                         char equal_data1[] = "Equal";
 
-                        Typing::Size size1 = strlen(small_data) < strlen(enormous_data) ? strlen(small_data) : strlen(enormous_data);
+                        Typing::USize size1 = strlen(small_data) < strlen(enormous_data) ? strlen(small_data) : strlen(enormous_data);
                         
                         Memory::Buffer<char> small(small_data, strlen(small_data));
                         Memory::Buffer<char> enormous(enormous_data, strlen(enormous_data));

@@ -8,11 +8,11 @@ namespace Melon::Exceptions
 {
         class BufferOverflow : public std::exception
         {
-                Typing::Size requested_size;
-                Typing::Size buffer_size;
+                Typing::USize requested_size;
+                Typing::USize buffer_size;
 
         public:
-                BufferOverflow(Typing::Size requested_size, Typing::Size buffer_size);
+                BufferOverflow(Typing::USize requested_size, Typing::USize buffer_size);
 
                 const char *what() const noexcept;
         };

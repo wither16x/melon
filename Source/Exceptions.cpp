@@ -4,7 +4,7 @@
 
 namespace Melon::Exceptions
 {
-        BufferOverflow::BufferOverflow(Typing::Size requested_size, Typing::Size buffer_size)
+        BufferOverflow::BufferOverflow(Typing::USize requested_size, Typing::USize buffer_size)
                 : requested_size(requested_size), buffer_size(buffer_size)
         {}
 

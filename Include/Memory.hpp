@@ -11,14 +11,14 @@ namespace Melon::Memory
         class Buffer
         {
                 T *data;
-                Typing::Size size;
+                Typing::USize size;
 
         public:
-                Buffer(T *data, Typing::Size size)
+                Buffer(T *data, Typing::USize size)
                         : data(data), size(size)
                 {}
 
-                Buffer<T> &copy(this Buffer<T> &self, Buffer<T> &dest, Typing::Size size)
+                Buffer<T> &copy(this Buffer<T> &self, Buffer<T> &dest, Typing::USize size)
                 {
                         if (size > self.size)
                                 throw Exceptions::BufferOverflow(size, self.size);
@@ -28,7 +28,7 @@ namespace Melon::Memory
                         return dest;
                 }
 
-                Buffer<T> &set(this Buffer<T> &self, T c, Typing::Size size)
+                Buffer<T> &set(this Buffer<T> &self, T c, Typing::USize size)
                 {
                         if (size > self.size)
                                 throw Exceptions::BufferOverflow(size, self.size);
@@ -38,7 +38,7 @@ namespace Melon::Memory
                         return self;
                 }
 
-                Buffer<T> &move(this Buffer<T> &self, Buffer<T> &dest, Typing::Size size)
+                Buffer<T> &move(this Buffer<T> &self, Buffer<T> &dest, Typing::USize size)
                 {
                         if (size > self.size)
                                 throw Exceptions::BufferOverflow(size, self.size);
@@ -48,7 +48,7 @@ namespace Melon::Memory
                         return self;
                 }
 
-                int compare(this const Buffer<T> &self, const Buffer<T> &other, Typing::Size size)
+                int compare(this const Buffer<T> &self, const Buffer<T> &other, Typing::USize size)
                 {
                         if (size > self.size)
                                 throw Exceptions::BufferOverflow(size, self.size);
