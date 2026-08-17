@@ -38,9 +38,14 @@ namespace Melon::Memory
                         return self;
                 }
 
-                T *move(this Buffer<T> &self, T *dest, const T *src, Typing::Size size)
+                Buffer<T> &move(this Buffer<T> &self, Buffer<T> &dest, Typing::Size size)
                 {
-                        // TODO
+                        if (size > self.size)
+                                throw Exceptions::BufferOverflow(size, self.size);
+
+                        memmove(dest.data, self.data, size);
+
+                        return self;
                 }
 
                 int compare(this const Buffer<T> &self, const Buffer<T> &s2, Typing::Size size)

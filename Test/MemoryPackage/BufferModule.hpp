@@ -63,12 +63,26 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitCheckMove)
+                {
+                        char a_data[] = "01234";
+                        char b_data[] = "abcde";
+
+                        Memory::Buffer<char> a(a_data, strlen(a_data));
+                        Memory::Buffer<char> b(b_data, strlen(b_data));
+
+                        a.move(b, strlen(a.get()));
+
+                        TARWI_EXPECT(strcmp(a.get(), b.get()) == 0);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
                         TARWI_CALL_UNIT(unitCheckCopy);
                         TARWI_CALL_UNIT(unitCopyOverflow);
                         TARWI_CALL_UNIT(unitCheckSet);
+                        TARWI_CALL_UNIT(unitCheckMove);
                 }
         };
 } // namespace Melon::Test
