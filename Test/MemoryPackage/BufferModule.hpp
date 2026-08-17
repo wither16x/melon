@@ -28,7 +28,7 @@ namespace Melon::Test
                         Memory::Buffer<char> a(a_data, strlen(a_data));
                         Memory::Buffer<char> b(b_data, strlen(b_data));
 
-                        a.copy(b, strlen(a.get()));
+                        a.copy(b, a.size());
 
                         TARWI_EXPECT(strcmp(a.get(), b.get()) == 0);
                 }
@@ -42,7 +42,7 @@ namespace Melon::Test
                         Memory::Buffer<char> b(b_data, strlen(b_data));
 
                         try {
-                                a.copy(b, strlen(a.get()) + 2);
+                                a.copy(b, a.size() + 2);
                         } catch (const Exceptions::BufferOverflow &e) {
                                 TARWI_OUTPUT("buffer copy failed: %s\n", e.what());
                         }
@@ -71,7 +71,7 @@ namespace Melon::Test
                         Memory::Buffer<char> a(a_data, strlen(a_data));
                         Memory::Buffer<char> b(b_data, strlen(b_data));
 
-                        a.move(b, strlen(a.get()));
+                        a.move(b, a.size());
 
                         TARWI_EXPECT(strcmp(a.get(), b.get()) == 0);
                 }
@@ -92,7 +92,7 @@ namespace Melon::Test
 
                         int is_smaller = small.compare(enormous, size1);
                         int is_bigger = enormous.compare(small, size1);
-                        int is_equal = equal0.compare(equal1, strlen(equal0.get()));
+                        int is_equal = equal0.compare(equal1, equal0.size());
 
                         TARWI_EXPECT(
                                 is_smaller < 0
