@@ -21,10 +21,17 @@ namespace Melon::Memory
                 Typing::USize __size;
 
         public:
+                /// @brief Constructs the buffer from existing raw memory.
+                /// @param data memory to construct the buffer from
+                /// @param size maximum size of the buffer
                 Buffer(T *data, Typing::USize size)
                         : data(data), __size(size)
                 {}
 
+                /// @brief Copies some objects from here to another buffer.
+                /// @param dest destination buffer
+                /// @param size object count
+                /// @return destination buffer
                 Buffer<T> &copy(this Buffer<T> &self, Buffer<T> &dest, Typing::USize size)
                 {
                         if (size > self.__size)
@@ -37,6 +44,10 @@ namespace Melon::Memory
                         return dest;
                 }
 
+                /// @brief Sets some objects from this buffer to a given value.
+                /// @param c value to set
+                /// @param size object count
+                /// @return self
                 Buffer<T> &set(this Buffer<T> &self, T c, Typing::USize size)
                 {
                         if (size > self.__size)
@@ -47,6 +58,13 @@ namespace Melon::Memory
                         return self;
                 }
 
+                /// @brief Moves some objects from here to another buffer.
+                ///
+                /// This method is similar to copy() but it prevents from both buffers
+                /// to overlap.
+                /// @param dest destination buffer
+                /// @param size object count
+                /// @return destination buffer
                 Buffer<T> &move(this Buffer<T> &self, Buffer<T> &dest, Typing::USize size)
                 {
                         if (size > self.__size)
@@ -59,6 +77,10 @@ namespace Melon::Memory
                         return dest;
                 }
 
+                /// @brief Compares some objects between this buffer and another one.
+                /// @param other buffer to compare
+                /// @param size object count
+                /// @return <0 if self < dest, 0 if self == dest and >0 if self > dest
                 int compare(this const Buffer<T> &self, const Buffer<T> &other, Typing::USize size)
                 {
                         if (size > self.__size)
@@ -71,11 +93,15 @@ namespace Melon::Memory
                         return result;
                 }
 
+                /// @brief Gets a constant pointer to the raw memory.
+                /// @return constant raw buffer
                 const T *get(this const Buffer<T> &self)
                 {
                         return self.data;
                 }
 
+                /// @brief Gets the size of the buffer.
+                /// @return buffer size
                 Typing::USize size(this const Buffer<T> &self)
                 {
                         return self.__size;

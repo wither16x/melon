@@ -120,37 +120,323 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae1dd2e687c0799762d49661ce83d0f7f" id="r_ae1dd2e687c0799762d49661ce83d0f7f"><td class="memItemLeft"><a id="ae1dd2e687c0799762d49661ce83d0f7f" name="ae1dd2e687c0799762d49661ce83d0f7f"></a>
-&#160;</td><td class="memItemRight"><b>Buffer</b> (T *data, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
-<tr class="memitem:a91f687732dc704d2295fd9a3767b8148" id="r_a91f687732dc704d2295fd9a3767b8148"><td class="memItemLeft"><a id="a91f687732dc704d2295fd9a3767b8148" name="a91f687732dc704d2295fd9a3767b8148"></a>
-Buffer&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><b>copy</b> (this Buffer&lt; T &gt; &amp;self, Buffer&lt; T &gt; &amp;dest, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
-<tr class="memitem:a84b100c260ec0778cdf939711cb56f4e" id="r_a84b100c260ec0778cdf939711cb56f4e"><td class="memItemLeft"><a id="a84b100c260ec0778cdf939711cb56f4e" name="a84b100c260ec0778cdf939711cb56f4e"></a>
-Buffer&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><b>set</b> (this Buffer&lt; T &gt; &amp;self, T c, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
-<tr class="memitem:a938bd1e1bed5b3a6416fd0c2882038a5" id="r_a938bd1e1bed5b3a6416fd0c2882038a5"><td class="memItemLeft"><a id="a938bd1e1bed5b3a6416fd0c2882038a5" name="a938bd1e1bed5b3a6416fd0c2882038a5"></a>
-Buffer&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><b>move</b> (this Buffer&lt; T &gt; &amp;self, Buffer&lt; T &gt; &amp;dest, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
-<tr class="memitem:aedf9df3c71765ebded5f2f12de0a976a" id="r_aedf9df3c71765ebded5f2f12de0a976a"><td class="memItemLeft"><a id="aedf9df3c71765ebded5f2f12de0a976a" name="aedf9df3c71765ebded5f2f12de0a976a"></a>
-int&#160;</td><td class="memItemRight"><b>compare</b> (this const Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
-<tr class="memitem:a15b3a15f9d08fb0a50ddfa76a3dcbc6a" id="r_a15b3a15f9d08fb0a50ddfa76a3dcbc6a"><td class="memItemLeft"><a id="a15b3a15f9d08fb0a50ddfa76a3dcbc6a" name="a15b3a15f9d08fb0a50ddfa76a3dcbc6a"></a>
-const T *&#160;</td><td class="memItemRight"><b>get</b> (this const Buffer&lt; T &gt; &amp;self)</td></tr>
-<tr class="memitem:a6359280d4517e7d746b6b96b5a55f57a" id="r_a6359280d4517e7d746b6b96b5a55f57a"><td class="memItemLeft"><a id="a6359280d4517e7d746b6b96b5a55f57a" name="a6359280d4517e7d746b6b96b5a55f57a"></a>
-<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><b>size</b> (this const Buffer&lt; T &gt; &amp;self)</td></tr>
+<tr class="memitem:ae1dd2e687c0799762d49661ce83d0f7f" id="r_ae1dd2e687c0799762d49661ce83d0f7f"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a> (T *data, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
+<tr class="memdesc:ae1dd2e687c0799762d49661ce83d0f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the buffer from existing raw memory.  <br /></td></tr>
+<tr class="memitem:a91f687732dc704d2295fd9a3767b8148" id="r_a91f687732dc704d2295fd9a3767b8148"><td class="memItemLeft"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a91f687732dc704d2295fd9a3767b8148">copy</a> (this <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;dest, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
+<tr class="memdesc:a91f687732dc704d2295fd9a3767b8148"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies some objects from here to another buffer.  <br /></td></tr>
+<tr class="memitem:a84b100c260ec0778cdf939711cb56f4e" id="r_a84b100c260ec0778cdf939711cb56f4e"><td class="memItemLeft"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a84b100c260ec0778cdf939711cb56f4e">set</a> (this <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, T c, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
+<tr class="memdesc:a84b100c260ec0778cdf939711cb56f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets some objects from this buffer to a given value.  <br /></td></tr>
+<tr class="memitem:a938bd1e1bed5b3a6416fd0c2882038a5" id="r_a938bd1e1bed5b3a6416fd0c2882038a5"><td class="memItemLeft"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a938bd1e1bed5b3a6416fd0c2882038a5">move</a> (this <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;dest, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
+<tr class="memdesc:a938bd1e1bed5b3a6416fd0c2882038a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves some objects from here to another buffer.  <br /></td></tr>
+<tr class="memitem:aedf9df3c71765ebded5f2f12de0a976a" id="r_aedf9df3c71765ebded5f2f12de0a976a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aedf9df3c71765ebded5f2f12de0a976a">compare</a> (this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;other, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
+<tr class="memdesc:aedf9df3c71765ebded5f2f12de0a976a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares some objects between this buffer and another one.  <br /></td></tr>
+<tr class="memitem:a15b3a15f9d08fb0a50ddfa76a3dcbc6a" id="r_a15b3a15f9d08fb0a50ddfa76a3dcbc6a"><td class="memItemLeft">const T *&#160;</td><td class="memItemRight"><a class="el" href="#a15b3a15f9d08fb0a50ddfa76a3dcbc6a">get</a> (this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self)</td></tr>
+<tr class="memdesc:a15b3a15f9d08fb0a50ddfa76a3dcbc6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a constant pointer to the raw memory.  <br /></td></tr>
+<tr class="memitem:a6359280d4517e7d746b6b96b5a55f57a" id="r_a6359280d4517e7d746b6b96b5a55f57a"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6359280d4517e7d746b6b96b5a55f57a">size</a> (this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self)</td></tr>
+<tr class="memdesc:a6359280d4517e7d746b6b96b5a55f57a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the size of the buffer.  <br /></td></tr>
 <tr class="memitem:a2796bcd5dd0f76d353bb25fd3b5df989" id="r_a2796bcd5dd0f76d353bb25fd3b5df989"><td class="memItemLeft"><a id="a2796bcd5dd0f76d353bb25fd3b5df989" name="a2796bcd5dd0f76d353bb25fd3b5df989"></a>
-bool&#160;</td><td class="memItemRight"><b>operator==</b> (this const Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other)</td></tr>
+bool&#160;</td><td class="memItemRight"><b>operator==</b> (this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;other)</td></tr>
 <tr class="memitem:a707a536814632943dfc2a3c09cba945f" id="r_a707a536814632943dfc2a3c09cba945f"><td class="memItemLeft"><a id="a707a536814632943dfc2a3c09cba945f" name="a707a536814632943dfc2a3c09cba945f"></a>
-bool&#160;</td><td class="memItemRight"><b>operator&lt;</b> (this const Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other)</td></tr>
+bool&#160;</td><td class="memItemRight"><b>operator&lt;</b> (this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;other)</td></tr>
 <tr class="memitem:a85fa02a27319e5fe42e37eca8a686a03" id="r_a85fa02a27319e5fe42e37eca8a686a03"><td class="memItemLeft"><a id="a85fa02a27319e5fe42e37eca8a686a03" name="a85fa02a27319e5fe42e37eca8a686a03"></a>
-bool&#160;</td><td class="memItemRight"><b>operator&gt;</b> (this const Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other)</td></tr>
+bool&#160;</td><td class="memItemRight"><b>operator&gt;</b> (this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;other)</td></tr>
 <tr class="memitem:a909ade1c1fa84fbc6167f4f25c3b34b2" id="r_a909ade1c1fa84fbc6167f4f25c3b34b2"><td class="memItemLeft"><a id="a909ade1c1fa84fbc6167f4f25c3b34b2" name="a909ade1c1fa84fbc6167f4f25c3b34b2"></a>
-bool&#160;</td><td class="memItemRight"><b>operator&lt;=</b> (this const Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other)</td></tr>
+bool&#160;</td><td class="memItemRight"><b>operator&lt;=</b> (this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;other)</td></tr>
 <tr class="memitem:ab053f8469286e491aeb9d93838468b35" id="r_ab053f8469286e491aeb9d93838468b35"><td class="memItemLeft"><a id="ab053f8469286e491aeb9d93838468b35" name="ab053f8469286e491aeb9d93838468b35"></a>
-bool&#160;</td><td class="memItemRight"><b>operator&gt;=</b> (this const Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other)</td></tr>
+bool&#160;</td><td class="memItemRight"><b>operator&gt;=</b> (this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;self, const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;other)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 requires std::is_trivially_constructible_v&lt;T&gt;<br />
 class Melon::Memory::Buffer&lt; T &gt;</div><p>Container for raw memory. </p>
 <p>This container stores allocated raw memory and the size of the allocated area. Know that as you can see below, <span class="tt">T</span> must be trivially constructible. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae1dd2e687c0799762d49661ce83d0f7f" name="ae1dd2e687c0799762d49661ce83d0f7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1dd2e687c0799762d49661ce83d0f7f">&#9670;&#160;</a></span>Buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::Buffer </td>
+          <td>(</td>
+          <td class="paramtype">T *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the buffer from existing raw memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>memory to construct the buffer from </td></tr>
+    <tr><td class="paramname">size</td><td>maximum size of the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="aedf9df3c71765ebded5f2f12de0a976a" name="aedf9df3c71765ebded5f2f12de0a976a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf9df3c71765ebded5f2f12de0a976a">&#9670;&#160;</a></span>compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::compare </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compares some objects between this buffer and another one. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>buffer to compare </td></tr>
+    <tr><td class="paramname">size</td><td>object count </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>&lt;0 if self &lt; dest, 0 if self == dest and &gt;0 if self &gt; dest </dd></dl>
+
+</div>
+</div>
+<a id="a91f687732dc704d2295fd9a3767b8148" name="a91f687732dc704d2295fd9a3767b8148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f687732dc704d2295fd9a3767b8148">&#9670;&#160;</a></span>copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp; <a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::copy </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copies some objects from here to another buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>destination buffer </td></tr>
+    <tr><td class="paramname">size</td><td>object count </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>destination buffer </dd></dl>
+
+</div>
+</div>
+<a id="a15b3a15f9d08fb0a50ddfa76a3dcbc6a" name="a15b3a15f9d08fb0a50ddfa76a3dcbc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b3a15f9d08fb0a50ddfa76a3dcbc6a">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T * <a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::get </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a constant pointer to the raw memory. </p>
+<dl class="section return"><dt>Returns</dt><dd>constant raw buffer </dd></dl>
+
+</div>
+</div>
+<a id="a938bd1e1bed5b3a6416fd0c2882038a5" name="a938bd1e1bed5b3a6416fd0c2882038a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938bd1e1bed5b3a6416fd0c2882038a5">&#9670;&#160;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp; <a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::move </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>dest</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Moves some objects from here to another buffer. </p>
+<p>This method is similar to <a class="el" href="#a91f687732dc704d2295fd9a3767b8148" title="Copies some objects from here to another buffer.">copy()</a> but it prevents from both buffers to overlap. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dest</td><td>destination buffer </td></tr>
+    <tr><td class="paramname">size</td><td>object count </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>destination buffer </dd></dl>
+
+</div>
+</div>
+<a id="a84b100c260ec0778cdf939711cb56f4e" name="a84b100c260ec0778cdf939711cb56f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84b100c260ec0778cdf939711cb56f4e">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp; <a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::set </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets some objects from this buffer to a given value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>value to set </td></tr>
+    <tr><td class="paramname">size</td><td>object count </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
+
+</div>
+</div>
+<a id="a6359280d4517e7d746b6b96b5a55f57a" name="a6359280d4517e7d746b6b96b5a55f57a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6359280d4517e7d746b6b96b5a55f57a">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> <a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::size </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#ae1dd2e687c0799762d49661ce83d0f7f">Buffer</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the size of the buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>buffer size </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>Include/<a class="el" href="Memory_8hpp_source.html">Memory.hpp</a></li>
 </ul>
 </div><!-- contents -->
