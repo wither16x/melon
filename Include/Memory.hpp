@@ -22,6 +22,8 @@ namespace Melon::Memory
                 {
                         if (size > self.__size)
                                 throw Exceptions::BufferOverflow(size, self.__size);
+                        if (size > dest.__size)
+                                throw Exceptions::BufferOverflow(size, dest.__size);
 
                         memcpy(dest.data, self.data, size);
 
@@ -42,6 +44,8 @@ namespace Melon::Memory
                 {
                         if (size > self.__size)
                                 throw Exceptions::BufferOverflow(size, self.__size);
+                        if (size > dest.__size)
+                                throw Exceptions::BufferOverflow(size, dest.__size);
 
                         memmove(dest.data, self.data, size);
 
