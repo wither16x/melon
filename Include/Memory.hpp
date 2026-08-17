@@ -50,6 +50,11 @@ namespace Melon::Memory
 
                 int compare(this const Buffer<T> &self, const Buffer<T> &other, Typing::USize size)
                 {
+                        if (size > self.__size)
+                                throw Exceptions::BufferOverflow(size, self.__size);
+                        if (size > other.__size)
+                                throw Exceptions::BufferOverflow(size, other.__size);
+
                         int result = memcmp(self.data, other.data, size);
 
                         return result;
@@ -67,23 +72,25 @@ namespace Melon::Memory
 
                 bool operator ==(this const Buffer<T> &self, const Buffer<T> &other)
                 {
-                        return self.compare(other, self.__size) == 0;
+                        return self.__size == other.__size and self.compare(other, self.__size) == 0;
                 }
 
                 bool operator <(this const Buffer<T> &self, const Buffer<T> &other)
                 {
-                        Typing::USize size = sizeof(self.data) < sizeof(other.data)
-                                ? sizeof(self.data)
-                                : sizeof(other.data);
-                        return self.compare(other, size) < 0;
+                        Typing::USize size = self.__size < other.__size ? self.__size : other.__size;
+                        int result = self.compare(other, size);
+                        if (result != 0)
+                                return result < 0;
+                        return self.__size < other.__size;
                 }
 
                 bool operator >(this const Buffer<T> &self, const Buffer<T> &other)
                 {
-                        Typing::USize size = sizeof(self.data) < sizeof(other.data)
-                                ? sizeof(self.data)
-                                : sizeof(other.data);
-                        return self.compare(other, size) > 0;
+                        Typing::USize size = self.__size < other.__size ? self.__size : other.__size;
+                        int result = self.compare(other, size);
+                        if (result != 0)
+                                return result > 0;
+                        return self.__size > other.__size;
                 }
 
                 bool operator <=(this const Buffer<T> &self, const Buffer<T> &other)

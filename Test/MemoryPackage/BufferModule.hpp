@@ -112,7 +112,7 @@ namespace Melon::Test
                         TARWI_EXPECT(a == b);
                 }
 
-                TARWI_UNIT(unitOperatorLesserThan)
+                TARWI_UNIT(unitSmallerBigger)
                 {
                         Typing::Uint8 a_data[] = {25, 42};
                         Typing::Uint8 b_data[] = {25, 42, 12};
@@ -120,7 +120,7 @@ namespace Melon::Test
                         Memory::Buffer<Typing::Uint8> a(a_data, sizeof(a_data));
                         Memory::Buffer<Typing::Uint8> b(b_data, sizeof(b_data));
 
-                        TARWI_EXPECT(a < b);
+                        TARWI_EXPECT(a < b and b > a);
                 }
 
                 TARWI_MODULE_MAIN()
@@ -132,7 +132,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitCheckMove);
                         TARWI_CALL_UNIT(unitCheckComparison);
                         TARWI_CALL_UNIT(unitOperatorEqual);
-                        TARWI_CALL_UNIT(unitOperatorLesserThan);
+                        TARWI_CALL_UNIT(unitSmallerBigger);
                 }
         };
 } // namespace Melon::Test
