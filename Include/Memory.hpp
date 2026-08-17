@@ -69,5 +69,30 @@ namespace Melon::Memory
                 {
                         return self.__size;
                 }
+
+                bool operator ==(this const Buffer<T> &self, const Buffer<T> &other)
+                {
+                        return self.compare(other, self.__size) == 0;
+                }
+
+                bool operator <(this const Buffer<T> &self, const Buffer<T> &other)
+                {
+                        return self.compare(other, self.__size) < 0;
+                }
+
+                bool operator >(this const Buffer<T> &self, const Buffer<T> &other)
+                {
+                        return self.compare(other, self.__size) > 0;
+                }
+
+                bool operator <=(this const Buffer<T> &self, const Buffer<T> &other)
+                {
+                        return self < other or self == other;
+                }
+
+                bool operator >=(this const Buffer<T> &self, const Buffer<T> &other)
+                {
+                        return self > other or self == other;
+                }
         };
 } // namespace Melon::Memory
