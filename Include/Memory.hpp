@@ -48,9 +48,16 @@ namespace Melon::Memory
                         return self;
                 }
 
-                int compare(this const Buffer<T> &self, const Buffer<T> &s2, Typing::Size size)
+                int compare(this const Buffer<T> &self, const Buffer<T> &other, Typing::Size size)
                 {
-                        // TODO
+                        if (size > self.size)
+                                throw Exceptions::BufferOverflow(size, self.size);
+                        if (size > other.size)
+                                throw Exceptions::BufferOverflow(size, other.size);
+
+                        int result = memcmp(self.data, other.data, size);
+
+                        return result;
                 }
 
                 const T *get(this const Buffer<T> &self)
