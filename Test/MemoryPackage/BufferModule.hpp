@@ -134,6 +134,31 @@ namespace Melon::Test
                         TARWI_EXPECT(a < b and b > a);
                 }
 
+                TARWI_UNIT(unitGetByIndex)
+                {
+                        Typing::Uint8 data[] = {10, 20, 30};
+                        Memory::Buffer<Typing::Uint8> buf(data, sizeof(data));
+
+                        TARWI_EXPECT(buf[0] == 10 and buf[1] == 20 and buf[2] == 30);
+                }
+
+                TARWI_UNIT(unitGetOutOfRange)
+                {
+                        Typing::Uint8 data[] = {10, 20, 30};
+                        Memory::Buffer<Typing::Uint8> buf(data, sizeof(data));
+                        bool caught = false;
+
+                        try {
+                                Typing::Uint8 elem4 = buf[4];
+                                (void)elem4;
+                        } catch (const Exceptions::OutOfRange &e) {
+                                TARWI_OUTPUT("buffer get failed: %s\n", e.what());
+                                caught = true;
+                        }
+
+                        TARWI_EXPECT(caught);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
@@ -145,6 +170,8 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitOperatorEqual);
                         TARWI_CALL_UNIT(unitOperatorNotEqual);
                         TARWI_CALL_UNIT(unitSmallerBigger);
+                        TARWI_CALL_UNIT(unitGetByIndex);
+                        TARWI_CALL_UNIT(unitGetOutOfRange);
                 }
         };
 } // namespace Melon::Test

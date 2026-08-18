@@ -162,5 +162,18 @@ namespace Melon::Memory
                 {
                         return self > other or self == other;
                 }
+
+                /// @brief Gets an object from the buffer.
+                ///
+                /// The object is returned by index. If the index is too high,
+                /// Exceptions::OutOfRange will be thrown.
+                /// @param index position of the object in the buffer
+                const T &operator [](this const Buffer<T> &self, Typing::USize index)
+                {
+                        if (index >= self.__size)
+                                throw Exceptions::OutOfRange(index, self.__size);
+
+                        return self.data[index];
+                }
         };
 } // namespace Melon::Memory
