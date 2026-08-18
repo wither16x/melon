@@ -5,6 +5,9 @@
 namespace Melon::Memory
 {
         /// @brief A null-terminated string.
+        ///
+        /// This kind of string is not intended to be extended or shortened.
+        /// Its size should be always the same.
         class CString
         {
                 char *data;
@@ -14,11 +17,22 @@ namespace Melon::Memory
                 /// @param s null-terminated string
                 CString(const char *s);
 
+                ~CString();
+
+                /// @brief Copies somes bytes from the internal buffer to another string's
+                /// internal buffer.
+                /// @param other destination string
+                /// @param chars character count
+                /// @return destination string
+                CString &copy(this const CString &self, CString &dest, Typing::USize chars);
+
                 /// @brief Computes the length of this string.
                 ///
                 /// The null-terminating character is not treated as a part of the string.
                 /// @return string length
                 Typing::USize length(this const CString &self);
+
+                const char *get(this const CString &self);
 
                 /// @brief Checks if a string is the same than this one.
                 /// @param other string to compare

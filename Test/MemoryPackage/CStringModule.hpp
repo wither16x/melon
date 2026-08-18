@@ -50,6 +50,16 @@ namespace Melon::Test
                         TARWI_EXPECT(str1 < str2 and str2 > str1);
                 }
 
+                TARWI_UNIT(unitCopy)
+                {
+                        Memory::CString src("Apple");
+                        Memory::CString dest("Banana");
+
+                        src.copy(dest, dest.length());
+
+                        TARWI_EXPECT(dest == src);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitLength);
@@ -57,6 +67,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitOperatorEqual);
                         TARWI_CALL_UNIT(unitOperatorNotEqual);
                         TARWI_CALL_UNIT(unitSmallerBigger);
+                        TARWI_CALL_UNIT(unitCopy);
                 }
         };
 } // namespace Melon::Test

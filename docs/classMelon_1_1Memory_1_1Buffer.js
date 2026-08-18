@@ -2,9 +2,9 @@ var classMelon_1_1Memory_1_1Buffer =
 [
     [ "Buffer", "classMelon_1_1Memory_1_1Buffer.html#ae1dd2e687c0799762d49661ce83d0f7f", null ],
     [ "compare", "classMelon_1_1Memory_1_1Buffer.html#aedf9df3c71765ebded5f2f12de0a976a", null ],
-    [ "copy", "classMelon_1_1Memory_1_1Buffer.html#a91f687732dc704d2295fd9a3767b8148", null ],
+    [ "copy", "classMelon_1_1Memory_1_1Buffer.html#a1fc534b2ed9e9399f2d3979c5c26c260", null ],
     [ "get", "classMelon_1_1Memory_1_1Buffer.html#a15b3a15f9d08fb0a50ddfa76a3dcbc6a", null ],
-    [ "move", "classMelon_1_1Memory_1_1Buffer.html#a938bd1e1bed5b3a6416fd0c2882038a5", null ],
+    [ "move", "classMelon_1_1Memory_1_1Buffer.html#a3f5d1858e5f58d1a6ad7a41016dd6f92", null ],
     [ "operator!=", "classMelon_1_1Memory_1_1Buffer.html#ae209ba990fc9d75d3a357073e5255ca6", null ],
     [ "operator<", "classMelon_1_1Memory_1_1Buffer.html#a707a536814632943dfc2a3c09cba945f", null ],
     [ "operator<=", "classMelon_1_1Memory_1_1Buffer.html#a909ade1c1fa84fbc6167f4f25c3b34b2", null ],
