@@ -70,6 +70,16 @@ namespace Melon::Test
                         TARWI_EXPECT(str == "bar");
                 }
 
+                TARWI_UNIT(unitCheckIfHasChar)
+                {
+                        Memory::CString str("orange");
+
+                        TARWI_EXPECT(
+                                str.has('o') and str.has('a') and str.has('n')
+                                and str.has('g') and str.has('e') and not str.has('x')
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitLength);
@@ -79,6 +89,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitSmallerBigger);
                         TARWI_CALL_UNIT(unitCopy);
                         TARWI_CALL_UNIT(unitSetByIndex);
+                        TARWI_CALL_UNIT(unitCheckIfHasChar);
                 }
         };
 } // namespace Melon::Test

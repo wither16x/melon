@@ -29,6 +29,11 @@ namespace Melon::Memory
                 /// @return destination string
                 CString &copy(this const CString &self, CString &dest, Typing::USize chars);
 
+                /// @brief Checks if this string contains a given character.
+                /// @param ch character to find
+                /// @return boolean
+                bool has(this const CString &self, char ch);
+
                 /// @brief Computes the length of this string.
                 ///
                 /// The null-terminating character is not treated as a part of the string.

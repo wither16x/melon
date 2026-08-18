@@ -24,6 +24,15 @@ namespace Melon::Memory
                 return dest;
         }
 
+        bool CString::has(this const CString &self, char ch)
+        {
+                for (Typing::USize i = 0; i < strlen(self.data); i++) {
+                        if (self.data[i] == ch)
+                                return true;
+                }
+                return false;
+        }
+
         Typing::USize CString::length(this const CString &self)
         {
                 return strlen(self.data);

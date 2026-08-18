@@ -127,6 +127,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aba277d1da4e942fe15f550bf69204bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the internal buffer since it is allocated on the heap. <br /></td></tr>
 <tr class="memitem:a192f852f967d8eaa607c59d15702be5b" id="r_a192f852f967d8eaa607c59d15702be5b"><td class="memItemLeft"><a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a192f852f967d8eaa607c59d15702be5b">copy</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self, <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;dest, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> chars)</td></tr>
 <tr class="memdesc:a192f852f967d8eaa607c59d15702be5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies somes bytes from the internal buffer to another string's internal buffer.  <br /></td></tr>
+<tr class="memitem:a3fb679a3c698f7dce62dacb222ddbde2" id="r_a3fb679a3c698f7dce62dacb222ddbde2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3fb679a3c698f7dce62dacb222ddbde2">has</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self, char ch)</td></tr>
+<tr class="memdesc:a3fb679a3c698f7dce62dacb222ddbde2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this string contains a given character.  <br /></td></tr>
 <tr class="memitem:a0d97d3493841340768f20ee0cde84ca8" id="r_a0d97d3493841340768f20ee0cde84ca8"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0d97d3493841340768f20ee0cde84ca8">length</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self)</td></tr>
 <tr class="memdesc:a0d97d3493841340768f20ee0cde84ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the length of this string.  <br /></td></tr>
 <tr class="memitem:a1e1c2047d6d9750b083d257f30426529" id="r_a1e1c2047d6d9750b083d257f30426529"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a1e1c2047d6d9750b083d257f30426529">get</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self)</td></tr>
@@ -143,8 +145,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6d579363235b6b1951aab112f8ad2d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this string is smaller than or equals another.  <br /></td></tr>
 <tr class="memitem:a4136aee3af8109daf7dab9ccdab7db73" id="r_a4136aee3af8109daf7dab9ccdab7db73"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4136aee3af8109daf7dab9ccdab7db73">operator&gt;=</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self, const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;other)</td></tr>
 <tr class="memdesc:a4136aee3af8109daf7dab9ccdab7db73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this string is bigger than or equals another.  <br /></td></tr>
-<tr class="memitem:a4d35376ed9535fb4050808f8a1a8724d" id="r_a4d35376ed9535fb4050808f8a1a8724d"><td class="memItemLeft">char&#160;</td><td class="memItemRight"><a class="el" href="#a4d35376ed9535fb4050808f8a1a8724d">operator[]</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
-<tr class="memdesc:a4d35376ed9535fb4050808f8a1a8724d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a character by its index in the string.  <br /></td></tr>
+<tr class="memitem:a66f5c8a534dc14e8193cfc462af6a947" id="r_a66f5c8a534dc14e8193cfc462af6a947"><td class="memItemLeft">char &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a66f5c8a534dc14e8193cfc462af6a947">operator[]</a> (this <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
+<tr class="memdesc:a66f5c8a534dc14e8193cfc462af6a947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a character by its index in the string.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A null-terminated string. </p>
@@ -229,6 +231,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the internal buffer. </p>
 <dl class="section return"><dt>Returns</dt><dd>internal buffer (constant) </dd></dl>
+
+</div>
+</div>
+<a id="a3fb679a3c698f7dce62dacb222ddbde2" name="a3fb679a3c698f7dce62dacb222ddbde2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fb679a3c698f7dce62dacb222ddbde2">&#9670;&#160;</a></span>has()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Melon::Memory::CString::has </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>ch</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if this string contains a given character. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>character to find </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
 </div>
 </div>
@@ -432,16 +464,16 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4d35376ed9535fb4050808f8a1a8724d" name="a4d35376ed9535fb4050808f8a1a8724d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d35376ed9535fb4050808f8a1a8724d">&#9670;&#160;</a></span>operator[]()</h2>
+<a id="a66f5c8a534dc14e8193cfc462af6a947" name="a66f5c8a534dc14e8193cfc462af6a947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f5c8a534dc14e8193cfc462af6a947">&#9670;&#160;</a></span>operator[]()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char Melon::Memory::CString::operator[] </td>
+          <td class="memname">char &amp; Melon::Memory::CString::operator[] </td>
           <td>(</td>
-          <td class="paramtype">this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+          <td class="paramtype">this <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
