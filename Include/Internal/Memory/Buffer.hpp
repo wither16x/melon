@@ -32,7 +32,7 @@ namespace Melon::Memory
                 /// @param dest destination buffer
                 /// @param size object count
                 /// @return destination buffer
-                Buffer<T> &copy(this Buffer<T> &self, Buffer<T> &dest, Typing::USize size)
+                Buffer<T> &copy(this const Buffer<T> &self, Buffer<T> &dest, Typing::USize size)
                 {
                         if (size > self.__size)
                                 throw Exceptions::BufferOverflow(size, self.__size);
@@ -65,7 +65,7 @@ namespace Melon::Memory
                 /// @param dest destination buffer
                 /// @param size object count
                 /// @return destination buffer
-                Buffer<T> &move(this Buffer<T> &self, Buffer<T> &dest, Typing::USize size)
+                Buffer<T> &move(this const Buffer<T> &self, Buffer<T> &dest, Typing::USize size)
                 {
                         if (size > self.__size)
                                 throw Exceptions::BufferOverflow(size, self.__size);
