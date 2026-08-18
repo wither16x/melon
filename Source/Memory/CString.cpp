@@ -5,14 +5,12 @@
 
 namespace Melon::Memory
 {
-        /// The internal buffer is allocated on the heap.
         CString::CString(const char *s)
         {
                 this->data = new char[strlen(s) + 1];
                 strncpy(data, s, strlen(s));
         }
 
-        /// @brief Free the internal buffer since it is allocated on the heap.
         CString::~CString()
         {
                 if (this->data)

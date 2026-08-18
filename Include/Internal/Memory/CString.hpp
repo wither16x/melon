@@ -14,9 +14,12 @@ namespace Melon::Memory
 
         public:
                 /// @brief Constructs the object from a given null-terminated string.
+                ///
+                /// The internal buffer is allocated on the heap.
                 /// @param s null-terminated string
                 CString(const char *s);
 
+                /// @brief Free the internal buffer since it is allocated on the heap.
                 ~CString();
 
                 /// @brief Copies somes bytes from the internal buffer to another string's
