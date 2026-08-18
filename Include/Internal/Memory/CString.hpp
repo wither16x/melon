@@ -35,6 +35,8 @@ namespace Melon::Memory
                 /// @return string length
                 Typing::USize length(this const CString &self);
 
+                /// @brief Gets the internal buffer.
+                /// @return internal buffer (constant)
                 const char *get(this const CString &self);
 
                 /// @brief Checks if a string is the same than this one.

@@ -129,8 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a192f852f967d8eaa607c59d15702be5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies somes bytes from the internal buffer to another string's internal buffer.  <br /></td></tr>
 <tr class="memitem:a0d97d3493841340768f20ee0cde84ca8" id="r_a0d97d3493841340768f20ee0cde84ca8"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0d97d3493841340768f20ee0cde84ca8">length</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self)</td></tr>
 <tr class="memdesc:a0d97d3493841340768f20ee0cde84ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the length of this string.  <br /></td></tr>
-<tr class="memitem:a1e1c2047d6d9750b083d257f30426529" id="r_a1e1c2047d6d9750b083d257f30426529"><td class="memItemLeft"><a id="a1e1c2047d6d9750b083d257f30426529" name="a1e1c2047d6d9750b083d257f30426529"></a>
-const char *&#160;</td><td class="memItemRight"><b>get</b> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self)</td></tr>
+<tr class="memitem:a1e1c2047d6d9750b083d257f30426529" id="r_a1e1c2047d6d9750b083d257f30426529"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a1e1c2047d6d9750b083d257f30426529">get</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self)</td></tr>
+<tr class="memdesc:a1e1c2047d6d9750b083d257f30426529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the internal buffer.  <br /></td></tr>
 <tr class="memitem:a3db2b0cd2ac351ad37afcccf10f11ed7" id="r_a3db2b0cd2ac351ad37afcccf10f11ed7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3db2b0cd2ac351ad37afcccf10f11ed7">operator==</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self, const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;other)</td></tr>
 <tr class="memdesc:a3db2b0cd2ac351ad37afcccf10f11ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a string is the same than this one.  <br /></td></tr>
 <tr class="memitem:ad36b3fdbfa671ef1095f5efead47f3cd" id="r_ad36b3fdbfa671ef1095f5efead47f3cd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad36b3fdbfa671ef1095f5efead47f3cd">operator!=</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self, const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;other)</td></tr>
@@ -148,6 +148,7 @@ const char *&#160;</td><td class="memItemRight"><b>get</b> (this const <a class=
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A null-terminated string. </p>
+<p>This kind of string is not intended to be extended or shortened. Its size should be always the same. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af9fe01baa4591775abddb84aadacf181" name="af9fe01baa4591775abddb84aadacf181"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9fe01baa4591775abddb84aadacf181">&#9670;&#160;</a></span>CString()</h2>
@@ -165,8 +166,7 @@ const char *&#160;</td><td class="memItemRight"><b>get</b> (this const <a class=
 </div><div class="memdoc">
 
 <p>Constructs the object from a given null-terminated string. </p>
-<p>The internal buffer is allocated on the heap.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The internal buffer is allocated on the heap. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">s</td><td>null-terminated string </td></tr>
   </table>
@@ -209,6 +209,26 @@ const char *&#160;</td><td class="memItemRight"><b>get</b> (this const <a class=
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>destination string </dd></dl>
+
+</div>
+</div>
+<a id="a1e1c2047d6d9750b083d257f30426529" name="a1e1c2047d6d9750b083d257f30426529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1c2047d6d9750b083d257f30426529">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * Melon::Memory::CString::get </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the internal buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>internal buffer (constant) </dd></dl>
 
 </div>
 </div>
