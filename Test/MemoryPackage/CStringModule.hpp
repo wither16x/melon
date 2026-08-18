@@ -42,12 +42,21 @@ namespace Melon::Test
                         TARWI_EXPECT(str1 != str2);
                 }
 
+                TARWI_UNIT(unitSmallerBigger)
+                {
+                        Memory::CString str1("Fish");
+                        Memory::CString str2("and chips");
+
+                        TARWI_EXPECT(str1 < str2 and str2 > str1);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitLength);
                         TARWI_CALL_UNIT(unitGetByIndex);
                         TARWI_CALL_UNIT(unitOperatorEqual);
                         TARWI_CALL_UNIT(unitOperatorNotEqual);
+                        TARWI_CALL_UNIT(unitSmallerBigger);
                 }
         };
 } // namespace Melon::Test

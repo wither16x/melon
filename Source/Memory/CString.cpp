@@ -24,6 +24,26 @@ namespace Melon::Memory
                 return strcmp(self.data, other.data) != 0;
         }
 
+        bool CString::operator <(this const CString &self, const CString &other)
+        {
+                return strcmp(self.data, other.data) < 0;
+        }
+
+        bool CString::operator >(this const CString &self, const CString &other)
+        {
+                return strcmp(self.data, other.data) > 0;
+        }
+
+        bool CString::operator <=(this const CString &self, const CString &other)
+        {
+                return self < other or self == other;
+        }
+
+        bool CString::operator >=(this const CString &self, const CString &other)
+        {
+                return self > other or self == other;
+        }
+
         char CString::operator [](this const CString &self, Typing::USize index)
         {
                 Typing::USize length = strlen(self.data);

@@ -30,6 +30,26 @@ namespace Melon::Memory
                 /// @return boolean
                 bool operator !=(this const CString &self, const CString &other);
 
+                /// @brief Checks if this string is smaller than another.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator <(this const CString &self, const CString &other);
+
+                /// @brief Checks if this string is bigger than another.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator >(this const CString &self, const CString &other);
+
+                /// @brief Checks if this string is smaller than or equals another.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator <=(this const CString &self, const CString &other);
+
+                /// @brief Checks if this string is bigger than or equals another.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator >=(this const CString &self, const CString &other);
+
                 /// @brief Gets a character by its index in the string.
                 /// @param index character position
                 /// @return character at given position
