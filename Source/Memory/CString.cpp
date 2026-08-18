@@ -26,8 +26,8 @@ namespace Melon::Memory
 
         bool CString::has(this const CString &self, char ch)
         {
-                for (Typing::USize i = 0; i < strlen(self.data); i++) {
-                        if (self.data[i] == ch)
+                for (auto &c : self) {
+                        if (c == ch)
                                 return true;
                 }
                 return false;
@@ -36,6 +36,16 @@ namespace Melon::Memory
         Typing::USize CString::length(this const CString &self)
         {
                 return strlen(self.data);
+        }
+
+        const char *CString::begin(this const CString &self)
+        {
+                return self.data;
+        }
+
+        const char *CString::end(this const CString &self)
+        {
+                return self.data + strlen(self.data);
         }
 
         const char *CString::get(this const CString &self)

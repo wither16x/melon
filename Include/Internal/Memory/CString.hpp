@@ -40,6 +40,12 @@ namespace Melon::Memory
                 /// @return string length
                 Typing::USize length(this const CString &self);
 
+                /// @brief Gets a pointer to the base of the internal buffer.
+                const char *begin(this const CString &self);
+
+                /// @brief Gets a pointer to the end of the internal buffer.
+                const char *end(this const CString &self);
+
                 /// @brief Gets the internal buffer.
                 /// @return internal buffer (constant)
                 const char *get(this const CString &self);
