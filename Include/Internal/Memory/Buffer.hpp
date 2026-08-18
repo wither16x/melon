@@ -155,6 +155,23 @@ namespace Melon::Memory
                         return self.data + self.__size;
                 }
 
+                /// @brief Resizes the buffer.
+                ///
+                /// This method gives a new size to this buffer and reallocates the
+                /// data to match the new size.
+                /// @param new_size new size of the buffer
+                void resize(this Buffer<T> &self, Typing::USize new_size)
+                {
+                        T *new_data = new T[new_size];
+
+                        for (Typing::USize i = 0; i < self.__size; ++i)
+                                new_data[i] = self.data[i];
+
+                        delete[] self.data;
+                        self.data = new_data;
+                        self.__size = new_size;
+                }
+
                 /// @brief Checks if a buffer has same size and same content.
                 /// @param other other buffer
                 /// @return comparison result
