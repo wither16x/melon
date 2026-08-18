@@ -21,12 +21,46 @@ namespace Melon::Memory
                 Typing::USize __size;
 
         public:
+                Buffer()
+                {
+                        this->data = new T[1];
+                        this->__size = 1;
+                }
+
                 /// @brief Constructs the buffer from existing raw memory.
                 /// @param data memory to construct the buffer from
                 /// @param size maximum size of the buffer
-                Buffer(T *data, Typing::USize size)
-                        : data(data), __size(size)
-                {}
+                Buffer(const T *data, Typing::USize size)
+                        : __size(size)
+                {
+                        this->data = new T[size];
+                        memcpy(this->data, data, size);
+                }
+
+                /// @brief Copy constructor.
+                /// @param other buffer to copy data to
+                Buffer(const Buffer<T> &other)
+                {
+                        memcpy(other.data, this->data, this->__size);
+                }
+
+                /// @brief Move constructor.
+                /// @param other buffer to move data and size to
+                Buffer(Buffer<T> &&other)
+                {
+                        memcpy(other.data, this->data, this->__size);
+                        other.__size = this->__size;
+
+                        memset(this->data, 0, this->__size);
+                        this->__size = 0;
+                }
+
+                /// @brief Destructor.
+                ~Buffer()
+                {
+                        if (this->data)
+                                delete[] this->data;
+                }
 
                 /// @brief Copies some objects from here to another buffer.
                 /// @param dest destination buffer
@@ -107,6 +141,20 @@ namespace Melon::Memory
                         return self.__size;
                 }
 
+                /// @brief Gets a constant pointer to the base of the raw buffer.
+                /// @return pointer to raw buffer base
+                const T *begin(this const Buffer<T> &self)
+                {
+                        return self.data;
+                }
+
+                /// @brief Gets a constant pointer to the end of the raw buffer.
+                /// @return pointer to raw buffer end
+                const T *end(this const Buffer<T> &self)
+                {
+                        return self.data + self.__size;
+                }
+
                 /// @brief Checks if a buffer has same size and same content.
                 /// @param other other buffer
                 /// @return comparison result
@@ -168,12 +216,37 @@ namespace Melon::Memory
                 /// The object is returned by index. If the index is too high,
                 /// Exceptions::OutOfRange will be thrown.
                 /// @param index position of the object in the buffer
-                const T &operator [](this const Buffer<T> &self, Typing::USize index)
+                T &operator [](this Buffer<T> &self, Typing::USize index)
                 {
                         if (index >= self.__size)
                                 throw Exceptions::OutOfRange(index, self.__size);
 
                         return self.data[index];
+                }
+
+                /// @brief Copy assignment operator.
+                /// @param other buffer to copy data to
+                Buffer<T> &operator =(this Buffer<T> &self, const Buffer<T> &other)
+                {
+                        if (self != other)
+                                memcpy(other.data, self.data, self.__size);
+
+                        return self;
+                }
+
+                /// @brief Move assignment operator.
+                /// @param other buffer to move data and size to
+                Buffer<T> &operator =(this Buffer<T> &self, Buffer<T> &&other)
+                {
+                        if (self != other) {
+                                memcpy(other.data, self.data, self.__size);
+                                other.__size = self.__size;
+
+                                memset(self.data, 0, self.__size);
+                                self.__size = 0;
+                        }
+
+                        return self;
                 }
         };
 } // namespace Melon::Memory

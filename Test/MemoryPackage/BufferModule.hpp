@@ -55,11 +55,11 @@ namespace Melon::Test
                         Typing::Uint8 data[5];
                         Memory::Buffer<Typing::Uint8> buf(data, sizeof(data));
 
-                        buf.set(12, sizeof(data));
+                        buf.set(12, buf.size());
 
                         TARWI_EXPECT(
-                                data[0] == 12 and data[1] == 12 and data[2] == 12 and
-                                data[3] == 12 and data[4] == 12
+                                buf[0] == 12 and buf[1] == 12 and buf[2] == 12 and
+                                buf[3] == 12 and buf[4] == 12
                         );
                 }
 
