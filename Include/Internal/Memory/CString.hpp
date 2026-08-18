@@ -72,6 +72,6 @@ namespace Melon::Memory
                 /// @brief Gets a character by its index in the string.
                 /// @param index character position
                 /// @return character at given position
-                char operator [](this const CString &self, Typing::USize index);
+                char &operator [](this CString &self, Typing::USize index);
         };
 } // namespace Melon::Memory

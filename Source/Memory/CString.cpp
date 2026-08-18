@@ -1,5 +1,6 @@
 #include "Internal/Memory/CString.hpp"
 #include "Exceptions.hpp"
+#include "Typing.hpp"
 
 #include <string.h>
 
@@ -8,7 +9,7 @@ namespace Melon::Memory
         CString::CString(const char *s)
         {
                 this->data = new char[strlen(s) + 1];
-                strncpy(data, s, strlen(s));
+                strncpy(data, s, strlen(s) + 1);
         }
 
         CString::~CString()
@@ -63,7 +64,7 @@ namespace Melon::Memory
                 return self > other or self == other;
         }
 
-        char CString::operator [](this const CString &self, Typing::USize index)
+        char &CString::operator [](this CString &self, Typing::USize index)
         {
                 Typing::USize length = strlen(self.data);
                 if (index >= length)

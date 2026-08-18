@@ -60,6 +60,16 @@ namespace Melon::Test
                         TARWI_EXPECT(dest == src);
                 }
 
+                TARWI_UNIT(unitSetByIndex)
+                {
+                        Memory::CString str("foo");
+                        str[0] = 'b';
+                        str[1] = 'a';
+                        str[2] = 'r';
+
+                        TARWI_EXPECT(str == "bar");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitLength);
@@ -68,6 +78,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitOperatorNotEqual);
                         TARWI_CALL_UNIT(unitSmallerBigger);
                         TARWI_CALL_UNIT(unitCopy);
+                        TARWI_CALL_UNIT(unitSetByIndex);
                 }
         };
 } // namespace Melon::Test
