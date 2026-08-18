@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Melon: Melon::Exceptions::BufferOverflow Class Reference</title>
+<title>Melon: Melon::Exceptions::OutOfRange Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1Exceptions_1_1BufferOverflow.html','','classMelon_1_1Exceptions_1_1BufferOverflow-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1Exceptions_1_1OutOfRange.html','','classMelon_1_1Exceptions_1_1OutOfRange-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -109,54 +109,54 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Melon::Exceptions::BufferOverflow Class Reference</div></div>
+  <div class="headertitle"><div class="title">Melon::Exceptions::OutOfRange Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Thrown when a buffer overflows.  
+<p>Thrown when an index is out of range.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Exceptions_8hpp_source.html">Exceptions.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Melon::Exceptions::BufferOverflow:</div>
+Inheritance diagram for Melon::Exceptions::OutOfRange:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classMelon_1_1Exceptions_1_1BufferOverflow.png" alt=""/>
+  <img src="classMelon_1_1Exceptions_1_1OutOfRange.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a78a8c33621b13bf920c76034341c1955" id="r_a78a8c33621b13bf920c76034341c1955"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a78a8c33621b13bf920c76034341c1955">BufferOverflow</a> (<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> requested_size, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> buffer_size)</td></tr>
-<tr class="memdesc:a78a8c33621b13bf920c76034341c1955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main constructor for class <a class="el" href="classMelon_1_1Exceptions_1_1BufferOverflow.html" title="Thrown when a buffer overflows.">BufferOverflow</a>.  <br /></td></tr>
-<tr class="memitem:a52087b72546021f2eeab45bc6e17cf13" id="r_a52087b72546021f2eeab45bc6e17cf13"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a52087b72546021f2eeab45bc6e17cf13">what</a> () const noexcept</td></tr>
+<tr class="memitem:ac9344b20e65bb7388f05675972246086" id="r_ac9344b20e65bb7388f05675972246086"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ac9344b20e65bb7388f05675972246086">OutOfRange</a> (<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> highest_index)</td></tr>
+<tr class="memdesc:ac9344b20e65bb7388f05675972246086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main constructor for class <a class="el" href="classMelon_1_1Exceptions_1_1OutOfRange.html" title="Thrown when an index is out of range.">OutOfRange</a>.  <br /></td></tr>
+<tr class="memitem:a07a7efd3580a98441862ef47f63bd081" id="r_a07a7efd3580a98441862ef47f63bd081"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a07a7efd3580a98441862ef47f63bd081">what</a> () const noexcept</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Thrown when a buffer overflows. </p>
+<div class="textblock"><p>Thrown when an index is out of range. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a78a8c33621b13bf920c76034341c1955" name="a78a8c33621b13bf920c76034341c1955"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78a8c33621b13bf920c76034341c1955">&#9670;&#160;</a></span>BufferOverflow()</h2>
+<a id="ac9344b20e65bb7388f05675972246086" name="ac9344b20e65bb7388f05675972246086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9344b20e65bb7388f05675972246086">&#9670;&#160;</a></span>OutOfRange()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Melon::Exceptions::BufferOverflow::BufferOverflow </td>
+          <td class="memname">Melon::Exceptions::OutOfRange::OutOfRange </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>requested_size</em></span>, </td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>buffer_size</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>highest_index</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main constructor for class <a class="el" href="classMelon_1_1Exceptions_1_1BufferOverflow.html" title="Thrown when a buffer overflows.">BufferOverflow</a>. </p>
+<p>Main constructor for class <a class="el" href="classMelon_1_1Exceptions_1_1OutOfRange.html" title="Thrown when an index is out of range.">OutOfRange</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">requested_size</td><td>size requested by the user </td></tr>
-    <tr><td class="paramname">buffer_size</td><td>size of the buffer </td></tr>
+    <tr><td class="paramname">index</td><td>index out of range </td></tr>
+    <tr><td class="paramname">highest_index</td><td>limit of the array </td></tr>
   </table>
   </dd>
 </dl>
@@ -164,8 +164,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a52087b72546021f2eeab45bc6e17cf13" name="a52087b72546021f2eeab45bc6e17cf13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52087b72546021f2eeab45bc6e17cf13">&#9670;&#160;</a></span>what()</h2>
+<a id="a07a7efd3580a98441862ef47f63bd081" name="a07a7efd3580a98441862ef47f63bd081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a7efd3580a98441862ef47f63bd081">&#9670;&#160;</a></span>what()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -174,7 +174,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char * Melon::Exceptions::BufferOverflow::what </td>
+          <td class="memname">const char * Melon::Exceptions::OutOfRange::what </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -192,7 +192,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Include/<a class="el" href="Exceptions_8hpp_source.html">Exceptions.hpp</a></li>
-<li>Source/Exceptions/<b>BufferOverflow.cpp</b></li>
+<li>Source/Exceptions/<b>OutOfRange.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -207,7 +207,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Melon</b></li><li class="navelem"><a href="namespaceMelon_1_1Exceptions.html">Exceptions</a></li><li class="navelem"><a href="classMelon_1_1Exceptions_1_1BufferOverflow.html">BufferOverflow</a></li>
+    <li class="navelem"><b>Melon</b></li><li class="navelem"><a href="namespaceMelon_1_1Exceptions.html">Exceptions</a></li><li class="navelem"><a href="classMelon_1_1Exceptions_1_1OutOfRange.html">OutOfRange</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>
