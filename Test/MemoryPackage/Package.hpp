@@ -4,6 +4,7 @@
 #include <TarwiGlobals.hpp>
 
 #include <MemoryPackage/BufferModule.hpp>
+#include <MemoryPackage/CStringModule.hpp>
 
 namespace Melon::Test
 {
@@ -11,16 +12,18 @@ namespace Melon::Test
         {
                 TARWI_SET_NAME("MemoryPackage");
 
-                BufferModule buffer_module;
+                BufferModule buffer;
+                CStringModule cstring;
 
                 TARWI_PACKAGE_MAIN()
                 {
-                        TARWI_RUN_MODULE(buffer_module);
+                        TARWI_RUN_MODULE(buffer);
+                        TARWI_RUN_MODULE(cstring);
 
                         TARWI_DISPLAY_RESULTS(
-                                buffer_module.successfull_tests,
-                                buffer_module.failed_tests,
-                                buffer_module.skipped_tests
+                                buffer.successfull_tests + cstring.successfull_tests,
+                                buffer.failed_tests + cstring.failed_tests,
+                                buffer.skipped_tests + cstring.skipped_tests
                         );
                 }
         };

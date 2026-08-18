@@ -1,6 +1,7 @@
 var NAVTREEINDEX0 =
 {
 "Buffer_8hpp_source.html":[2,0,0,0,0,0],
+"CString_8hpp_source.html":[2,0,0,0,0,1],
 "Exceptions_8hpp_source.html":[2,0,0,1],
 "Memory_8hpp_source.html":[2,0,0,2],
 "Typing_8hpp_source.html":[2,0,0,3],
@@ -47,6 +48,12 @@ var NAVTREEINDEX0 =
 "classMelon_1_1Memory_1_1Buffer.html#ae209ba990fc9d75d3a357073e5255ca6":[1,0,0,1,0,5],
 "classMelon_1_1Memory_1_1Buffer.html#aedf9df3c71765ebded5f2f12de0a976a":[0,0,0,1,0,1],
 "classMelon_1_1Memory_1_1Buffer.html#aedf9df3c71765ebded5f2f12de0a976a":[1,0,0,1,0,1],
+"classMelon_1_1Memory_1_1CString.html":[0,0,0,1,1],
+"classMelon_1_1Memory_1_1CString.html":[1,0,0,1,1],
+"classMelon_1_1Memory_1_1CString.html#a0d97d3493841340768f20ee0cde84ca8":[0,0,0,1,1,1],
+"classMelon_1_1Memory_1_1CString.html#a0d97d3493841340768f20ee0cde84ca8":[1,0,0,1,1,1],
+"classMelon_1_1Memory_1_1CString.html#af9fe01baa4591775abddb84aadacf181":[0,0,0,1,1,0],
+"classMelon_1_1Memory_1_1CString.html#af9fe01baa4591775abddb84aadacf181":[1,0,0,1,1,0],
 "classes.html":[1,1],
 "dir_856524284ebe840938865dc061f982fb.html":[2,0,0],
 "dir_c6004c54a184687a9ffd011df5cb2576.html":[2,0,0,0],

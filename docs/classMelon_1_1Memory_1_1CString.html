@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Melon: Melon::Memory Namespace Reference</title>
+<title>Melon: Melon::Memory::CString Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('namespaceMelon_1_1Memory.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1Memory_1_1CString.html','','classMelon_1_1Memory_1_1CString-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -109,23 +109,84 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespaceMelon
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Melon::Memory Namespace Reference</div></div>
+  <div class="headertitle"><div class="title">Melon::Memory::CString Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Contains various classes and functions for memory management.  
-<a href="#details">More...</a></p>
+<p>A null-terminated string.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="CString_8hpp_source.html">CString.hpp</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:Buffer" id="r_Buffer"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Buffer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Container for raw memory.  <a href="classMelon_1_1Memory_1_1Buffer.html#details">More...</a><br /></td></tr>
-<tr class="memitem:CString" id="r_CString"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classMelon_1_1Memory_1_1CString.html">CString</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A null-terminated string.  <a href="classMelon_1_1Memory_1_1CString.html#details">More...</a><br /></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:af9fe01baa4591775abddb84aadacf181" id="r_af9fe01baa4591775abddb84aadacf181"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> (const char *s)</td></tr>
+<tr class="memdesc:af9fe01baa4591775abddb84aadacf181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the object from a given null-terminated string.  <br /></td></tr>
+<tr class="memitem:a0d97d3493841340768f20ee0cde84ca8" id="r_a0d97d3493841340768f20ee0cde84ca8"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a0d97d3493841340768f20ee0cde84ca8">length</a> (this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;self)</td></tr>
+<tr class="memdesc:a0d97d3493841340768f20ee0cde84ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the length of this string.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Contains various classes and functions for memory management. </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>A null-terminated string. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af9fe01baa4591775abddb84aadacf181" name="af9fe01baa4591775abddb84aadacf181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9fe01baa4591775abddb84aadacf181">&#9670;&#160;</a></span>CString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Melon::Memory::CString::CString </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the object from a given null-terminated string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>null-terminated string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a0d97d3493841340768f20ee0cde84ca8" name="a0d97d3493841340768f20ee0cde84ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d97d3493841340768f20ee0cde84ca8">&#9670;&#160;</a></span>length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> Melon::Memory::CString::length </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#af9fe01baa4591775abddb84aadacf181">CString</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the length of this string. </p>
+<p>The null-terminating character is not treated as a part of the string. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>Include/Internal/Memory/<a class="el" href="CString_8hpp_source.html">CString.hpp</a></li>
+<li>Source/Memory/<b>CString.cpp</b></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
 <div id="page-nav-resize-handle"></div>
@@ -138,7 +199,7 @@ Classes</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Melon</b></li><li class="navelem"><a href="namespaceMelon_1_1Memory.html">Memory</a></li>
+    <li class="navelem"><b>Melon</b></li><li class="navelem"><a href="namespaceMelon_1_1Memory.html">Memory</a></li><li class="navelem"><a href="classMelon_1_1Memory_1_1CString.html">CString</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>

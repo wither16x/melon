@@ -3,7 +3,7 @@
 #include <Tarwi.hpp>
 #include <TarwiGlobals.hpp>
 
-#include <Memory.hpp>
+#include <Internal/Memory/Buffer.hpp>
 #include <Exceptions.hpp>
 
 namespace Melon::Test

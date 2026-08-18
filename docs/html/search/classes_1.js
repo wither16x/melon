@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['outofrange_0',['OutOfRange',['../classMelon_1_1Exceptions_1_1OutOfRange.html',1,'Melon::Exceptions']]]
+  ['cstring_0',['CString',['../classMelon_1_1Memory_1_1CString.html',1,'Melon::Memory']]]
 ];

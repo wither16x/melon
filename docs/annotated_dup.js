@@ -6,7 +6,8 @@ var annotated_dup =
         [ "OutOfRange", "classMelon_1_1Exceptions_1_1OutOfRange.html", "classMelon_1_1Exceptions_1_1OutOfRange" ]
       ] ],
       [ "Memory", "namespaceMelon_1_1Memory.html", [
-        [ "Buffer", "classMelon_1_1Memory_1_1Buffer.html", "classMelon_1_1Memory_1_1Buffer" ]
+        [ "Buffer", "classMelon_1_1Memory_1_1Buffer.html", "classMelon_1_1Memory_1_1Buffer" ],
+        [ "CString", "classMelon_1_1Memory_1_1CString.html", "classMelon_1_1Memory_1_1CString" ]
       ] ]
     ] ]
 ];
