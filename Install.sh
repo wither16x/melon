@@ -10,5 +10,5 @@ PREFIX="$1"
 
 mkdir -p "$PREFIX"/usr/include/Melon/
 
-cp -v Include/*.hpp "$PREFIX"/usr/include/Melon/
-cp -v Build/libmelon.a* "$PREFIX"/usr/lib/libmelon.a
+cp -v -r Include/* "$PREFIX"/usr/include/Melon/
+cp -v Build/libmelon.a "$PREFIX"/usr/lib/libmelon.a

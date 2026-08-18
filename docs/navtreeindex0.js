@@ -1,8 +1,9 @@
 var NAVTREEINDEX0 =
 {
-"Exceptions_8hpp_source.html":[2,0,0,0],
-"Memory_8hpp_source.html":[2,0,0,1],
-"Typing_8hpp_source.html":[2,0,0,2],
+"Buffer_8hpp_source.html":[2,0,0,0,0,0],
+"Exceptions_8hpp_source.html":[2,0,0,1],
+"Memory_8hpp_source.html":[2,0,0,2],
+"Typing_8hpp_source.html":[2,0,0,3],
 "annotated.html":[1,0],
 "classMelon_1_1Exceptions_1_1BufferOverflow.html":[0,0,0,0,0],
 "classMelon_1_1Exceptions_1_1BufferOverflow.html":[1,0,0,0,0],
@@ -48,6 +49,8 @@ var NAVTREEINDEX0 =
 "classMelon_1_1Memory_1_1Buffer.html#aedf9df3c71765ebded5f2f12de0a976a":[1,0,0,1,0,1],
 "classes.html":[1,1],
 "dir_856524284ebe840938865dc061f982fb.html":[2,0,0],
+"dir_c6004c54a184687a9ffd011df5cb2576.html":[2,0,0,0],
+"dir_eaa1cea92258d40377f53d34e8ce0258.html":[2,0,0,0,0],
 "files.html":[2,0],
 "functions.html":[1,3,0],
 "functions_func.html":[1,3,1],
