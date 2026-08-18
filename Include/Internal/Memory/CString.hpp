@@ -25,6 +25,11 @@ namespace Melon::Memory
                 /// @return boolean
                 bool operator ==(this const CString &self, const CString &other);
 
+                /// @brief Checks if a string is different to this one.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator !=(this const CString &self, const CString &other);
+
                 /// @brief Gets a character by its index in the string.
                 /// @param index character position
                 /// @return character at given position

@@ -34,11 +34,20 @@ namespace Melon::Test
                         TARWI_EXPECT(str1 == str2);
                 }
 
+                TARWI_UNIT(unitOperatorNotEqual)
+                {
+                        Memory::CString str1("Foo");
+                        Memory::CString str2("Bar");
+
+                        TARWI_EXPECT(str1 != str2);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitLength);
                         TARWI_CALL_UNIT(unitGetByIndex);
                         TARWI_CALL_UNIT(unitOperatorEqual);
+                        TARWI_CALL_UNIT(unitOperatorNotEqual);
                 }
         };
 } // namespace Melon::Test
