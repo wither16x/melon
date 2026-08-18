@@ -1,17 +1,24 @@
 var classMelon_1_1Memory_1_1Buffer =
 [
-    [ "Buffer", "classMelon_1_1Memory_1_1Buffer.html#ae1dd2e687c0799762d49661ce83d0f7f", null ],
+    [ "Buffer", "classMelon_1_1Memory_1_1Buffer.html#a94e7c140bea779cb193d51912571ba43", null ],
+    [ "Buffer", "classMelon_1_1Memory_1_1Buffer.html#a1a55ec1c4107d76c6ffb107612cea6ee", null ],
+    [ "Buffer", "classMelon_1_1Memory_1_1Buffer.html#a1011e3c79845a1b9d49bb4588c3da785", null ],
+    [ "~Buffer", "classMelon_1_1Memory_1_1Buffer.html#a808072abbab4497d0c0a7dac80af8aa0", null ],
+    [ "begin", "classMelon_1_1Memory_1_1Buffer.html#af780584b1910e6b82c1f8a89accf2164", null ],
     [ "compare", "classMelon_1_1Memory_1_1Buffer.html#aedf9df3c71765ebded5f2f12de0a976a", null ],
     [ "copy", "classMelon_1_1Memory_1_1Buffer.html#a1fc534b2ed9e9399f2d3979c5c26c260", null ],
+    [ "end", "classMelon_1_1Memory_1_1Buffer.html#ac9d56132582d17822153cd278022df96", null ],
     [ "get", "classMelon_1_1Memory_1_1Buffer.html#a15b3a15f9d08fb0a50ddfa76a3dcbc6a", null ],
     [ "move", "classMelon_1_1Memory_1_1Buffer.html#a3f5d1858e5f58d1a6ad7a41016dd6f92", null ],
     [ "operator!=", "classMelon_1_1Memory_1_1Buffer.html#ae209ba990fc9d75d3a357073e5255ca6", null ],
     [ "operator<", "classMelon_1_1Memory_1_1Buffer.html#a707a536814632943dfc2a3c09cba945f", null ],
     [ "operator<=", "classMelon_1_1Memory_1_1Buffer.html#a909ade1c1fa84fbc6167f4f25c3b34b2", null ],
+    [ "operator=", "classMelon_1_1Memory_1_1Buffer.html#a9c457268da5b88e34637152e6e72bc5e", null ],
+    [ "operator=", "classMelon_1_1Memory_1_1Buffer.html#a0c6b173bb0288e83f43e68e555f1f390", null ],
     [ "operator==", "classMelon_1_1Memory_1_1Buffer.html#a2796bcd5dd0f76d353bb25fd3b5df989", null ],
     [ "operator>", "classMelon_1_1Memory_1_1Buffer.html#a85fa02a27319e5fe42e37eca8a686a03", null ],
     [ "operator>=", "classMelon_1_1Memory_1_1Buffer.html#ab053f8469286e491aeb9d93838468b35", null ],
-    [ "operator[]", "classMelon_1_1Memory_1_1Buffer.html#abe2c893ab9fb375f0a0013d27dd4257b", null ],
+    [ "operator[]", "classMelon_1_1Memory_1_1Buffer.html#acd02f6361bb3b239645d41c0eaab9321", null ],
     [ "set", "classMelon_1_1Memory_1_1Buffer.html#a84b100c260ec0778cdf939711cb56f4e", null ],
     [ "size", "classMelon_1_1Memory_1_1Buffer.html#a6359280d4517e7d746b6b96b5a55f57a", null ]
 ];

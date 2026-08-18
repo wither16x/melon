@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Internal/Memory/Buffer.hpp"
+
 #include "Typing.hpp"
 
 namespace Melon::Vector
@@ -8,7 +10,7 @@ namespace Melon::Vector
         template<typename T>
         class Vector
         {
-                T *buf;
+                Memory::Buffer<T> buf;
                 Typing::USize obj_count;
                 Typing::USize __capacity;
 
@@ -17,23 +19,22 @@ namespace Melon::Vector
                 ///
                 /// Allocates minimal space to store the buffer.
                 Vector()
-                        : buf(new T[1]), obj_count(0), __capacity(1)
-                {}
+                        : obj_count(0), __capacity(1)
+                {
+                        this->buf = Memory::Buffer<T>(new T[this->__capacity], this->__capacity);
+                }
 
                 /// @brief Destructor.
-                ///
-                /// Frees the buffer if it is not null.
                 ~Vector()
                 {
-                        if (this->buf)
-                                delete[] buf;
+                        // TODO
                 }
 
                 /// @brief Gets a pointer to the internal buffer.
                 /// @return constant pointer to the internal buffer
                 const T *data(this const Vector<T> &self)
                 {
-                        return self.buf;
+                        return self.buf.get();
                 }
 
                 /// @brief Gets the length of the vector.
