@@ -60,8 +60,8 @@ namespace Melon::Memory
 
                 /// @brief Moves some objects from here to another buffer.
                 ///
-                /// This method is similar to copy() but it prevents from both buffers
-                /// to overlap.
+                /// This method is similar to copy() but it prevents both buffers
+                /// from overlapping.
                 /// @param dest destination buffer
                 /// @param size object count
                 /// @return destination buffer
@@ -107,16 +107,25 @@ namespace Melon::Memory
                         return self.__size;
                 }
 
+                /// @brief Checks if a buffer has same size and same content.
+                /// @param other other buffer
+                /// @return comparison result
                 bool operator ==(this const Buffer<T> &self, const Buffer<T> &other)
                 {
                         return self.__size == other.__size and self.compare(other, self.__size) == 0;
                 }
 
+                /// @brief Checks if a buffer does not have same size or same content.
+                /// @param other other buffer
+                /// @return comparison result
                 bool operator !=(this const Buffer<T> &self, const Buffer<T> &other)
                 {
                         return not (self == other);
                 }
 
+                /// @brief Checks if this buffer is smaller than another.
+                /// @param other other buffer
+                /// @return comparison result
                 bool operator <(this const Buffer<T> &self, const Buffer<T> &other)
                 {
                         Typing::USize size = self.__size < other.__size ? self.__size : other.__size;
@@ -126,6 +135,9 @@ namespace Melon::Memory
                         return self.__size < other.__size;
                 }
 
+                /// @brief Checks if this buffer is bigger than another.
+                /// @param other other buffer
+                /// @return comparison result
                 bool operator >(this const Buffer<T> &self, const Buffer<T> &other)
                 {
                         Typing::USize size = self.__size < other.__size ? self.__size : other.__size;
@@ -135,11 +147,17 @@ namespace Melon::Memory
                         return self.__size > other.__size;
                 }
 
+                /// @brief Checks if this buffer is smaller than or equals another.
+                /// @param other other buffer
+                /// @return comparison result
                 bool operator <=(this const Buffer<T> &self, const Buffer<T> &other)
                 {
                         return self < other or self == other;
                 }
 
+                /// @brief Checks if this buffer is bigger than or equals another.
+                /// @param other other buffer
+                /// @return comparison result
                 bool operator >=(this const Buffer<T> &self, const Buffer<T> &other)
                 {
                         return self > other or self == other;
