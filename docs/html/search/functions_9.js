@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7ecstring_0',['~CString',['../classMelon_1_1Memory_1_1CString.html#aba277d1da4e942fe15f550bf69204bc6',1,'Melon::Memory::CString']]]
+  ['set_0',['set',['../classMelon_1_1Memory_1_1Buffer.html#a84b100c260ec0778cdf939711cb56f4e',1,'Melon::Memory::Buffer']]],
+  ['size_1',['size',['../classMelon_1_1Memory_1_1Buffer.html#a6359280d4517e7d746b6b96b5a55f57a',1,'Melon::Memory::Buffer']]]
 ];

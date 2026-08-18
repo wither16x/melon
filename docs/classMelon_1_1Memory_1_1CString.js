@@ -2,7 +2,9 @@ var classMelon_1_1Memory_1_1CString =
 [
     [ "CString", "classMelon_1_1Memory_1_1CString.html#af9fe01baa4591775abddb84aadacf181", null ],
     [ "~CString", "classMelon_1_1Memory_1_1CString.html#aba277d1da4e942fe15f550bf69204bc6", null ],
+    [ "begin", "classMelon_1_1Memory_1_1CString.html#a8689d1b74f13a871af92a80b30c41068", null ],
     [ "copy", "classMelon_1_1Memory_1_1CString.html#a192f852f967d8eaa607c59d15702be5b", null ],
+    [ "end", "classMelon_1_1Memory_1_1CString.html#a4550f992623c29aab670290e03bf171c", null ],
     [ "get", "classMelon_1_1Memory_1_1CString.html#a1e1c2047d6d9750b083d257f30426529", null ],
     [ "has", "classMelon_1_1Memory_1_1CString.html#a3fb679a3c698f7dce62dacb222ddbde2", null ],
     [ "length", "classMelon_1_1Memory_1_1CString.html#a0d97d3493841340768f20ee0cde84ca8", null ],

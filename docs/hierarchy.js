@@ -5,5 +5,6 @@ var hierarchy =
     [ "std::exception", null, [
       [ "Melon::Exceptions::BufferOverflow", "classMelon_1_1Exceptions_1_1BufferOverflow.html", null ],
       [ "Melon::Exceptions::OutOfRange", "classMelon_1_1Exceptions_1_1OutOfRange.html", null ]
-    ] ]
+    ] ],
+    [ "Melon::Vector::Vector&lt; T &gt;", "classMelon_1_1Vector_1_1Vector.html", null ]
 ];

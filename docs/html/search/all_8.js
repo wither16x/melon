@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['set_0',['set',['../classMelon_1_1Memory_1_1Buffer.html#a84b100c260ec0778cdf939711cb56f4e',1,'Melon::Memory::Buffer']]],
-  ['size_1',['size',['../classMelon_1_1Memory_1_1Buffer.html#a6359280d4517e7d746b6b96b5a55f57a',1,'Melon::Memory::Buffer']]]
+  ['melon_3a_3aexceptions_0',['Exceptions',['../namespaceMelon_1_1Exceptions.html',1,'Melon']]],
+  ['melon_3a_3amemory_1',['Memory',['../namespaceMelon_1_1Memory.html',1,'Melon']]],
+  ['melon_3a_3atyping_2',['Typing',['../namespaceMelon_1_1Typing.html',1,'Melon']]],
+  ['move_3',['move',['../classMelon_1_1Memory_1_1Buffer.html#a3f5d1858e5f58d1a6ad7a41016dd6f92',1,'Melon::Memory::Buffer']]]
 ];
