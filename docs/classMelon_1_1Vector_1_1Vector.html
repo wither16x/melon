@@ -122,9 +122,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a97f75b55da38c8cb5b96435efe5a7d93" id="r_a97f75b55da38c8cb5b96435efe5a7d93"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a> ()</td></tr>
 <tr class="memdesc:a97f75b55da38c8cb5b96435efe5a7d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
-<tr class="memitem:a5e311e56f074b8ba0c30dd6f1d35acb7" id="r_a5e311e56f074b8ba0c30dd6f1d35acb7"><td class="memTemplParams" colspan="2"><a id="a5e311e56f074b8ba0c30dd6f1d35acb7" name="a5e311e56f074b8ba0c30dd6f1d35acb7"></a>
-template&lt;<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> N&gt; </td></tr>
-<tr class="memitem:a5e311e56f074b8ba0c30dd6f1d35acb7 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><b>Vector</b> (const T(&amp;objects)[N])</td></tr>
+<tr class="memitem:a5e311e56f074b8ba0c30dd6f1d35acb7" id="r_a5e311e56f074b8ba0c30dd6f1d35acb7"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> N&gt; </td></tr>
+<tr class="memitem:a5e311e56f074b8ba0c30dd6f1d35acb7 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5e311e56f074b8ba0c30dd6f1d35acb7">Vector</a> (const T(&amp;objects)[N])</td></tr>
+<tr class="memdesc:a5e311e56f074b8ba0c30dd6f1d35acb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the vector from existing objects.  <br /></td></tr>
 <tr class="memitem:a8e324ff87ab572333327b0096d5cbca6" id="r_a8e324ff87ab572333327b0096d5cbca6"><td class="memItemLeft"><a id="a8e324ff87ab572333327b0096d5cbca6" name="a8e324ff87ab572333327b0096d5cbca6"></a>
 &#160;</td><td class="memItemRight"><b>~Vector</b> ()</td></tr>
 <tr class="memdesc:a8e324ff87ab572333327b0096d5cbca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
@@ -134,15 +134,15 @@ template&lt;<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea6
 <tr class="memdesc:aba2a91d90549b0cf1bd54df51d8c6934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the length of the vector.  <br /></td></tr>
 <tr class="memitem:ae1bae41e148e5e9450c82ca95b974a67" id="r_ae1bae41e148e5e9450c82ca95b974a67"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae1bae41e148e5e9450c82ca95b974a67">capacity</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:ae1bae41e148e5e9450c82ca95b974a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capacity of the vector.  <br /></td></tr>
-<tr class="memitem:aafdfdd2601798dbc24eb7ff3a1a2866c" id="r_aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="memItemLeft"><a id="aafdfdd2601798dbc24eb7ff3a1a2866c" name="aafdfdd2601798dbc24eb7ff3a1a2866c"></a>
-T &amp;&#160;</td><td class="memItemRight"><b>operator[]</b> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
+<tr class="memitem:aafdfdd2601798dbc24eb7ff3a1a2866c" id="r_aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aafdfdd2601798dbc24eb7ff3a1a2866c">operator[]</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
+<tr class="memdesc:aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an object from the vector.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class Melon::Vector::Vector&lt; T &gt;</div><p>A linear dynamic generic container. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a97f75b55da38c8cb5b96435efe5a7d93" name="a97f75b55da38c8cb5b96435efe5a7d93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97f75b55da38c8cb5b96435efe5a7d93">&#9670;&#160;</a></span>Vector()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f75b55da38c8cb5b96435efe5a7d93">&#9670;&#160;</a></span>Vector() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,6 +168,43 @@ template&lt;typename T&gt; </div>
 
 <p>Default constructor. </p>
 <p>Allocates minimal space to store the buffer. </p>
+
+</div>
+</div>
+<a id="a5e311e56f074b8ba0c30dd6f1d35acb7" name="a5e311e56f074b8ba0c30dd6f1d35acb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e311e56f074b8ba0c30dd6f1d35acb7">&#9670;&#160;</a></span>Vector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::Vector </td>
+          <td>(</td>
+          <td class="paramtype">const T(&amp;)</td>          <td class="paramname"><span class="paramname"><em>objects</em></span>[N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the vector from existing objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">objects</td><td>array of objects </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -259,6 +296,45 @@ template&lt;typename T&gt; </div>
 
 <p>Gets the length of the vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>object count </dd></dl>
+
+</div>
+</div>
+<a id="aafdfdd2601798dbc24eb7ff3a1a2866c" name="aafdfdd2601798dbc24eb7ff3a1a2866c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafdfdd2601798dbc24eb7ff3a1a2866c">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an object from the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>object position </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -24,6 +24,8 @@ namespace Melon::Vector
                         this->buf = Memory::Buffer<T>(new T[this->__capacity], this->__capacity);
                 }
 
+                /// @brief Constructs the vector from existing objects.
+                /// @param objects array of objects
                 template<Typing::USize N>
                 Vector(const T (&objects)[N])
                 {
@@ -63,6 +65,8 @@ namespace Melon::Vector
                         return self.__capacity;
                 }
 
+                /// @brief Gets an object from the vector.
+                /// @param index object position
                 T &operator [](this Vector<T> &self, Typing::USize index)
                 {
                         return self.buf[index];
