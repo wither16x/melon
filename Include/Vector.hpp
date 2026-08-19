@@ -24,6 +24,18 @@ namespace Melon::Vector
                         this->buf = Memory::Buffer<T>(new T[this->__capacity], this->__capacity);
                 }
 
+                template<Typing::USize N>
+                Vector(const T (&objects)[N])
+                {
+                        this->__capacity = N;
+                        this->buf = Memory::Buffer<T>(new T[this->__capacity], this->__capacity);
+
+                        for (Typing::USize i = 0; i < N; i++) {
+                                this->buf[i] = objects[i];
+                                ++this->obj_count;
+                        }
+                }
+
                 /// @brief Destructor.
                 ~Vector()
                 {
@@ -49,6 +61,11 @@ namespace Melon::Vector
                 Typing::USize capacity(this const Vector<T> &self)
                 {
                         return self.__capacity;
+                }
+
+                T &operator [](this Vector<T> &self, Typing::USize index)
+                {
+                        return self.buf[index];
                 }
         };
 } // namespace Melon::Vector

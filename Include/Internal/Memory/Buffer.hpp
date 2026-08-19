@@ -48,11 +48,11 @@ namespace Melon::Memory
                 /// @param other buffer to move data and size to
                 Buffer(Buffer<T> &&other)
                 {
-                        memcpy(other.data, this->data, this->__size);
-                        other.__size = this->__size;
+                        memcpy(this->data, other.data, other.__size);
+                        this->__size = other.__size;
 
-                        memset(this->data, 0, this->__size);
-                        this->__size = 0;
+                        memset(other.data, 0, other.__size);
+                        other.__size = 0;
                 }
 
                 /// @brief Destructor.
@@ -256,11 +256,11 @@ namespace Melon::Memory
                 Buffer<T> &operator =(this Buffer<T> &self, Buffer<T> &&other)
                 {
                         if (self != other) {
-                                memcpy(other.data, self.data, self.__size);
-                                other.__size = self.__size;
+                                memcpy(self.data, other.data, other.__size);
+                                self.__size = other.__size;
 
-                                memset(self.data, 0, self.__size);
-                                self.__size = 0;
+                                memset(other.data, 0, other.__size);
+                                other.__size = 0;
                         }
 
                         return self;

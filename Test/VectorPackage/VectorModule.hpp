@@ -22,9 +22,20 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitVectorOfInts)
+                {
+                        Vector::Vector<int> vec({1, 2, 3, 4, 5});
+
+                        TARWI_EXPECT(
+                                vec[0] == 1 and vec[1] == 2 and vec[2] == 3 and vec[3] == 4
+                                and vec[4] == 5
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
+                        TARWI_CALL_UNIT(unitVectorOfInts);
                 }
         };
 } // namespace Melon::Test

@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Typing.hpp"
 #include <Tarwi.hpp>
 #include <TarwiGlobals.hpp>
 
@@ -159,6 +160,24 @@ namespace Melon::Test
                         TARWI_EXPECT(caught);
                 }
 
+                TARWI_UNIT(unitCheckResize)
+                {
+                        Typing::Uint32 data[] = {150, 250, 550, 780};
+                        Memory::Buffer<Typing::Uint32> buf(data, sizeof(data));
+
+                        buf.resize(buf.size() * 2);
+                        buf[4] = 950;
+                        buf[5] = 1230;
+                        buf[6] = 2350;
+                        buf[7] = 3225;
+
+                        TARWI_EXPECT(
+                                buf[0] == 150 and buf[1] == 250 and buf[2] == 550
+                                and buf[3] == 780 and buf[4] == 950 and buf[5] == 1230
+                                and buf[6] == 2350 and buf[7] == 3225
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
@@ -172,6 +191,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitSmallerBigger);
                         TARWI_CALL_UNIT(unitGetByIndex);
                         TARWI_CALL_UNIT(unitGetOutOfRange);
+                        TARWI_CALL_UNIT(unitCheckResize);
                 }
         };
 } // namespace Melon::Test

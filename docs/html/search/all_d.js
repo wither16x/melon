@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_0',['what',['../classMelon_1_1Exceptions_1_1BufferOverflow.html#a52087b72546021f2eeab45bc6e17cf13',1,'Melon::Exceptions::BufferOverflow::what()'],['../classMelon_1_1Exceptions_1_1OutOfRange.html#a07a7efd3580a98441862ef47f63bd081',1,'Melon::Exceptions::OutOfRange::what()']]]
+  ['vector_0',['Vector',['../classMelon_1_1Vector_1_1Vector.html',1,'Melon::Vector::Vector&lt; T &gt;'],['../classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93',1,'Melon::Vector::Vector::Vector()']]]
 ];
