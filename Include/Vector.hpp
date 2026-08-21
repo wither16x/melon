@@ -104,6 +104,13 @@ namespace Melon::Vector
                         }
                 }
 
+                /// @brief Clears the vector.
+                void clear(this Vector<T> &self)
+                {
+                        self.buf.set(0, self.buf.size());
+                        self.obj_count = 0;
+                }
+
                 /// @brief Gets a pointer to the internal buffer.
                 /// @return constant pointer to the internal buffer
                 const T *data(this const Vector<T> &self)

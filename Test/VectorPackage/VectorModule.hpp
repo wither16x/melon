@@ -102,6 +102,14 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitClear)
+                {
+                        Vector::Vector<int> vec({12, 24, 48, 96});
+                        vec.clear();
+
+                        TARWI_EXPECT(vec[0] == 0 and vec.length() == 0);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
@@ -110,6 +118,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitIsEmpty);
                         TARWI_CALL_UNIT(unitEmplaceBack);
                         TARWI_CALL_UNIT(unitPopBack);
+                        TARWI_CALL_UNIT(unitClear);
                 }
         };
 } // namespace Melon::Test
