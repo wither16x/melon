@@ -32,10 +32,27 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitPushBack)
+                {
+                        Vector::Vector<int> vec({250, 500, 750, 1000});
+
+                        vec.pushBack(1250);
+                        vec.pushBack(1500);
+                        vec.pushBack(1750);
+                        vec.pushBack(2000);
+
+                        TARWI_EXPECT(
+                                vec[0] == 250 and vec[1] == 500 and vec[2] == 750
+                                and vec[3] == 1000 and vec[4] == 1250 and vec[5] == 1500
+                                and vec[6] == 1750 and vec[7] == 2000
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
                         TARWI_CALL_UNIT(unitVectorOfInts);
+                        TARWI_CALL_UNIT(unitPushBack);
                 }
         };
 } // namespace Melon::Test
