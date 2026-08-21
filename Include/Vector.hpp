@@ -92,6 +92,13 @@ namespace Melon::Vector
                         return self.__capacity;
                 }
 
+                /// @brief Checks if the vector is empty.
+                /// @return boolean
+                bool isEmpty(this const Vector<T> &self)
+                {
+                        return self.obj_count == 0;
+                }
+
                 /// @brief Gets an object from the vector.
                 /// @param index object position
                 T &operator [](this Vector<T> &self, Typing::USize index)

@@ -48,11 +48,23 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitIsEmpty)
+                {
+                        Vector::Vector<int> vec_with_elems({2, 4, 6, 8, 10, 12});
+                        Vector::Vector<int> empty_vec;
+
+                        TARWI_EXPECT(
+                                not vec_with_elems.isEmpty()
+                                and empty_vec.isEmpty()
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
                         TARWI_CALL_UNIT(unitVectorOfInts);
                         TARWI_CALL_UNIT(unitPushBack);
+                        TARWI_CALL_UNIT(unitIsEmpty);
                 }
         };
 } // namespace Melon::Test
