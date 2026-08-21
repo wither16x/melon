@@ -5,5 +5,6 @@ var searchData=
   ['int64_2',['Int64',['../namespaceMelon_1_1Typing.html#a1bd6d1943a3dd2eaef1914211b009008',1,'Melon::Typing']]],
   ['int8_3',['Int8',['../namespaceMelon_1_1Typing.html#a0039fd8e73c471ce721aca12d0e668cf',1,'Melon::Typing']]],
   ['intpointer_4',['IntPointer',['../namespaceMelon_1_1Typing.html#ac8abfa69e05110102620014b1031b81e',1,'Melon::Typing']]],
-  ['isize_5',['ISize',['../namespaceMelon_1_1Typing.html#a3c501a24fdfa94a5ed9ceb854d953480',1,'Melon::Typing']]]
+  ['isempty_5',['isEmpty',['../classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5',1,'Melon::Vector::Vector']]],
+  ['isize_6',['ISize',['../namespaceMelon_1_1Typing.html#a3c501a24fdfa94a5ed9ceb854d953480',1,'Melon::Typing']]]
 ];

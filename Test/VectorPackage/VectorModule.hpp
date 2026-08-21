@@ -59,12 +59,43 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitEmplaceBack)
+                {
+                        struct Person
+                        {
+                                const char *name;
+                                unsigned int age;
+
+                                Person() = default;
+
+                                Person(const char *name, unsigned int age)
+                                        : name(name), age(age)
+                                {}
+                        };
+
+                        Vector::Vector<Person> persons;
+                        persons.emplaceBack("John", 42);
+                        persons.emplaceBack("Tom", 24);
+                        persons.emplaceBack("Harry", 11);
+                        persons.emplaceBack("Lea", 35);
+                        persons.emplaceBack("Martine", 76);
+
+                        TARWI_EXPECT(
+                                strcmp(persons[0].name, "John") == 0 and persons[0].age == 42 and
+                                strcmp(persons[1].name, "Tom") == 0 and persons[1].age == 24 and
+                                strcmp(persons[2].name, "Harry") == 0 and persons[2].age == 11 and
+                                strcmp(persons[3].name, "Lea") == 0 and persons[3].age == 35 and
+                                strcmp(persons[4].name, "Martine") == 0 and persons[4].age == 76
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
                         TARWI_CALL_UNIT(unitVectorOfInts);
                         TARWI_CALL_UNIT(unitPushBack);
                         TARWI_CALL_UNIT(unitIsEmpty);
+                        TARWI_CALL_UNIT(unitEmplaceBack);
                 }
         };
 } // namespace Melon::Test

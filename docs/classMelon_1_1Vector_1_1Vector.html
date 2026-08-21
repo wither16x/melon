@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>A linear dynamic generic container.  
+<p>A linear dynamic generic container. TODO: if possible, support objects with no default constructor.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>&gt;</code></p>
@@ -133,21 +133,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ada06e924fb890340d4365fb997831c2d" id="r_ada06e924fb890340d4365fb997831c2d"><td class="memItemLeft">const T *&#160;</td><td class="memItemRight"><a class="el" href="#ada06e924fb890340d4365fb997831c2d">end</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:ada06e924fb890340d4365fb997831c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the end of the data.  <br /></td></tr>
 <tr class="memitem:ab044158e92c57087c40540231b7cd156" id="r_ab044158e92c57087c40540231b7cd156"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab044158e92c57087c40540231b7cd156">pushBack</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, const T &amp;object)</td></tr>
-<tr class="memdesc:ab044158e92c57087c40540231b7cd156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an element to the end of the vector.  <br /></td></tr>
+<tr class="memdesc:ab044158e92c57087c40540231b7cd156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an object to the end of the vector.  <br /></td></tr>
+<tr class="memitem:a921c81811f31b8203cd9ff67e77e8389" id="r_a921c81811f31b8203cd9ff67e77e8389"><td class="memTemplParams" colspan="2">template&lt;typename... ARGS&gt; </td></tr>
+<tr class="memitem:a921c81811f31b8203cd9ff67e77e8389 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a921c81811f31b8203cd9ff67e77e8389">emplaceBack</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, ARGS &amp;&amp;...args)</td></tr>
+<tr class="memdesc:a921c81811f31b8203cd9ff67e77e8389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an object and add it at the end of the vector.  <br /></td></tr>
 <tr class="memitem:a82a8121b0ffd2a0c06f9f6a09052b11b" id="r_a82a8121b0ffd2a0c06f9f6a09052b11b"><td class="memItemLeft">const T *&#160;</td><td class="memItemRight"><a class="el" href="#a82a8121b0ffd2a0c06f9f6a09052b11b">data</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:a82a8121b0ffd2a0c06f9f6a09052b11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the internal buffer.  <br /></td></tr>
 <tr class="memitem:aba2a91d90549b0cf1bd54df51d8c6934" id="r_aba2a91d90549b0cf1bd54df51d8c6934"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#aba2a91d90549b0cf1bd54df51d8c6934">length</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:aba2a91d90549b0cf1bd54df51d8c6934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the length of the vector.  <br /></td></tr>
 <tr class="memitem:ae1bae41e148e5e9450c82ca95b974a67" id="r_ae1bae41e148e5e9450c82ca95b974a67"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae1bae41e148e5e9450c82ca95b974a67">capacity</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:ae1bae41e148e5e9450c82ca95b974a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capacity of the vector.  <br /></td></tr>
-<tr class="memitem:ad887a62a38d16ff54bc5a8bb60e801a5" id="r_ad887a62a38d16ff54bc5a8bb60e801a5"><td class="memItemLeft"><a id="ad887a62a38d16ff54bc5a8bb60e801a5" name="ad887a62a38d16ff54bc5a8bb60e801a5"></a>
-bool&#160;</td><td class="memItemRight"><b>isEmpty</b> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
+<tr class="memitem:ad887a62a38d16ff54bc5a8bb60e801a5" id="r_ad887a62a38d16ff54bc5a8bb60e801a5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad887a62a38d16ff54bc5a8bb60e801a5">isEmpty</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
+<tr class="memdesc:ad887a62a38d16ff54bc5a8bb60e801a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the vector is empty.  <br /></td></tr>
 <tr class="memitem:aafdfdd2601798dbc24eb7ff3a1a2866c" id="r_aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aafdfdd2601798dbc24eb7ff3a1a2866c">operator[]</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
 <tr class="memdesc:aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an object from the vector.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class Melon::Vector::Vector&lt; T &gt;</div><p>A linear dynamic generic container. </p>
+class Melon::Vector::Vector&lt; T &gt;</div><p>A linear dynamic generic container. TODO: if possible, support objects with no default constructor. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a97f75b55da38c8cb5b96435efe5a7d93" name="a97f75b55da38c8cb5b96435efe5a7d93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97f75b55da38c8cb5b96435efe5a7d93">&#9670;&#160;</a></span>Vector() <span class="overload">[1/2]</span></h2>
@@ -307,6 +310,47 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a921c81811f31b8203cd9ff67e77e8389" name="a921c81811f31b8203cd9ff67e77e8389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921c81811f31b8203cd9ff67e77e8389">&#9670;&#160;</a></span>emplaceBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<div class="memtemplate">
+template&lt;typename... ARGS&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::emplaceBack </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ARGS &amp;&amp;...</td>          <td class="paramname"><span class="paramname"><em>args</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an object and add it at the end of the vector. </p>
+<p>If the number of objects in the vector exceeds the vector's capacity, the buffer is extended to two times the current capacity. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>constructor arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ada06e924fb890340d4365fb997831c2d" name="ada06e924fb890340d4365fb997831c2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada06e924fb890340d4365fb997831c2d">&#9670;&#160;</a></span>end()</h2>
 
@@ -334,6 +378,36 @@ template&lt;typename T&gt; </div>
 
 <p>Gets a pointer to the end of the data. </p>
 <dl class="section return"><dt>Returns</dt><dd>constant pointer to end of data </dd></dl>
+
+</div>
+</div>
+<a id="ad887a62a38d16ff54bc5a8bb60e801a5" name="ad887a62a38d16ff54bc5a8bb60e801a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad887a62a38d16ff54bc5a8bb60e801a5">&#9670;&#160;</a></span>isEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::isEmpty </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if the vector is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
 </div>
 </div>
@@ -435,7 +509,7 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Add an element to the end of the vector. </p>
+<p>Add an object to the end of the vector. </p>
 <p>If the number of objects in the vector exceeds the vector's capacity, the buffer is extended to two times the current capacity. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">object</td><td>object to add </td></tr>

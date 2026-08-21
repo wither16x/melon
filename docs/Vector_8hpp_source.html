@@ -120,115 +120,130 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('Vector_8hpp_so
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>Melon::Vector</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html">   11</a></span>        <span class="keyword">class </span><a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                <a class="code hl_class" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer&lt;T&gt;</a> buf;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> obj_count;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> __capacity;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">   21</a></span>                <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>()</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                        : obj_count(0), __capacity(1)</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                        this-&gt;buf = <a class="code hl_class" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer&lt;T&gt;</a>(<span class="keyword">new</span> T[this-&gt;__capacity], this-&gt;__capacity);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                }</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html">   12</a></span>        <span class="keyword">class </span><a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                <a class="code hl_class" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer&lt;T&gt;</a> buf;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> obj_count;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> __capacity;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">   22</a></span>                <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                        : obj_count(0), __capacity(1)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                        this-&gt;buf = <a class="code hl_class" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer&lt;T&gt;</a>(<span class="keyword">new</span> T[this-&gt;__capacity], this-&gt;__capacity);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                }</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <span class="keyword">template</span>&lt;Typing::USize N&gt;</div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7">   30</a></span>                <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7">Vector</a>(<span class="keyword">const</span> T (&amp;objects)[N])</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                        this-&gt;__capacity = N;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                        this-&gt;buf = <a class="code hl_class" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer&lt;T&gt;</a>(<span class="keyword">new</span> T[this-&gt;__capacity], this-&gt;__capacity);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                        <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> i = 0;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                        <span class="keywordflow">for</span> (; i &lt; N; i++)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                                this-&gt;buf[i] = objects[i];</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        this-&gt;obj_count = i;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                <span class="keyword">template</span>&lt;Typing::USize N&gt;</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7">   31</a></span>                <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7">Vector</a>(<span class="keyword">const</span> T (&amp;objects)[N])</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                        this-&gt;__capacity = N;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                        this-&gt;buf = <a class="code hl_class" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer&lt;T&gt;</a>(<span class="keyword">new</span> T[this-&gt;__capacity * N], this-&gt;__capacity);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                        <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> i = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                        <span class="keywordflow">for</span> (; i &lt; N; i++)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                                this-&gt;buf[i] = objects[i];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                        this-&gt;obj_count = i;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                }</div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a8e324ff87ab572333327b0096d5cbca6">   42</a></span>                <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a8e324ff87ab572333327b0096d5cbca6">~Vector</a>()</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                        <span class="comment">// TODO</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a8e324ff87ab572333327b0096d5cbca6">   43</a></span>                <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a8e324ff87ab572333327b0096d5cbca6">~Vector</a>()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                        <span class="comment">// TODO</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                }</div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#aa01418f6de2842608282a3e34485e541">   49</a></span>                <span class="keyword">const</span> T *<a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#aa01418f6de2842608282a3e34485e541">begin</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                        <span class="keywordflow">return</span> self.buf.begin();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#aa01418f6de2842608282a3e34485e541">   50</a></span>                <span class="keyword">const</span> T *<a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#aa01418f6de2842608282a3e34485e541">begin</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                        <span class="keywordflow">return</span> self.buf.begin();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                }</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d">   56</a></span>                <span class="keyword">const</span> T *<a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d">end</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                {</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                        <span class="keywordflow">return</span> self.buf.end();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d">   57</a></span>                <span class="keyword">const</span> T *<a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d">end</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                        <span class="keywordflow">return</span> self.buf.end();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                }</div>
 </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156">   66</a></span>                <span class="keywordtype">void</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156">pushBack</a>(<span class="keyword">this</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self, <span class="keyword">const</span> T &amp;<span class="keywordtype">object</span>)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                        <span class="keywordflow">if</span> (self.obj_count &gt;= self.__capacity)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                self.buf.resize(self.__capacity * 2);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                        self.buf[self.obj_count++] = object;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156">   67</a></span>                <span class="keywordtype">void</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156">pushBack</a>(<span class="keyword">this</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self, <span class="keyword">const</span> T &amp;<span class="keywordtype">object</span>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                        <span class="keywordflow">if</span> (self.obj_count &gt;= self.__capacity)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                self.buf.resize(self.buf.size() * 2);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                        self.buf[self.obj_count++] = object;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                }</div>
 </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span></div>
-<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a82a8121b0ffd2a0c06f9f6a09052b11b">   76</a></span>                <span class="keyword">const</span> T *<a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a82a8121b0ffd2a0c06f9f6a09052b11b">data</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                        <span class="keywordflow">return</span> self.buf.get();</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... ARGS&gt;</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a921c81811f31b8203cd9ff67e77e8389">   81</a></span>                <span class="keywordtype">void</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a921c81811f31b8203cd9ff67e77e8389">emplaceBack</a>(<span class="keyword">this</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self, ARGS &amp;&amp;...args)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                        <span class="keywordflow">if</span> (self.obj_count &gt;= self.__capacity)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                                self.buf.resize(self.buf.size() * 2);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                        self.buf[self.obj_count] = T(args...);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                        ++self.obj_count;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                }</div>
 </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
-<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934">   83</a></span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934">length</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                        <span class="keywordflow">return</span> self.obj_count;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#a82a8121b0ffd2a0c06f9f6a09052b11b">   92</a></span>                <span class="keyword">const</span> T *<a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a82a8121b0ffd2a0c06f9f6a09052b11b">data</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                        <span class="keywordflow">return</span> self.buf.get();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                }</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span></div>
-<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#ae1bae41e148e5e9450c82ca95b974a67">   90</a></span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#ae1bae41e148e5e9450c82ca95b974a67">capacity</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                        <span class="keywordflow">return</span> self.__capacity;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934">   99</a></span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934">length</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                        <span class="keywordflow">return</span> self.obj_count;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                }</div>
 </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                <span class="keywordtype">bool</span> isEmpty(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_class" href="classMelon_1_1Vector_1_1Vector.html">Vector&lt;T&gt;</a> &amp;self)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                        <span class="keywordflow">return</span> self.obj_count == 0;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
-<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#aafdfdd2601798dbc24eb7ff3a1a2866c">  102</a></span>                T &amp;<a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#aafdfdd2601798dbc24eb7ff3a1a2866c">operator []</a>(<span class="keyword">this</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self, <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                        <span class="keywordflow">return</span> self.buf[index];</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#ae1bae41e148e5e9450c82ca95b974a67">  106</a></span>                <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#ae1bae41e148e5e9450c82ca95b974a67">capacity</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                        <span class="keywordflow">return</span> self.__capacity;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                }</div>
 </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        };</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span></div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5">  113</a></span>                <span class="keywordtype">bool</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5">isEmpty</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                        <span class="keywordflow">return</span> self.obj_count == 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>                }</div>
 </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>} <span class="comment">// namespace Melon::Vector</span></div>
-<div class="ttc" id="aclassMelon_1_1Memory_1_1Buffer_html"><div class="ttname"><a href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a></div><div class="ttdoc">Container for raw memory.</div><div class="ttdef"><b>Definition</b> Buffer.hpp:19</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a></div><div class="ttdoc">A linear dynamic generic container.</div><div class="ttdef"><b>Definition</b> Vector.hpp:12</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a5e311e56f074b8ba0c30dd6f1d35acb7"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7">Melon::Vector::Vector::Vector</a></div><div class="ttdeci">Vector(const T(&amp;objects)[N])</div><div class="ttdoc">Constructs the vector from existing objects.</div><div class="ttdef"><b>Definition</b> Vector.hpp:30</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a82a8121b0ffd2a0c06f9f6a09052b11b"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a82a8121b0ffd2a0c06f9f6a09052b11b">Melon::Vector::Vector::data</a></div><div class="ttdeci">const T * data(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets a pointer to the internal buffer.</div><div class="ttdef"><b>Definition</b> Vector.hpp:76</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a8e324ff87ab572333327b0096d5cbca6"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a8e324ff87ab572333327b0096d5cbca6">Melon::Vector::Vector::~Vector</a></div><div class="ttdeci">~Vector()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> Vector.hpp:42</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a97f75b55da38c8cb5b96435efe5a7d93"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Melon::Vector::Vector::Vector</a></div><div class="ttdeci">Vector()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> Vector.hpp:21</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_aa01418f6de2842608282a3e34485e541"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#aa01418f6de2842608282a3e34485e541">Melon::Vector::Vector::begin</a></div><div class="ttdeci">const T * begin(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets a pointer to the base of the data.</div><div class="ttdef"><b>Definition</b> Vector.hpp:49</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_aafdfdd2601798dbc24eb7ff3a1a2866c"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#aafdfdd2601798dbc24eb7ff3a1a2866c">Melon::Vector::Vector::operator[]</a></div><div class="ttdeci">T &amp; operator[](this Vector&lt; T &gt; &amp;self, Typing::USize index)</div><div class="ttdoc">Gets an object from the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:102</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_ab044158e92c57087c40540231b7cd156"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156">Melon::Vector::Vector::pushBack</a></div><div class="ttdeci">void pushBack(this Vector&lt; T &gt; &amp;self, const T &amp;object)</div><div class="ttdoc">Add an element to the end of the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:66</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_aba2a91d90549b0cf1bd54df51d8c6934"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934">Melon::Vector::Vector::length</a></div><div class="ttdeci">Typing::USize length(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets the length of the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:83</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_ada06e924fb890340d4365fb997831c2d"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d">Melon::Vector::Vector::end</a></div><div class="ttdeci">const T * end(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets a pointer to the end of the data.</div><div class="ttdef"><b>Definition</b> Vector.hpp:56</div></div>
-<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_ae1bae41e148e5e9450c82ca95b974a67"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#ae1bae41e148e5e9450c82ca95b974a67">Melon::Vector::Vector::capacity</a></div><div class="ttdeci">Typing::USize capacity(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets the capacity of the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:90</div></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classMelon_1_1Vector_1_1Vector.html#aafdfdd2601798dbc24eb7ff3a1a2866c">  120</a></span>                T &amp;<a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#aafdfdd2601798dbc24eb7ff3a1a2866c">operator []</a>(<span class="keyword">this</span> <a class="code hl_function" href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Vector&lt;T&gt;</a> &amp;self, <a class="code hl_typedef" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                        <span class="keywordflow">return</span> self.buf[index];</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                }</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        };</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>} <span class="comment">// namespace Melon::Vector</span></div>
+<div class="ttc" id="aclassMelon_1_1Memory_1_1Buffer_html"><div class="ttname"><a href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a></div><div class="ttdoc">Container for raw memory.</div><div class="ttdef"><b>Definition</b> Buffer.hpp:18</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a5e311e56f074b8ba0c30dd6f1d35acb7"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7">Melon::Vector::Vector::Vector</a></div><div class="ttdeci">Vector(const T(&amp;objects)[N])</div><div class="ttdoc">Constructs the vector from existing objects.</div><div class="ttdef"><b>Definition</b> Vector.hpp:31</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a82a8121b0ffd2a0c06f9f6a09052b11b"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a82a8121b0ffd2a0c06f9f6a09052b11b">Melon::Vector::Vector::data</a></div><div class="ttdeci">const T * data(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets a pointer to the internal buffer.</div><div class="ttdef"><b>Definition</b> Vector.hpp:92</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a8e324ff87ab572333327b0096d5cbca6"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a8e324ff87ab572333327b0096d5cbca6">Melon::Vector::Vector::~Vector</a></div><div class="ttdeci">~Vector()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition</b> Vector.hpp:43</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a921c81811f31b8203cd9ff67e77e8389"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a921c81811f31b8203cd9ff67e77e8389">Melon::Vector::Vector::emplaceBack</a></div><div class="ttdeci">void emplaceBack(this Vector&lt; T &gt; &amp;self, ARGS &amp;&amp;...args)</div><div class="ttdoc">Construct an object and add it at the end of the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:81</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_a97f75b55da38c8cb5b96435efe5a7d93"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93">Melon::Vector::Vector::Vector</a></div><div class="ttdeci">Vector()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition</b> Vector.hpp:22</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_aa01418f6de2842608282a3e34485e541"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#aa01418f6de2842608282a3e34485e541">Melon::Vector::Vector::begin</a></div><div class="ttdeci">const T * begin(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets a pointer to the base of the data.</div><div class="ttdef"><b>Definition</b> Vector.hpp:50</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_aafdfdd2601798dbc24eb7ff3a1a2866c"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#aafdfdd2601798dbc24eb7ff3a1a2866c">Melon::Vector::Vector::operator[]</a></div><div class="ttdeci">T &amp; operator[](this Vector&lt; T &gt; &amp;self, Typing::USize index)</div><div class="ttdoc">Gets an object from the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:120</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_ab044158e92c57087c40540231b7cd156"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156">Melon::Vector::Vector::pushBack</a></div><div class="ttdeci">void pushBack(this Vector&lt; T &gt; &amp;self, const T &amp;object)</div><div class="ttdoc">Add an object to the end of the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:67</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_aba2a91d90549b0cf1bd54df51d8c6934"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934">Melon::Vector::Vector::length</a></div><div class="ttdeci">Typing::USize length(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets the length of the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:99</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_ad887a62a38d16ff54bc5a8bb60e801a5"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5">Melon::Vector::Vector::isEmpty</a></div><div class="ttdeci">bool isEmpty(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Checks if the vector is empty.</div><div class="ttdef"><b>Definition</b> Vector.hpp:113</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_ada06e924fb890340d4365fb997831c2d"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d">Melon::Vector::Vector::end</a></div><div class="ttdeci">const T * end(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets a pointer to the end of the data.</div><div class="ttdef"><b>Definition</b> Vector.hpp:57</div></div>
+<div class="ttc" id="aclassMelon_1_1Vector_1_1Vector_html_ae1bae41e148e5e9450c82ca95b974a67"><div class="ttname"><a href="classMelon_1_1Vector_1_1Vector.html#ae1bae41e148e5e9450c82ca95b974a67">Melon::Vector::Vector::capacity</a></div><div class="ttdeci">Typing::USize capacity(this const Vector&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets the capacity of the vector.</div><div class="ttdef"><b>Definition</b> Vector.hpp:106</div></div>
 <div class="ttc" id="anamespaceMelon_1_1Typing_html_a2429ada77c523bea640978c88ce4f9ce"><div class="ttname"><a href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Melon::Typing::USize</a></div><div class="ttdeci">size_t USize</div><div class="ttdoc">Biggest unsigned type.</div><div class="ttdef"><b>Definition</b> Typing.hpp:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

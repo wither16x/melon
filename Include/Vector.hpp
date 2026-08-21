@@ -7,6 +7,7 @@
 namespace Melon::Vector
 {
         /// @brief A linear dynamic generic container.
+        /// TODO: if possible, support objects with no default constructor
         template<typename T>
         class Vector
         {
@@ -30,7 +31,7 @@ namespace Melon::Vector
                 Vector(const T (&objects)[N])
                 {
                         this->__capacity = N;
-                        this->buf = Memory::Buffer<T>(new T[this->__capacity], this->__capacity);
+                        this->buf = Memory::Buffer<T>(new T[this->__capacity * N], this->__capacity);
 
                         Typing::USize i = 0;
                         for (; i < N; i++)
@@ -58,7 +59,7 @@ namespace Melon::Vector
                         return self.buf.end();
                 }
 
-                /// @brief Add an element to the end of the vector.
+                /// @brief Add an object to the end of the vector.
                 ///
                 /// If the number of objects in the vector exceeds the vector's capacity,
                 /// the buffer is extended to two times the current capacity.
@@ -66,9 +67,24 @@ namespace Melon::Vector
                 void pushBack(this Vector<T> &self, const T &object)
                 {
                         if (self.obj_count >= self.__capacity)
-                                self.buf.resize(self.__capacity * 2);
+                                self.buf.resize(self.buf.size() * 2);
 
                         self.buf[self.obj_count++] = object;
+                }
+
+                /// @brief Construct an object and add it at the end of the vector.
+                ///
+                /// If the number of objects in the vector exceeds the vector's capacity,
+                /// the buffer is extended to two times the current capacity.
+                /// @param args constructor arguments
+                template<typename... ARGS>
+                void emplaceBack(this Vector<T> &self, ARGS &&...args)
+                {
+                        if (self.obj_count >= self.__capacity)
+                                self.buf.resize(self.buf.size() * 2);
+
+                        self.buf[self.obj_count] = T(args...);
+                        ++self.obj_count;
                 }
 
                 /// @brief Gets a pointer to the internal buffer.

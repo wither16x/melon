@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resize_0',['resize',['../classMelon_1_1Memory_1_1Buffer.html#a5685449b40effde3d9f3616818fc99d8',1,'Melon::Memory::Buffer']]]
+  ['pushback_0',['pushBack',['../classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156',1,'Melon::Vector::Vector']]]
 ];
