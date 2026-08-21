@@ -4,7 +4,6 @@
 #include "../../Exceptions.hpp"
 
 #include <string.h>
-#include <type_traits>
 
 /// @brief Contains various classes and functions for memory management.
 namespace Melon::Memory 
@@ -12,9 +11,9 @@ namespace Melon::Memory
         /// @brief Container for raw memory.
         ///
         /// This container stores allocated raw memory and the size of the allocated area.
-        /// Know that as you can see below, `T` must be trivially constructible.
+        /// If `T` is not trivially constructible, its constructor will never be called
+        /// internally.
         template<typename T>
-                requires std::is_trivially_constructible_v<T>
         class Buffer
         {
                 T *data;
@@ -24,7 +23,7 @@ namespace Melon::Memory
                 Buffer()
                 {
                         this->data = new T[1];
-                        this->__size = 1;
+                        this->__size = 0;
                 }
 
                 /// @brief Constructs the buffer from existing raw memory.
