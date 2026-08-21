@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Exceptions.hpp"
 #include "Internal/Memory/Buffer.hpp"
 
 #include "Typing.hpp"
@@ -72,7 +73,7 @@ namespace Melon::Vector
                         self.buf[self.obj_count++] = object;
                 }
 
-                /// @brief Construct an object and add it at the end of the vector.
+                /// @brief Constructs an object and add it at the end of the vector.
                 ///
                 /// If the number of objects in the vector exceeds the vector's capacity,
                 /// the buffer is extended to two times the current capacity.
@@ -85,6 +86,22 @@ namespace Melon::Vector
 
                         self.buf[self.obj_count] = T(args...);
                         ++self.obj_count;
+                }
+
+                /// @brief Removes the last object from the vector.
+                ///
+                /// Actually, the object is not removed. The object count is basically
+                /// decremented, making the last object unaccessible.
+                /// @return last object
+                T &popBack(this Vector<T> &self)
+                {
+                        if (self.obj_count > 0) {
+                                --self.obj_count;
+                                T &obj = self.buf[self.obj_count];
+                                return obj;
+                        } else {
+                                throw Exceptions::OutOfRange(self.obj_count, 0);
+                        }
                 }
 
                 /// @brief Gets a pointer to the internal buffer.

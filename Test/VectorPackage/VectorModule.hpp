@@ -89,6 +89,19 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitPopBack)
+                {
+                        Vector::Vector<float> vec({0.0f, 0.5f, 1.0f, 1.5f, 2.0f, 2.5f});
+                        float f5 = vec.popBack();
+                        float f4 = vec.popBack();
+                        float f3 = vec.popBack();
+
+                        TARWI_EXPECT(
+                                f5 == 2.5f and f4 == 2.0f and f3 == 1.5f
+                                and vec.length() == 3
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
@@ -96,6 +109,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitPushBack);
                         TARWI_CALL_UNIT(unitIsEmpty);
                         TARWI_CALL_UNIT(unitEmplaceBack);
+                        TARWI_CALL_UNIT(unitPopBack);
                 }
         };
 } // namespace Melon::Test

@@ -11,5 +11,6 @@ var classMelon_1_1Vector_1_1Vector =
     [ "isEmpty", "classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5", null ],
     [ "length", "classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934", null ],
     [ "operator[]", "classMelon_1_1Vector_1_1Vector.html#aafdfdd2601798dbc24eb7ff3a1a2866c", null ],
+    [ "popBack", "classMelon_1_1Vector_1_1Vector.html#aeb51f1abba19866dce1ee57c4702513c", null ],
     [ "pushBack", "classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156", null ]
 ];
