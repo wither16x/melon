@@ -53,12 +53,20 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitCheckAssign)
+                {
+                        String::String str = "I am a string!";
+
+                        TARWI_EXPECT(strcmp(str.raw(), "I am a string!") == 0);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
                         TARWI_CALL_UNIT(unitGetByIndex);
                         TARWI_CALL_UNIT(unitSetByIndex);
                         TARWI_CALL_UNIT(unitGetLength);
+                        TARWI_CALL_UNIT(unitCheckAssign);
                 }
         };
 } // namespace Melon::Test
