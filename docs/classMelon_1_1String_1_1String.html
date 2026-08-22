@@ -130,6 +130,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5587032c94d16a1bdd62847c9e257111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a character from its index.  <br /></td></tr>
 <tr class="memitem:a605f44a5ad6b47639ace439747f61074" id="r_a605f44a5ad6b47639ace439747f61074"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a605f44a5ad6b47639ace439747f61074">operator==</a> (this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;self, const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;other)</td></tr>
 <tr class="memdesc:a605f44a5ad6b47639ace439747f61074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if both strings are the same.  <br /></td></tr>
+<tr class="memitem:a2553354903f273c39354f9983135454b" id="r_a2553354903f273c39354f9983135454b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a2553354903f273c39354f9983135454b">operator&lt;</a> (this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;self, const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;other)</td></tr>
+<tr class="memdesc:a2553354903f273c39354f9983135454b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this string is smaller than another.  <br /></td></tr>
+<tr class="memitem:ae9bbeff82843e8b755ff230bdc182a79" id="r_ae9bbeff82843e8b755ff230bdc182a79"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ae9bbeff82843e8b755ff230bdc182a79">operator&gt;</a> (this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;self, const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;other)</td></tr>
+<tr class="memdesc:ae9bbeff82843e8b755ff230bdc182a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this string is bigger than another.  <br /></td></tr>
+<tr class="memitem:a3262dd15cb6ec03d130ca49df679312b" id="r_a3262dd15cb6ec03d130ca49df679312b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3262dd15cb6ec03d130ca49df679312b">operator&lt;=</a> (this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;self, const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;other)</td></tr>
+<tr class="memdesc:a3262dd15cb6ec03d130ca49df679312b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this string is smaller than another or if both have the same size.  <br /></td></tr>
+<tr class="memitem:a53d24ae1f8dee11d2e8f1dac21e7e112" id="r_a53d24ae1f8dee11d2e8f1dac21e7e112"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a53d24ae1f8dee11d2e8f1dac21e7e112">operator&gt;=</a> (this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;self, const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;other)</td></tr>
+<tr class="memdesc:a53d24ae1f8dee11d2e8f1dac21e7e112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this string is bigger than another or if both have the same size.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A dynamic string. </p>
@@ -180,6 +188,66 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2553354903f273c39354f9983135454b" name="a2553354903f273c39354f9983135454b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2553354903f273c39354f9983135454b">&#9670;&#160;</a></span>operator&lt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Melon::String::String::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if this string is smaller than another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>string to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
+<a id="a3262dd15cb6ec03d130ca49df679312b" name="a3262dd15cb6ec03d130ca49df679312b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3262dd15cb6ec03d130ca49df679312b">&#9670;&#160;</a></span>operator&lt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Melon::String::String::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if this string is smaller than another or if both have the same size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>string to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
 <a id="a605f44a5ad6b47639ace439747f61074" name="a605f44a5ad6b47639ace439747f61074"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a605f44a5ad6b47639ace439747f61074">&#9670;&#160;</a></span>operator==()</h2>
 
@@ -200,6 +268,66 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if both strings are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>string to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
+<a id="ae9bbeff82843e8b755ff230bdc182a79" name="ae9bbeff82843e8b755ff230bdc182a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9bbeff82843e8b755ff230bdc182a79">&#9670;&#160;</a></span>operator&gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Melon::String::String::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if this string is bigger than another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>string to compare </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
+<a id="a53d24ae1f8dee11d2e8f1dac21e7e112" name="a53d24ae1f8dee11d2e8f1dac21e7e112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d24ae1f8dee11d2e8f1dac21e7e112">&#9670;&#160;</a></span>operator&gt;=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Melon::String::String::operator&gt;= </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#acbe1616adcfad64e9dc9fdd02062f51b">String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if this string is bigger than another or if both have the same size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">other</td><td>string to compare </td></tr>

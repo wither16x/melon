@@ -32,5 +32,25 @@ namespace Melon::String
                 /// @param other string to compare
                 /// @return boolean
                 bool operator ==(this const String &self, const String &other);
+
+                /// @brief Checks if this string is smaller than another.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator <(this const String &self, const String &other);
+
+                /// @brief Checks if this string is bigger than another.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator >(this const String &self, const String &other);
+
+                /// @brief Checks if this string is smaller than another or if both have the same size.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator <=(this const String &self, const String &other);
+
+                /// @brief Checks if this string is bigger than another or if both have the same size.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator >=(this const String &self, const String &other);
         };
 } // namespace Melon::String

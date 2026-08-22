@@ -28,4 +28,24 @@ namespace Melon::String
         {
                 return strcmp(self.chars.data(), other.chars.data()) == 0;
         }
+
+        bool String::operator <(this const String &self, const String &other)
+        {
+                return strcmp(self.chars.data(), other.chars.data()) < 0;
+        }
+
+        bool String::operator >(this const String &self, const String &other)
+        {
+                return strcmp(self.chars.data(), other.chars.data()) > 0;
+        }
+
+        bool String::operator <=(this const String &self, const String &other)
+        {
+                return strcmp(self.chars.data(), other.chars.data()) <= 0;
+        }
+
+        bool String::operator >=(this const String &self, const String &other)
+        {
+                return strcmp(self.chars.data(), other.chars.data()) >= 0;
+        }
 } // namespace Melon::String

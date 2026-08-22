@@ -60,6 +60,17 @@ namespace Melon::Test
                         TARWI_EXPECT(str == "I am a string!");
                 }
 
+                TARWI_UNIT(unitDifferentSizes)
+                {
+                        String::String small_str = "small";
+                        String::String very_big_str = "very big";
+
+                        TARWI_EXPECT(
+                                small_str < very_big_str and
+                                very_big_str > small_str
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
@@ -67,6 +78,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitSetByIndex);
                         TARWI_CALL_UNIT(unitGetLength);
                         TARWI_CALL_UNIT(unitCheckAssign);
+                        TARWI_CALL_UNIT(unitDifferentSizes);
                 }
         };
 } // namespace Melon::Test
