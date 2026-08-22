@@ -10,7 +10,7 @@ var annotated_dup =
         [ "CString", "classMelon_1_1Memory_1_1CString.html", "classMelon_1_1Memory_1_1CString" ]
       ] ],
       [ "String", null, [
-        [ "String", "classMelon_1_1String_1_1String.html", null ]
+        [ "String", "classMelon_1_1String_1_1String.html", "classMelon_1_1String_1_1String" ]
       ] ],
       [ "Vector", null, [
         [ "Vector", "classMelon_1_1Vector_1_1Vector.html", "classMelon_1_1Vector_1_1Vector" ]

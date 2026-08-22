@@ -8,4 +8,9 @@ namespace Melon::String
                 while (*s)
                         this->chars.pushBack(*s++);
         }
+
+        const char *String::raw(this const String &self)
+        {
+                return self.chars.data();
+        }
 } // namespace Melon::String
