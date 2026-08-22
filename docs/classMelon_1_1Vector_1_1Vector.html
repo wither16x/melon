@@ -125,9 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5e311e56f074b8ba0c30dd6f1d35acb7" id="r_a5e311e56f074b8ba0c30dd6f1d35acb7"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> N&gt; </td></tr>
 <tr class="memitem:a5e311e56f074b8ba0c30dd6f1d35acb7 template"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a5e311e56f074b8ba0c30dd6f1d35acb7">Vector</a> (const T(&amp;objects)[N])</td></tr>
 <tr class="memdesc:a5e311e56f074b8ba0c30dd6f1d35acb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the vector from existing objects.  <br /></td></tr>
-<tr class="memitem:a8e324ff87ab572333327b0096d5cbca6" id="r_a8e324ff87ab572333327b0096d5cbca6"><td class="memItemLeft"><a id="a8e324ff87ab572333327b0096d5cbca6" name="a8e324ff87ab572333327b0096d5cbca6"></a>
-&#160;</td><td class="memItemRight"><b>~Vector</b> ()</td></tr>
-<tr class="memdesc:a8e324ff87ab572333327b0096d5cbca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memitem:a1cd815a3c56f919836a167272bbccfc8" id="r_a1cd815a3c56f919836a167272bbccfc8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1cd815a3c56f919836a167272bbccfc8">Vector</a> (const Vector&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:a1cd815a3c56f919836a167272bbccfc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
+<tr class="memitem:a8e27572987268b8c37e7099035780d6d" id="r_a8e27572987268b8c37e7099035780d6d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8e27572987268b8c37e7099035780d6d">Vector</a> (Vector&lt; T &gt; &amp;&amp;other)</td></tr>
+<tr class="memdesc:a8e27572987268b8c37e7099035780d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <br /></td></tr>
 <tr class="memitem:aa01418f6de2842608282a3e34485e541" id="r_aa01418f6de2842608282a3e34485e541"><td class="memItemLeft">const T *&#160;</td><td class="memItemRight"><a class="el" href="#aa01418f6de2842608282a3e34485e541">begin</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:aa01418f6de2842608282a3e34485e541"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the base of the data.  <br /></td></tr>
 <tr class="memitem:ada06e924fb890340d4365fb997831c2d" id="r_ada06e924fb890340d4365fb997831c2d"><td class="memItemLeft">const T *&#160;</td><td class="memItemRight"><a class="el" href="#ada06e924fb890340d4365fb997831c2d">end</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
@@ -150,15 +151,21 @@ void&#160;</td><td class="memItemRight"><b>clear</b> (this <a class="el" href="#
 <tr class="memdesc:ae1bae41e148e5e9450c82ca95b974a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the capacity of the vector.  <br /></td></tr>
 <tr class="memitem:ad887a62a38d16ff54bc5a8bb60e801a5" id="r_ad887a62a38d16ff54bc5a8bb60e801a5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad887a62a38d16ff54bc5a8bb60e801a5">isEmpty</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:ad887a62a38d16ff54bc5a8bb60e801a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the vector is empty.  <br /></td></tr>
+<tr class="memitem:ade390aef16ca08c838244d8d64d71c48" id="r_ade390aef16ca08c838244d8d64d71c48"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ade390aef16ca08c838244d8d64d71c48">operator==</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:ade390aef16ca08c838244d8d64d71c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if both buffers are the same.  <br /></td></tr>
 <tr class="memitem:aafdfdd2601798dbc24eb7ff3a1a2866c" id="r_aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aafdfdd2601798dbc24eb7ff3a1a2866c">operator[]</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
 <tr class="memdesc:aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an object from the vector.  <br /></td></tr>
+<tr class="memitem:a83f794b90b06fbe7e88150e673a6ce48" id="r_a83f794b90b06fbe7e88150e673a6ce48"><td class="memItemLeft"><a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a83f794b90b06fbe7e88150e673a6ce48">operator=</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;other)</td></tr>
+<tr class="memdesc:a83f794b90b06fbe7e88150e673a6ce48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator.  <br /></td></tr>
+<tr class="memitem:a7ef96db4a0a256f123e8fbf603dbc550" id="r_a7ef96db4a0a256f123e8fbf603dbc550"><td class="memItemLeft"><a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7ef96db4a0a256f123e8fbf603dbc550">operator=</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;&amp;other)</td></tr>
+<tr class="memdesc:a7ef96db4a0a256f123e8fbf603dbc550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
 class Melon::Vector::Vector&lt; T &gt;</div><p>A linear dynamic generic container. TODO: if possible, support objects with no default constructor. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a97f75b55da38c8cb5b96435efe5a7d93" name="a97f75b55da38c8cb5b96435efe5a7d93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97f75b55da38c8cb5b96435efe5a7d93">&#9670;&#160;</a></span>Vector() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f75b55da38c8cb5b96435efe5a7d93">&#9670;&#160;</a></span>Vector() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +195,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="a5e311e56f074b8ba0c30dd6f1d35acb7" name="a5e311e56f074b8ba0c30dd6f1d35acb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e311e56f074b8ba0c30dd6f1d35acb7">&#9670;&#160;</a></span>Vector() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e311e56f074b8ba0c30dd6f1d35acb7">&#9670;&#160;</a></span>Vector() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,6 +225,76 @@ template&lt;<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea6
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">objects</td><td>array of objects </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cd815a3c56f919836a167272bbccfc8" name="a1cd815a3c56f919836a167272bbccfc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd815a3c56f919836a167272bbccfc8">&#9670;&#160;</a></span>Vector() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::Vector </td>
+          <td>(</td>
+          <td class="paramtype">const Vector&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>vector to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8e27572987268b8c37e7099035780d6d" name="a8e27572987268b8c37e7099035780d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e27572987268b8c37e7099035780d6d">&#9670;&#160;</a></span>Vector() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::Vector </td>
+          <td>(</td>
+          <td class="paramtype">Vector&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>vector to move </td></tr>
   </table>
   </dd>
 </dl>
@@ -443,6 +520,120 @@ template&lt;typename T&gt; </div>
 
 <p>Gets the length of the vector. </p>
 <dl class="section return"><dt>Returns</dt><dd>object count </dd></dl>
+
+</div>
+</div>
+<a id="a83f794b90b06fbe7e88150e673a6ce48" name="a83f794b90b06fbe7e88150e673a6ce48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83f794b90b06fbe7e88150e673a6ce48">&#9670;&#160;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp; <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy assignment operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>vector to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
+
+</div>
+</div>
+<a id="a7ef96db4a0a256f123e8fbf603dbc550" name="a7ef96db4a0a256f123e8fbf603dbc550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef96db4a0a256f123e8fbf603dbc550">&#9670;&#160;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp; <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Move assignment operator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>vector to copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
+
+</div>
+</div>
+<a id="ade390aef16ca08c838244d8d64d71c48" name="ade390aef16ca08c838244d8d64d71c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade390aef16ca08c838244d8d64d71c48">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::operator== </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if both buffers are the same. </p>
+<p>This checks for the buffer only, not for the object count and capacity. </p><dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
 
 </div>
 </div>

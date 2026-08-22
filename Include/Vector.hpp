@@ -5,6 +5,8 @@
 
 #include "Typing.hpp"
 
+#include <algorithm>
+
 namespace Melon::Vector
 {
         /// @brief A linear dynamic generic container.
@@ -32,7 +34,7 @@ namespace Melon::Vector
                 Vector(const T (&objects)[N])
                 {
                         this->__capacity = N;
-                        this->buf = Memory::Buffer<T>(new T[this->__capacity * N], this->__capacity);
+                        this->buf = Memory::Buffer<T>(new T[this->__capacity], this->__capacity);
 
                         Typing::USize i = 0;
                         for (; i < N; i++)
@@ -40,10 +42,25 @@ namespace Melon::Vector
                         this->obj_count = i;
                 }
 
-                /// @brief Destructor.
-                ~Vector()
+                /// @brief Copy constructor.
+                /// @param other vector to copy
+                Vector(const Vector<T> &other)
                 {
-                        // TODO
+                        this->buf = other.buf;
+                        this->__capacity = other.__capacity;
+                        this->obj_count = other.obj_count;
+                }
+
+                /// @brief Move constructor.
+                /// @param other vector to move
+                Vector(Vector<T> &&other)
+                {
+                        this->buf = std::move(other.buf);
+                        this->__capacity = other.__capacity;
+                        this->obj_count = other.obj_count;
+
+                        other.__capacity = 0;
+                        other.obj_count = 0;
                 }
 
                 /// @brief Gets a pointer to the base of the data.
@@ -139,11 +156,52 @@ namespace Melon::Vector
                         return self.obj_count == 0;
                 }
 
+                /// @brief Checks if both buffers are the same.
+                ///
+                /// This checks for the buffer only, not for the object count and
+                /// capacity.
+                /// @return boolean
+                bool operator ==(this const Vector<T> &self, const Vector<T> &other)
+                {
+                        return self.buf == other.buf;
+                }
+
                 /// @brief Gets an object from the vector.
                 /// @param index object position
                 T &operator [](this Vector<T> &self, Typing::USize index)
                 {
                         return self.buf[index];
+                }
+
+                /// @brief Copy assignment operator.
+                /// @param other vector to copy
+                /// @return self
+                Vector<T> &operator =(this Vector<T> &self, const Vector<T> &other)
+                {
+                        if (self != other) {
+                                self.buf = other.buf;
+                                self.__capacity = other.__capacity;
+                                self.obj_count = other.obj_count;
+                        }
+
+                        return self;
+                }
+
+                /// @brief Move assignment operator.
+                /// @param other vector to copy
+                /// @return self
+                Vector<T> &operator =(this Vector<T> &self, Vector<T> &&other)
+                {
+                        if (self != other) {
+                                self.buf = std::move(other.buf);
+                                self.__capacity = other.__capacity;
+                                self.obj_count = other.obj_count;
+
+                                other.__capacity = 0;
+                                other.obj_count = 0;
+                        }
+
+                        return self;
                 }
         };
 } // namespace Melon::Vector

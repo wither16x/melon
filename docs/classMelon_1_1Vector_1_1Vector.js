@@ -2,7 +2,8 @@ var classMelon_1_1Vector_1_1Vector =
 [
     [ "Vector", "classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93", null ],
     [ "Vector", "classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7", null ],
-    [ "~Vector", "classMelon_1_1Vector_1_1Vector.html#a8e324ff87ab572333327b0096d5cbca6", null ],
+    [ "Vector", "classMelon_1_1Vector_1_1Vector.html#a1cd815a3c56f919836a167272bbccfc8", null ],
+    [ "Vector", "classMelon_1_1Vector_1_1Vector.html#a8e27572987268b8c37e7099035780d6d", null ],
     [ "begin", "classMelon_1_1Vector_1_1Vector.html#aa01418f6de2842608282a3e34485e541", null ],
     [ "capacity", "classMelon_1_1Vector_1_1Vector.html#ae1bae41e148e5e9450c82ca95b974a67", null ],
     [ "clear", "classMelon_1_1Vector_1_1Vector.html#af3ad7bc751f8ca71cc75675a6c481ad8", null ],
@@ -11,6 +12,9 @@ var classMelon_1_1Vector_1_1Vector =
     [ "end", "classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d", null ],
     [ "isEmpty", "classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5", null ],
     [ "length", "classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934", null ],
+    [ "operator=", "classMelon_1_1Vector_1_1Vector.html#a83f794b90b06fbe7e88150e673a6ce48", null ],
+    [ "operator=", "classMelon_1_1Vector_1_1Vector.html#a7ef96db4a0a256f123e8fbf603dbc550", null ],
+    [ "operator==", "classMelon_1_1Vector_1_1Vector.html#ade390aef16ca08c838244d8d64d71c48", null ],
     [ "operator[]", "classMelon_1_1Vector_1_1Vector.html#aafdfdd2601798dbc24eb7ff3a1a2866c", null ],
     [ "popBack", "classMelon_1_1Vector_1_1Vector.html#aeb51f1abba19866dce1ee57c4702513c", null ],
     [ "pushBack", "classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156", null ]

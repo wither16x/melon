@@ -110,6 +110,13 @@ namespace Melon::Test
                         TARWI_EXPECT(vec[0] == 0 and vec.length() == 0);
                 }
 
+                TARWI_UNIT(unitAssign)
+                {
+                        Vector::Vector<int> vec= {{0, 1, 2}};
+                        Vector::Vector<int> vec2 = vec;
+                        TARWI_EXPECT(vec2 == vec);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
@@ -119,6 +126,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitEmplaceBack);
                         TARWI_CALL_UNIT(unitPopBack);
                         TARWI_CALL_UNIT(unitClear);
+                        TARWI_CALL_UNIT(unitAssign);
                 }
         };
 } // namespace Melon::Test
