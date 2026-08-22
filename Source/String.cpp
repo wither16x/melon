@@ -14,6 +14,11 @@ namespace Melon::String
                 return self.chars.data();
         }
 
+        Typing::USize String::length(this const String &self)
+        {
+                return self.chars.length();
+        }
+
         char &String::operator [](this String &self, Typing::USize index)
         {
                 return self.chars[index];

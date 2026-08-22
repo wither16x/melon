@@ -41,11 +41,24 @@ namespace Melon::Test
                         TARWI_EXPECT(strcmp(str.raw(), "bonono") == 0);
                 }
 
+                TARWI_UNIT(unitGetLength)
+                {
+                        String::String s1("melon"); // 5
+                        String::String s2("radish"); // 6
+                        String::String s3("kiwi"); // 4
+
+                        TARWI_EXPECT(
+                                s1.length() == 5 and s2.length() == 6
+                                and s3.length() == 4
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
                         TARWI_CALL_UNIT(unitGetByIndex);
                         TARWI_CALL_UNIT(unitSetByIndex);
+                        TARWI_CALL_UNIT(unitGetLength);
                 }
         };
 } // namespace Melon::Test

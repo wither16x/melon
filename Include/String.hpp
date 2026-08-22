@@ -19,6 +19,10 @@ namespace Melon::String
                 /// @return constant char pointer
                 const char *raw(this const String &self);
 
+                /// @brief Gets the length of the string.
+                /// @return internal vector length
+                Typing::USize length(this const String &self);
+
                 /// @brief Gets a character from its index.
                 /// @param index position of the character
                 /// @return character
