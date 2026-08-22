@@ -40,7 +40,8 @@ namespace Melon::Memory
                 /// @param other buffer to copy data to
                 Buffer(const Buffer<T> &other)
                 {
-                        memcpy(other.data, this->data, this->__size);
+                        this->__size = other.__size;
+                        memcpy(this->data, other.data, this->__size);
                 }
 
                 /// @brief Move constructor.
@@ -244,8 +245,10 @@ namespace Melon::Memory
                 /// @param other buffer to copy data to
                 Buffer<T> &operator =(this Buffer<T> &self, const Buffer<T> &other)
                 {
-                        if (self != other)
-                                memcpy(other.data, self.data, self.__size);
+                        if (self != other) {
+                                self.__size = other.__size;
+                                memcpy(self.data, other.data, other.__size);
+                        }
 
                         return self;
                 }
