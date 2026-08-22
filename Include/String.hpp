@@ -33,6 +33,11 @@ namespace Melon::String
                 /// @return boolean
                 bool operator ==(this const String &self, const String &other);
 
+                /// @brief Checks if both strings are different.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator !=(this const String &self, const String &other);
+
                 /// @brief Checks if this string is smaller than another.
                 /// @param other string to compare
                 /// @return boolean

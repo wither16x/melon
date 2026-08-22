@@ -71,6 +71,14 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitCheckDifferent)
+                {
+                        String::String s1 = "first";
+                        String::String s2 = "second";
+
+                        TARWI_EXPECT(s1 != s2);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
@@ -79,6 +87,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitGetLength);
                         TARWI_CALL_UNIT(unitCheckAssign);
                         TARWI_CALL_UNIT(unitDifferentSizes);
+                        TARWI_CALL_UNIT(unitCheckDifferent);
                 }
         };
 } // namespace Melon::Test
