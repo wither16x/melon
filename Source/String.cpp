@@ -13,4 +13,9 @@ namespace Melon::String
         {
                 return self.chars.data();
         }
+
+        char &String::operator [](this String &self, Typing::USize index)
+        {
+                return self.chars[index];
+        }
 } // namespace Melon::String
