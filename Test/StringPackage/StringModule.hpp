@@ -38,7 +38,7 @@ namespace Melon::Test
                         str[3] = 'o';
                         str[5] = 'o';
 
-                        TARWI_EXPECT(strcmp(str.raw(), "bonono") == 0);
+                        TARWI_EXPECT(str == "bonono");
                 }
 
                 TARWI_UNIT(unitGetLength)
@@ -57,7 +57,7 @@ namespace Melon::Test
                 {
                         String::String str = "I am a string!";
 
-                        TARWI_EXPECT(strcmp(str.raw(), "I am a string!") == 0);
+                        TARWI_EXPECT(str == "I am a string!");
                 }
 
                 TARWI_MODULE_MAIN()

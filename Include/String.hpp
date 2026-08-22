@@ -27,5 +27,10 @@ namespace Melon::String
                 /// @param index position of the character
                 /// @return character
                 char &operator [](this String &self, Typing::USize index);
+
+                /// @brief Checks if both strings are the same.
+                /// @param other string to compare
+                /// @return boolean
+                bool operator ==(this const String &self, const String &other);
         };
 } // namespace Melon::String
