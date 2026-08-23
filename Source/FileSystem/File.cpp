@@ -18,7 +18,15 @@ namespace Melon::FileSystem
 
         File::~File()
         {
-                fclose(this->stream);
+                this->close();
+        }
+
+        void File::close(this File &self)
+        {
+                if (self.isOpen()) {
+                        fclose(self.stream);
+                        self.stream = nullptr;
+                }
         }
 
         bool File::isOpen(this const File &self)
