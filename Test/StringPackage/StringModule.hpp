@@ -94,6 +94,13 @@ namespace Melon::Test
                         TARWI_EXPECT(firstname == "John Doe");
                 }
 
+                TARWI_UNIT(unitSubstraction)
+                {
+                        String::String fullname = "John Doe";
+                        String::String firstname = fullname.substract(4);
+                        TARWI_EXPECT(firstname == "John");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
@@ -105,6 +112,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitCheckDifferent);
                         TARWI_CALL_UNIT(unitAddition);
                         TARWI_CALL_UNIT(unitAssignmentAddition);
+                        TARWI_CALL_UNIT(unitSubstraction);
                 }
         };
 } // namespace Melon::Test

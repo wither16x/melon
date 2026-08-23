@@ -25,6 +25,11 @@ namespace Melon::String
                 /// @param other string to move
                 String(String &&other);
 
+                /// @brief Returns a substring from this string.
+                /// @param chars number of characters to substract
+                /// @return substring
+                String substract(this String &self, Typing::USize chars);
+
                 /// @brief Gets a raw buffer which contains the string characters.
                 /// @return constant char pointer
                 const char *raw(this const String &self);

@@ -26,6 +26,18 @@ namespace Melon::String
                 other.chars.clear();
         }
 
+        String String::substract(this String &self, Typing::USize chars)
+        {
+                String tmp = self;
+
+                tmp.chars.popBack(); // remove null terminator
+                for (Typing::USize i = 0; i < chars; i++)
+                        tmp.chars.popBack();
+                tmp.chars.pushBack('\0'); // add null terminator
+
+                return tmp;
+        }
+
         const char *String::raw(this const String &self)
         {
                 return self.chars.data();

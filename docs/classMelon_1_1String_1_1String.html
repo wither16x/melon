@@ -126,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a710d61a9dc1f296c81ff880178c12ae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor.  <br /></td></tr>
 <tr class="memitem:aba533370c7748b3e81c4f56e5d0e438c" id="r_aba533370c7748b3e81c4f56e5d0e438c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aba533370c7748b3e81c4f56e5d0e438c">String</a> (String &amp;&amp;other)</td></tr>
 <tr class="memdesc:aba533370c7748b3e81c4f56e5d0e438c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor.  <br /></td></tr>
+<tr class="memitem:ac9be64320132e02c0594d398cd93c4ad" id="r_ac9be64320132e02c0594d398cd93c4ad"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#ac9be64320132e02c0594d398cd93c4ad">substract</a> (this String &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> chars)</td></tr>
+<tr class="memdesc:ac9be64320132e02c0594d398cd93c4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a substring from this string.  <br /></td></tr>
 <tr class="memitem:adb05e3b9accc562aa7fef1ebe91a2242" id="r_adb05e3b9accc562aa7fef1ebe91a2242"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#adb05e3b9accc562aa7fef1ebe91a2242">raw</a> (this const String &amp;self)</td></tr>
 <tr class="memdesc:adb05e3b9accc562aa7fef1ebe91a2242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a raw buffer which contains the string characters.  <br /></td></tr>
 <tr class="memitem:a6f915379341221c6ba0ba15f2cc63f18" id="r_a6f915379341221c6ba0ba15f2cc63f18"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6f915379341221c6ba0ba15f2cc63f18">length</a> (this const String &amp;self)</td></tr>
@@ -631,6 +633,36 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets a raw buffer which contains the string characters. </p>
 <dl class="section return"><dt>Returns</dt><dd>constant char pointer </dd></dl>
+
+</div>
+</div>
+<a id="ac9be64320132e02c0594d398cd93c4ad" name="ac9be64320132e02c0594d398cd93c4ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9be64320132e02c0594d398cd93c4ad">&#9670;&#160;</a></span>substract()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Melon::String::String::substract </td>
+          <td>(</td>
+          <td class="paramtype">this String &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>chars</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a substring from this string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">chars</td><td>number of characters to substract </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>substring </dd></dl>
 
 </div>
 </div>
