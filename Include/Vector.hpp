@@ -18,6 +18,12 @@ namespace Melon::Vector
                 Typing::USize obj_count;
                 Typing::USize __capacity;
 
+                void extend(this Vector<T> &self)
+                {
+                        self.__capacity *= 2;
+                        self.buf.resize(self.__capacity);
+                }
+
         public:
                 /// @brief Default constructor.
                 ///
@@ -85,7 +91,7 @@ namespace Melon::Vector
                 void pushBack(this Vector<T> &self, const T &object)
                 {
                         if (self.obj_count >= self.__capacity)
-                                self.buf.resize(self.buf.size() * 2);
+                                self.extend();
 
                         self.buf[self.obj_count++] = object;
                 }
@@ -99,7 +105,7 @@ namespace Melon::Vector
                 void emplaceBack(this Vector<T> &self, ARGS &&...args)
                 {
                         if (self.obj_count >= self.__capacity)
-                                self.buf.resize(self.buf.size() * 2);
+                                self.extend();
 
                         self.buf[self.obj_count] = T(args...);
                         ++self.obj_count;
@@ -169,6 +175,13 @@ namespace Melon::Vector
                 /// @brief Gets an object from the vector.
                 /// @param index object position
                 T &operator [](this Vector<T> &self, Typing::USize index)
+                {
+                        return self.buf[index];
+                }
+
+                /// @brief Gets an object from the vector.
+                /// @param index object position
+                const T &operator [](this const Vector<T> &self, Typing::USize index)
                 {
                         return self.buf[index];
                 }
