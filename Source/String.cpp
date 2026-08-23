@@ -105,4 +105,10 @@ namespace Melon::String
 
                 return self;
         }
+
+        String &String::operator +=(this String &self, const String &other)
+        {
+                self = self + other;
+                return self;
+        }
 } // namespace Melon::String

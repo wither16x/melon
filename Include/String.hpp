@@ -87,5 +87,10 @@ namespace Melon::String
                 /// @param other string to move
                 /// @return self
                 String &operator =(this String &self, String &&other);
+
+                /// @brief Concatenate two strings.
+                /// @param other string to add
+                /// @return self
+                String &operator +=(this String &self, const String &other);
         };
 } // namespace Melon::String

@@ -6,6 +6,7 @@ var classMelon_1_1String_1_1String =
     [ "length", "classMelon_1_1String_1_1String.html#a6f915379341221c6ba0ba15f2cc63f18", null ],
     [ "operator!=", "classMelon_1_1String_1_1String.html#a08e9756ad2fe05ff9d0258974dc71a1f", null ],
     [ "operator+", "classMelon_1_1String_1_1String.html#aaabcd17055f119427e0438a4c1cf5df5", null ],
+    [ "operator+=", "classMelon_1_1String_1_1String.html#ac6b30b3bcf3eef23b031a008aee5f219", null ],
     [ "operator<", "classMelon_1_1String_1_1String.html#a2553354903f273c39354f9983135454b", null ],
     [ "operator<=", "classMelon_1_1String_1_1String.html#a3262dd15cb6ec03d130ca49df679312b", null ],
     [ "operator=", "classMelon_1_1String_1_1String.html#a9c69ceccdd9c1953cbc73585aa2aaf90", null ],

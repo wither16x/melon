@@ -85,6 +85,15 @@ namespace Melon::Test
                         TARWI_EXPECT(s3 == "Hello, world!");
                 }
 
+                TARWI_UNIT(unitAssignmentAddition)
+                {
+                        String::String firstname = "John";
+                        firstname += " ";
+                        String::String lastname = "Doe";
+                        firstname += lastname;
+                        TARWI_EXPECT(firstname == "John Doe");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
@@ -95,6 +104,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitDifferentSizes);
                         TARWI_CALL_UNIT(unitCheckDifferent);
                         TARWI_CALL_UNIT(unitAddition);
+                        TARWI_CALL_UNIT(unitAssignmentAddition);
                 }
         };
 } // namespace Melon::Test
