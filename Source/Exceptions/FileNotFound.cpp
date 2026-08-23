@@ -4,7 +4,7 @@
 
 namespace Melon::Exceptions
 {
-        FileNotFound::FileNotFound(const char *path)
+        FileNotFound::FileNotFound(const String::String &path)
                 : path(path)
         {}
 
@@ -14,7 +14,7 @@ namespace Melon::Exceptions
                 
                 snprintf(message, sizeof(message),
                         "file not found: %s",
-                        this->path
+                        this->path.raw()
                 );
 
                 return message;

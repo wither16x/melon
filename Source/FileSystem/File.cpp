@@ -9,7 +9,7 @@ namespace Melon::FileSystem
                 this->stream = fopen(path.raw(), modes.raw());
 
                 if (not this->stream)
-                        throw Exceptions::FileNotFound(path.raw());
+                        throw Exceptions::FileNotFound(path);
         }
 
         File::File(FILE *stream)

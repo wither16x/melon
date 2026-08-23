@@ -6,7 +6,7 @@
 #include <Internal/FileSystem/File.hpp>
 #include <Internal/FileSystem/StdStreams.hpp>
 
-#define RESOURCE_PATH   "Test/FileSystemPackage/Resources"
+#define RESOURCES_PATH   "Test/FileSystemPackage/Resources"
 
 namespace Melon::Test
 {
@@ -16,7 +16,7 @@ namespace Melon::Test
 
                 TARWI_UNIT(unitCheckRaii)
                 {
-                        FileSystem::File file(RESOURCE_PATH"/CheckRaii.txt", "rw");
+                        FileSystem::File file(RESOURCES_PATH"/CheckRaii.txt", "rw");
                         TARWI_EXPECT(file.isOpen());
                 }
 

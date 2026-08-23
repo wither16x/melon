@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../../String.hpp"
+
 #include <exception>
 
 /// @brief Contains custom exceptions.
@@ -10,10 +12,10 @@ namespace Melon::Exceptions
 {
         class FileNotFound: public std::exception
         {
-                const char *path;
+                const String::String &path;
 
         public:
-                FileNotFound(const char *path);
+                FileNotFound(const String::String &path);
 
                 const char *what() const noexcept;
         };
