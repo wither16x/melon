@@ -5,8 +5,10 @@
 namespace Melon::Exceptions
 {
         FileNotFound::FileNotFound(const String::String &path)
-                : path(path)
-        {}
+        {
+                this->path = new char[path.length()];
+                strcpy(this->path, path.raw());
+        }
 
         const char *FileNotFound::what() const noexcept
         {
@@ -14,7 +16,7 @@ namespace Melon::Exceptions
                 
                 snprintf(message, sizeof(message),
                         "file not found: %s",
-                        this->path.raw()
+                        this->path
                 );
 
                 return message;
