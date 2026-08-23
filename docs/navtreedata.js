@@ -49,7 +49,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Buffer_8hpp_source.html"
+"BufferOverflow_8hpp_source.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

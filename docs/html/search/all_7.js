@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['length_0',['length',['../classMelon_1_1Memory_1_1CString.html#a0d97d3493841340768f20ee0cde84ca8',1,'Melon::Memory::CString::length()'],['../classMelon_1_1String_1_1String.html#a6f915379341221c6ba0ba15f2cc63f18',1,'Melon::String::String::length()'],['../classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934',1,'Melon::Vector::Vector::length()']]]
+  ['int16_0',['Int16',['../namespaceMelon_1_1Typing.html#aaefef88591c010903b38788aee335b01',1,'Melon::Typing']]],
+  ['int32_1',['Int32',['../namespaceMelon_1_1Typing.html#ad71927750fa617dbe237e12f87acf169',1,'Melon::Typing']]],
+  ['int64_2',['Int64',['../namespaceMelon_1_1Typing.html#a1bd6d1943a3dd2eaef1914211b009008',1,'Melon::Typing']]],
+  ['int8_3',['Int8',['../namespaceMelon_1_1Typing.html#a0039fd8e73c471ce721aca12d0e668cf',1,'Melon::Typing']]],
+  ['intpointer_4',['IntPointer',['../namespaceMelon_1_1Typing.html#ac8abfa69e05110102620014b1031b81e',1,'Melon::Typing']]],
+  ['isempty_5',['isEmpty',['../classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5',1,'Melon::Vector::Vector']]],
+  ['isize_6',['ISize',['../namespaceMelon_1_1Typing.html#a3c501a24fdfa94a5ed9ceb854d953480',1,'Melon::Typing']]]
 ];

@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['vector_0',['Vector',['../classMelon_1_1Vector_1_1Vector.html',1,'Melon::Vector::Vector&lt; T &gt;'],['../classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93',1,'Melon::Vector::Vector::Vector()'],['../classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7',1,'Melon::Vector::Vector::Vector(const T(&amp;objects)[N])'],['../classMelon_1_1Vector_1_1Vector.html#a1cd815a3c56f919836a167272bbccfc8',1,'Melon::Vector::Vector::Vector(const Vector&lt; T &gt; &amp;other)'],['../classMelon_1_1Vector_1_1Vector.html#a8e27572987268b8c37e7099035780d6d',1,'Melon::Vector::Vector::Vector(Vector&lt; T &gt; &amp;&amp;other)']]],
-  ['vector_3c_20char_20_3e_1',['Vector&lt; char &gt;',['../classMelon_1_1Vector_1_1Vector.html',1,'Melon::Vector']]]
+  ['uint16_0',['Uint16',['../namespaceMelon_1_1Typing.html#a5e4626a468dcc30f140759209eb8f6fa',1,'Melon::Typing']]],
+  ['uint32_1',['Uint32',['../namespaceMelon_1_1Typing.html#a4dde83bcf103330a8468cc5b8ba57e6e',1,'Melon::Typing']]],
+  ['uint64_2',['Uint64',['../namespaceMelon_1_1Typing.html#aa8d047c3390b6088e27043eba2f59492',1,'Melon::Typing']]],
+  ['uint8_3',['Uint8',['../namespaceMelon_1_1Typing.html#a45ddff1a95fbf25846f49a23830dbdc5',1,'Melon::Typing']]],
+  ['upointer_4',['UPointer',['../namespaceMelon_1_1Typing.html#a515effa72822091382618d163ea40568',1,'Melon::Typing']]],
+  ['usize_5',['USize',['../namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce',1,'Melon::Typing']]]
 ];

@@ -1,4 +1,5 @@
-#include "Exceptions.hpp"
+#include <Internal/Exceptions/BufferOverflow.hpp>
+#include <String.hpp>
 
 #include <stdio.h>
 

@@ -115,10 +115,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('Buffer_8hpp_so
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;../../Typing.hpp&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../../Exceptions.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;../Exceptions/BufferOverflow.hpp&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../Exceptions/OutOfRange.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="namespaceMelon_1_1Memory.html">    9</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceMelon_1_1Memory.html">Melon::Memory</a> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
@@ -368,8 +369,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('Buffer_8hpp_so
 </div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>} <span class="comment">// namespace Melon::Memory</span></div>
 </div>
-<div class="ttc" id="aclassMelon_1_1Exceptions_1_1BufferOverflow_html"><div class="ttname"><a href="classMelon_1_1Exceptions_1_1BufferOverflow.html">Melon::Exceptions::BufferOverflow</a></div><div class="ttdoc">Thrown when a buffer overflows.</div><div class="ttdef"><b>Definition</b> Exceptions.hpp:15</div></div>
-<div class="ttc" id="aclassMelon_1_1Exceptions_1_1OutOfRange_html"><div class="ttname"><a href="classMelon_1_1Exceptions_1_1OutOfRange.html">Melon::Exceptions::OutOfRange</a></div><div class="ttdoc">Thrown when an index is out of range.</div><div class="ttdef"><b>Definition</b> Exceptions.hpp:31</div></div>
+<div class="ttc" id="aclassMelon_1_1Exceptions_1_1BufferOverflow_html"><div class="ttname"><a href="classMelon_1_1Exceptions_1_1BufferOverflow.html">Melon::Exceptions::BufferOverflow</a></div><div class="ttdoc">Thrown when a buffer overflows.</div><div class="ttdef"><b>Definition</b> BufferOverflow.hpp:11</div></div>
+<div class="ttc" id="aclassMelon_1_1Exceptions_1_1OutOfRange_html"><div class="ttname"><a href="classMelon_1_1Exceptions_1_1OutOfRange.html">Melon::Exceptions::OutOfRange</a></div><div class="ttdoc">Thrown when an index is out of range.</div><div class="ttdef"><b>Definition</b> OutOfRange.hpp:11</div></div>
 <div class="ttc" id="aclassMelon_1_1Memory_1_1Buffer_html_a0c6b173bb0288e83f43e68e555f1f390"><div class="ttname"><a href="classMelon_1_1Memory_1_1Buffer.html#a0c6b173bb0288e83f43e68e555f1f390">Melon::Memory::Buffer::operator=</a></div><div class="ttdeci">Buffer&lt; T &gt; &amp; operator=(this Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other)</div><div class="ttdoc">Copy assignment operator.</div><div class="ttdef"><b>Definition</b> Buffer.hpp:259</div></div>
 <div class="ttc" id="aclassMelon_1_1Memory_1_1Buffer_html_a1011e3c79845a1b9d49bb4588c3da785"><div class="ttname"><a href="classMelon_1_1Memory_1_1Buffer.html#a1011e3c79845a1b9d49bb4588c3da785">Melon::Memory::Buffer::Buffer</a></div><div class="ttdeci">Buffer(Buffer&lt; T &gt; &amp;&amp;other)</div><div class="ttdoc">Move constructor.</div><div class="ttdef"><b>Definition</b> Buffer.hpp:49</div></div>
 <div class="ttc" id="aclassMelon_1_1Memory_1_1Buffer_html_a15b3a15f9d08fb0a50ddfa76a3dcbc6a"><div class="ttname"><a href="classMelon_1_1Memory_1_1Buffer.html#a15b3a15f9d08fb0a50ddfa76a3dcbc6a">Melon::Memory::Buffer::get</a></div><div class="ttdeci">const T * get(this const Buffer&lt; T &gt; &amp;self)</div><div class="ttdoc">Gets a constant pointer to the raw memory.</div><div class="ttdef"><b>Definition</b> Buffer.hpp:132</div></div>

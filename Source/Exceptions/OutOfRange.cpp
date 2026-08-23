@@ -1,5 +1,5 @@
-#include "Exceptions.hpp"
-#include "Typing.hpp"
+#include <Internal/Exceptions/OutOfRange.hpp>
+#include <Typing.hpp>
 
 #include <stdio.h>
 

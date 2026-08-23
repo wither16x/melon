@@ -1,11 +1,11 @@
 #pragma once
 
 #include "../../Typing.hpp"
-#include "../../Exceptions.hpp"
+#include "../Exceptions/BufferOverflow.hpp"
+#include "../Exceptions/OutOfRange.hpp"
 
 #include <string.h>
 
-/// @brief Contains various classes and functions for memory management.
 namespace Melon::Memory 
 {
         /// @brief Container for raw memory.

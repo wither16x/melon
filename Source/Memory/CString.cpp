@@ -1,6 +1,6 @@
-#include "Internal/Memory/CString.hpp"
-#include "Exceptions.hpp"
-#include "Typing.hpp"
+#include <Internal/Memory/CString.hpp>
+#include <Internal/Exceptions/OutOfRange.hpp>
+#include <Typing.hpp>
 
 #include <string.h>
 
