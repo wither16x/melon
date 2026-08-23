@@ -161,6 +161,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab053f8469286e491aeb9d93838468b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if this buffer is bigger than or equals another.  <br /></td></tr>
 <tr class="memitem:acd02f6361bb3b239645d41c0eaab9321" id="r_acd02f6361bb3b239645d41c0eaab9321"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#acd02f6361bb3b239645d41c0eaab9321">operator[]</a> (this Buffer&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
 <tr class="memdesc:acd02f6361bb3b239645d41c0eaab9321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an object from the buffer.  <br /></td></tr>
+<tr class="memitem:abe2c893ab9fb375f0a0013d27dd4257b" id="r_abe2c893ab9fb375f0a0013d27dd4257b"><td class="memItemLeft">const T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#abe2c893ab9fb375f0a0013d27dd4257b">operator[]</a> (this const Buffer&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
+<tr class="memdesc:abe2c893ab9fb375f0a0013d27dd4257b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an object from the buffer.  <br /></td></tr>
 <tr class="memitem:a0c6b173bb0288e83f43e68e555f1f390" id="r_a0c6b173bb0288e83f43e68e555f1f390"><td class="memItemLeft">Buffer&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a0c6b173bb0288e83f43e68e555f1f390">operator=</a> (this Buffer&lt; T &gt; &amp;self, const Buffer&lt; T &gt; &amp;other)</td></tr>
 <tr class="memdesc:a0c6b173bb0288e83f43e68e555f1f390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator.  <br /></td></tr>
 <tr class="memitem:a9c457268da5b88e34637152e6e72bc5e" id="r_a9c457268da5b88e34637152e6e72bc5e"><td class="memItemLeft">Buffer&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a9c457268da5b88e34637152e6e72bc5e">operator=</a> (this Buffer&lt; T &gt; &amp;self, Buffer&lt; T &gt; &amp;&amp;other)</td></tr>
@@ -829,7 +831,7 @@ template&lt;typename T&gt; </div>
 </div>
 </div>
 <a id="acd02f6361bb3b239645d41c0eaab9321" name="acd02f6361bb3b239645d41c0eaab9321"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd02f6361bb3b239645d41c0eaab9321">&#9670;&#160;</a></span>operator[]()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acd02f6361bb3b239645d41c0eaab9321">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -843,6 +845,45 @@ template&lt;typename T&gt; </div>
           <td class="memname">T &amp; <a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::operator[] </td>
           <td>(</td>
           <td class="paramtype">this Buffer&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an object from the buffer. </p>
+<p>The object is returned by index. If the index is too high, <a class="el" href="classMelon_1_1Exceptions_1_1OutOfRange.html" title="Thrown when an index is out of range.">Exceptions::OutOfRange</a> will be thrown. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>position of the object in the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abe2c893ab9fb375f0a0013d27dd4257b" name="abe2c893ab9fb375f0a0013d27dd4257b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe2c893ab9fb375f0a0013d27dd4257b">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Melon::Memory::Buffer</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">this const Buffer&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

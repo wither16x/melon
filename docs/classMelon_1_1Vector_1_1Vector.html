@@ -155,6 +155,8 @@ void&#160;</td><td class="memItemRight"><b>clear</b> (this <a class="el" href="#
 <tr class="memdesc:ade390aef16ca08c838244d8d64d71c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if both buffers are the same.  <br /></td></tr>
 <tr class="memitem:aafdfdd2601798dbc24eb7ff3a1a2866c" id="r_aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aafdfdd2601798dbc24eb7ff3a1a2866c">operator[]</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
 <tr class="memdesc:aafdfdd2601798dbc24eb7ff3a1a2866c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an object from the vector.  <br /></td></tr>
+<tr class="memitem:a116c6008c748ea9d31f8f66836a744c5" id="r_a116c6008c748ea9d31f8f66836a744c5"><td class="memItemLeft">const T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a116c6008c748ea9d31f8f66836a744c5">operator[]</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
+<tr class="memdesc:a116c6008c748ea9d31f8f66836a744c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets an object from the vector.  <br /></td></tr>
 <tr class="memitem:a83f794b90b06fbe7e88150e673a6ce48" id="r_a83f794b90b06fbe7e88150e673a6ce48"><td class="memItemLeft"><a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a83f794b90b06fbe7e88150e673a6ce48">operator=</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;other)</td></tr>
 <tr class="memdesc:a83f794b90b06fbe7e88150e673a6ce48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator.  <br /></td></tr>
 <tr class="memitem:a7ef96db4a0a256f123e8fbf603dbc550" id="r_a7ef96db4a0a256f123e8fbf603dbc550"><td class="memItemLeft"><a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a7ef96db4a0a256f123e8fbf603dbc550">operator=</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;&amp;other)</td></tr>
@@ -637,8 +639,47 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a id="a116c6008c748ea9d31f8f66836a744c5" name="a116c6008c748ea9d31f8f66836a744c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116c6008c748ea9d31f8f66836a744c5">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets an object from the vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>object position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aafdfdd2601798dbc24eb7ff3a1a2866c" name="aafdfdd2601798dbc24eb7ff3a1a2866c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafdfdd2601798dbc24eb7ff3a1a2866c">&#9670;&#160;</a></span>operator[]()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aafdfdd2601798dbc24eb7ff3a1a2866c">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

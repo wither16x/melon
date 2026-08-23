@@ -5,8 +5,6 @@
 
 #include <String.hpp>
 
-#include <string.h>
-
 namespace Melon::Test
 {
         TARWI_MODULE(StringModule)
@@ -79,6 +77,14 @@ namespace Melon::Test
                         TARWI_EXPECT(s1 != s2);
                 }
 
+                TARWI_UNIT(unitAddition)
+                {
+                        String::String s1 = "Hello";
+                        String::String s2 = "world";
+                        String::String s3 = s1 + ", " + s2 + "!";
+                        TARWI_EXPECT(s3 == "Hello, world!");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
@@ -88,6 +94,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitCheckAssign);
                         TARWI_CALL_UNIT(unitDifferentSizes);
                         TARWI_CALL_UNIT(unitCheckDifferent);
+                        TARWI_CALL_UNIT(unitAddition);
                 }
         };
 } // namespace Melon::Test
