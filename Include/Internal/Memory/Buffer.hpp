@@ -241,6 +241,19 @@ namespace Melon::Memory
                         return self.data[index];
                 }
 
+                /// @brief Gets an object from the buffer.
+                ///
+                /// The object is returned by index. If the index is too high,
+                /// Exceptions::OutOfRange will be thrown.
+                /// @param index position of the object in the buffer
+                const T &operator [](this const Buffer<T> &self, Typing::USize index)
+                {
+                        if (index >= self.__size)
+                                throw Exceptions::OutOfRange(index, self.__size);
+
+                        return self.data[index];
+                }
+
                 /// @brief Copy assignment operator.
                 /// @param other buffer to copy data to
                 Buffer<T> &operator =(this Buffer<T> &self, const Buffer<T> &other)
