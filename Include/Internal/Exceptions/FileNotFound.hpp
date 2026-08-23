@@ -10,13 +10,17 @@
 /// as possible.
 namespace Melon::Exceptions
 {
+        /// @brief Thrown when a file was not found.
         class FileNotFound: public std::exception
         {
-                const String::String &path;
+                char *path;
 
         public:
+                /// @brief Main constructor.
+                /// @param path path to the file
                 FileNotFound(const String::String &path);
 
+                /// @return a formatted message describing the error
                 const char *what() const noexcept;
         };
 } // namespace Melon::Exceptions
