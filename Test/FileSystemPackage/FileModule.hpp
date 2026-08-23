@@ -5,6 +5,8 @@
 
 #include <Internal/FileSystem/File.hpp>
 #include <Internal/FileSystem/StdStreams.hpp>
+#include <Internal/Exceptions/FileNotFound.hpp>
+#include <Internal/Exceptions/NullStream.hpp>
 
 #define RESOURCES_PATH   "Test/FileSystemPackage/Resources"
 
@@ -29,10 +31,42 @@ namespace Melon::Test
                         TARWI_EXPECT(is_open_before_close and not is_open_after_close);
                 }
 
+                TARWI_UNIT(unitFileNotFound)
+                {
+                        bool caught = false;
+
+                        try {
+                                FileSystem::File file(RESOURCES_PATH"/Invisible.txt", "rw");
+                        } catch (const Exceptions::FileNotFound &e) {
+                                TARWI_OUTPUT("caught exception: %s\n", e.what());
+                                caught = true;
+                        }
+
+                        TARWI_EXPECT(caught);
+                }
+
+                TARWI_UNIT(unitNullStream)
+                {
+                        bool caught = false;
+
+                        FILE *stream = nullptr;
+
+                        try {
+                                FileSystem::File file(stream);
+                        } catch (const Exceptions::NullStream &e) {
+                                TARWI_OUTPUT("caught exception: %s\n", e.what());
+                                caught = true;
+                        }
+
+                        TARWI_EXPECT(caught);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
                         TARWI_CALL_UNIT(unitOpenClose);
+                        TARWI_CALL_UNIT(unitFileNotFound);
+                        TARWI_CALL_UNIT(unitNullStream);
                 }
         };
 } // namespace Melon::Test

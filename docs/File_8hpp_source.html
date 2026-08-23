@@ -120,24 +120,27 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('File_8hpp_sour
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>Melon::FileSystem</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classMelon_1_1FileSystem_1_1File.html">    9</a></span>        <span class="keyword">class </span>File</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                FILE *stream;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                File(<span class="keyword">const</span> <a class="code hl_class" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;path, <span class="keyword">const</span> <a class="code hl_class" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;modes);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                File(FILE *stream);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                ~File();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <span class="keywordtype">void</span> close(<span class="keyword">this</span> File &amp;self);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <span class="keywordtype">bool</span> isOpen(<span class="keyword">this</span> <span class="keyword">const</span> File &amp;self);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        };</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classMelon_1_1FileSystem_1_1File.html">   10</a></span>        <span class="keyword">class </span><a class="code hl_function" href="classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789">File</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                FILE *stream;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <a class="code hl_function" href="classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789">File</a>(<span class="keyword">const</span> <a class="code hl_class" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;path, <span class="keyword">const</span> <a class="code hl_class" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;modes);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <a class="code hl_function" href="classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789">File</a>(FILE *stream);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                <a class="code hl_function" href="classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789">~File</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="keywordtype">void</span> <a class="code hl_function" href="classMelon_1_1FileSystem_1_1File.html#a90bf3221bb8a43a6836eea44e4284852">close</a>(<span class="keyword">this</span> <a class="code hl_function" href="classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789">File</a> &amp;self);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordtype">bool</span> <a class="code hl_function" href="classMelon_1_1FileSystem_1_1File.html#ad3e5459466d1e424d7230e0632ead164">isOpen</a>(<span class="keyword">this</span> <span class="keyword">const</span> <a class="code hl_function" href="classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789">File</a> &amp;self);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        };</div>
 </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>} <span class="comment">// namespace Melon::FileSystem</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// namespace Melon::FileSystem</span></div>
+<div class="ttc" id="aclassMelon_1_1FileSystem_1_1File_html_a90bf3221bb8a43a6836eea44e4284852"><div class="ttname"><a href="classMelon_1_1FileSystem_1_1File.html#a90bf3221bb8a43a6836eea44e4284852">Melon::FileSystem::File::close</a></div><div class="ttdeci">void close(this File &amp;self)</div><div class="ttdoc">Close the file if it is open.</div><div class="ttdef"><b>Definition</b> File.cpp:27</div></div>
+<div class="ttc" id="aclassMelon_1_1FileSystem_1_1File_html_a935802573d5beba59f0064555d61e789"><div class="ttname"><a href="classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789">Melon::FileSystem::File::File</a></div><div class="ttdeci">File(const String::String &amp;path, const String::String &amp;modes)</div><div class="ttdoc">Open constructor.</div><div class="ttdef"><b>Definition</b> File.cpp:8</div></div>
+<div class="ttc" id="aclassMelon_1_1FileSystem_1_1File_html_ad3e5459466d1e424d7230e0632ead164"><div class="ttname"><a href="classMelon_1_1FileSystem_1_1File.html#ad3e5459466d1e424d7230e0632ead164">Melon::FileSystem::File::isOpen</a></div><div class="ttdeci">bool isOpen(this const File &amp;self)</div><div class="ttdoc">Checks if the file is open.</div><div class="ttdef"><b>Definition</b> File.cpp:35</div></div>
 <div class="ttc" id="aclassMelon_1_1String_1_1String_html"><div class="ttname"><a href="classMelon_1_1String_1_1String.html">Melon::String::String</a></div><div class="ttdoc">A dynamic string.</div><div class="ttdef"><b>Definition</b> String.hpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

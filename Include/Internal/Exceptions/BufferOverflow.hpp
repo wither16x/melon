@@ -13,7 +13,7 @@ namespace Melon::Exceptions
                 Typing::USize buffer_size;
 
         public:
-                /// @brief Main constructor for class BufferOverflow
+                /// @brief Main constructor for class BufferOverflow.
                 /// @param requested_size size requested by the user
                 /// @param buffer_size size of the buffer
                 BufferOverflow(Typing::USize requested_size, Typing::USize buffer_size);

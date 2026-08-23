@@ -112,18 +112,106 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
   <div class="headertitle"><div class="title">Melon::FileSystem::File Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Representation of a file stream.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="File_8hpp_source.html">File.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a935802573d5beba59f0064555d61e789" id="r_a935802573d5beba59f0064555d61e789"><td class="memItemLeft"><a id="a935802573d5beba59f0064555d61e789" name="a935802573d5beba59f0064555d61e789"></a>
-&#160;</td><td class="memItemRight"><b>File</b> (const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;path, const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;modes)</td></tr>
-<tr class="memitem:a73d28cc5f5c2e8daabd944fc1a30e788" id="r_a73d28cc5f5c2e8daabd944fc1a30e788"><td class="memItemLeft"><a id="a73d28cc5f5c2e8daabd944fc1a30e788" name="a73d28cc5f5c2e8daabd944fc1a30e788"></a>
-&#160;</td><td class="memItemRight"><b>File</b> (FILE *stream)</td></tr>
+<tr class="memitem:a935802573d5beba59f0064555d61e789" id="r_a935802573d5beba59f0064555d61e789"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> (const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;path, const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;modes)</td></tr>
+<tr class="memdesc:a935802573d5beba59f0064555d61e789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open constructor.  <br /></td></tr>
+<tr class="memitem:a73d28cc5f5c2e8daabd944fc1a30e788" id="r_a73d28cc5f5c2e8daabd944fc1a30e788"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a73d28cc5f5c2e8daabd944fc1a30e788">File</a> (FILE *stream)</td></tr>
+<tr class="memdesc:a73d28cc5f5c2e8daabd944fc1a30e788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the object from an existing stream.  <br /></td></tr>
+<tr class="memitem:af03335f59b3448632bf0a400dfa2e4c3" id="r_af03335f59b3448632bf0a400dfa2e4c3"><td class="memItemLeft"><a id="af03335f59b3448632bf0a400dfa2e4c3" name="af03335f59b3448632bf0a400dfa2e4c3"></a>
+&#160;</td><td class="memItemRight"><b>~File</b> ()</td></tr>
+<tr class="memdesc:af03335f59b3448632bf0a400dfa2e4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="memitem:a90bf3221bb8a43a6836eea44e4284852" id="r_a90bf3221bb8a43a6836eea44e4284852"><td class="memItemLeft"><a id="a90bf3221bb8a43a6836eea44e4284852" name="a90bf3221bb8a43a6836eea44e4284852"></a>
-void&#160;</td><td class="memItemRight"><b>close</b> (this File &amp;self)</td></tr>
-<tr class="memitem:ad3e5459466d1e424d7230e0632ead164" id="r_ad3e5459466d1e424d7230e0632ead164"><td class="memItemLeft"><a id="ad3e5459466d1e424d7230e0632ead164" name="ad3e5459466d1e424d7230e0632ead164"></a>
-bool&#160;</td><td class="memItemRight"><b>isOpen</b> (this const File &amp;self)</td></tr>
+void&#160;</td><td class="memItemRight"><b>close</b> (this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self)</td></tr>
+<tr class="memdesc:a90bf3221bb8a43a6836eea44e4284852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the file if it is open. <br /></td></tr>
+<tr class="memitem:ad3e5459466d1e424d7230e0632ead164" id="r_ad3e5459466d1e424d7230e0632ead164"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad3e5459466d1e424d7230e0632ead164">isOpen</a> (this const <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self)</td></tr>
+<tr class="memdesc:ad3e5459466d1e424d7230e0632ead164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the file is open.  <br /></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Representation of a file stream. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a935802573d5beba59f0064555d61e789" name="a935802573d5beba59f0064555d61e789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a935802573d5beba59f0064555d61e789">&#9670;&#160;</a></span>File() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Melon::FileSystem::File::File </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>modes</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>path to the file </td></tr>
+    <tr><td class="paramname">modes</td><td>open modes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73d28cc5f5c2e8daabd944fc1a30e788" name="a73d28cc5f5c2e8daabd944fc1a30e788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d28cc5f5c2e8daabd944fc1a30e788">&#9670;&#160;</a></span>File() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Melon::FileSystem::File::File </td>
+          <td>(</td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>stream</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the object from an existing stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>base stream </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ad3e5459466d1e424d7230e0632ead164" name="ad3e5459466d1e424d7230e0632ead164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e5459466d1e424d7230e0632ead164">&#9670;&#160;</a></span>isOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Melon::FileSystem::File::isOpen </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the file is open. </p>
+<p>If the stream is not null, then it is considered as open. </p><dl class="section return"><dt>Returns</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Include/Internal/FileSystem/<a class="el" href="File_8hpp_source.html">File.hpp</a></li>
 <li>Source/FileSystem/<b>File.cpp</b></li>

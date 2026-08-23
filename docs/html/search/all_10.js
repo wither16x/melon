@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['what_0',['what',['../classMelon_1_1Exceptions_1_1BufferOverflow.html#a52087b72546021f2eeab45bc6e17cf13',1,'Melon::Exceptions::BufferOverflow::what()'],['../classMelon_1_1Exceptions_1_1OutOfRange.html#a07a7efd3580a98441862ef47f63bd081',1,'Melon::Exceptions::OutOfRange::what()']]]
+  ['vector_0',['Vector',['../classMelon_1_1Vector_1_1Vector.html',1,'Melon::Vector::Vector&lt; T &gt;'],['../classMelon_1_1Vector_1_1Vector.html#a97f75b55da38c8cb5b96435efe5a7d93',1,'Melon::Vector::Vector::Vector()'],['../classMelon_1_1Vector_1_1Vector.html#a5e311e56f074b8ba0c30dd6f1d35acb7',1,'Melon::Vector::Vector::Vector(const T(&amp;objects)[N])'],['../classMelon_1_1Vector_1_1Vector.html#a1cd815a3c56f919836a167272bbccfc8',1,'Melon::Vector::Vector::Vector(const Vector&lt; T &gt; &amp;other)'],['../classMelon_1_1Vector_1_1Vector.html#a8e27572987268b8c37e7099035780d6d',1,'Melon::Vector::Vector::Vector(Vector&lt; T &gt; &amp;&amp;other)']]],
+  ['vector_3c_20char_20_3e_1',['Vector&lt; char &gt;',['../classMelon_1_1Vector_1_1Vector.html',1,'Melon::Vector']]]
 ];

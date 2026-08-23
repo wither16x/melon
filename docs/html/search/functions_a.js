@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['popback_0',['popBack',['../classMelon_1_1Vector_1_1Vector.html#aeb51f1abba19866dce1ee57c4702513c',1,'Melon::Vector::Vector']]],
-  ['pushback_1',['pushBack',['../classMelon_1_1Vector_1_1Vector.html#ab044158e92c57087c40540231b7cd156',1,'Melon::Vector::Vector']]]
+  ['nullstream_0',['NullStream',['../classMelon_1_1Exceptions_1_1NullStream.html#ae10d0020d2f0c7801663b0b806b5bc1a',1,'Melon::Exceptions::NullStream']]]
 ];

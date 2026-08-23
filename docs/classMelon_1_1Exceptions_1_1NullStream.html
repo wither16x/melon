@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Melon: Melon::Exceptions::FileNotFound Class Reference</title>
+<title>Melon: Melon::Exceptions::NullStream Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1Exceptions_1_1FileNotFound.html','','classMelon_1_1Exceptions_1_1FileNotFound-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1Exceptions_1_1NullStream.html','','classMelon_1_1Exceptions_1_1NullStream-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -109,58 +109,33 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Melon::Exceptions::FileNotFound Class Reference</div></div>
+  <div class="headertitle"><div class="title">Melon::Exceptions::NullStream Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Thrown when a file was not found.  
+<p>Thrown if an IO stream is null.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="FileNotFound_8hpp_source.html">FileNotFound.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="NullStream_8hpp_source.html">NullStream.hpp</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for Melon::Exceptions::FileNotFound:</div>
+Inheritance diagram for Melon::Exceptions::NullStream:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classMelon_1_1Exceptions_1_1FileNotFound.png" alt=""/>
+  <img src="classMelon_1_1Exceptions_1_1NullStream.png" alt=""/>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa7fbe6cd099cd5d8cb0be6ce86184a6e" id="r_aa7fbe6cd099cd5d8cb0be6ce86184a6e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa7fbe6cd099cd5d8cb0be6ce86184a6e">FileNotFound</a> (const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;path)</td></tr>
-<tr class="memdesc:aa7fbe6cd099cd5d8cb0be6ce86184a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main constructor.  <br /></td></tr>
-<tr class="memitem:a59256f96964e6abc934166ff54f5a31d" id="r_a59256f96964e6abc934166ff54f5a31d"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a59256f96964e6abc934166ff54f5a31d">what</a> () const noexcept</td></tr>
+<tr class="memitem:ae10d0020d2f0c7801663b0b806b5bc1a" id="r_ae10d0020d2f0c7801663b0b806b5bc1a"><td class="memItemLeft"><a id="ae10d0020d2f0c7801663b0b806b5bc1a" name="ae10d0020d2f0c7801663b0b806b5bc1a"></a>
+&#160;</td><td class="memItemRight"><b>NullStream</b> ()</td></tr>
+<tr class="memdesc:ae10d0020d2f0c7801663b0b806b5bc1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main constructor for class <a class="el" href="classMelon_1_1Exceptions_1_1NullStream.html" title="Thrown if an IO stream is null.">NullStream</a>. <br /></td></tr>
+<tr class="memitem:a7fbddabca206e8b9ce9905a5dd7c27e5" id="r_a7fbddabca206e8b9ce9905a5dd7c27e5"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a7fbddabca206e8b9ce9905a5dd7c27e5">what</a> () const noexcept</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Thrown when a file was not found. </p>
-</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa7fbe6cd099cd5d8cb0be6ce86184a6e" name="aa7fbe6cd099cd5d8cb0be6ce86184a6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7fbe6cd099cd5d8cb0be6ce86184a6e">&#9670;&#160;</a></span>FileNotFound()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Melon::Exceptions::FileNotFound::FileNotFound </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Main constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">path</td><td>path to the file </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a59256f96964e6abc934166ff54f5a31d" name="a59256f96964e6abc934166ff54f5a31d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59256f96964e6abc934166ff54f5a31d">&#9670;&#160;</a></span>what()</h2>
+<div class="textblock"><p>Thrown if an IO stream is null. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a7fbddabca206e8b9ce9905a5dd7c27e5" name="a7fbddabca206e8b9ce9905a5dd7c27e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fbddabca206e8b9ce9905a5dd7c27e5">&#9670;&#160;</a></span>what()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +144,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const char * Melon::Exceptions::FileNotFound::what </td>
+          <td class="memname">const char * Melon::Exceptions::NullStream::what </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -186,8 +161,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Include/Internal/Exceptions/<a class="el" href="FileNotFound_8hpp_source.html">FileNotFound.hpp</a></li>
-<li>Source/Exceptions/<b>FileNotFound.cpp</b></li>
+<li>Include/Internal/Exceptions/<a class="el" href="NullStream_8hpp_source.html">NullStream.hpp</a></li>
+<li>Source/Exceptions/<b>NullStream.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -202,7 +177,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Melon</b></li><li class="navelem"><a href="namespaceMelon_1_1Exceptions.html">Exceptions</a></li><li class="navelem"><a href="classMelon_1_1Exceptions_1_1FileNotFound.html">FileNotFound</a></li>
+    <li class="navelem"><b>Melon</b></li><li class="navelem"><a href="namespaceMelon_1_1Exceptions.html">Exceptions</a></li><li class="navelem"><a href="classMelon_1_1Exceptions_1_1NullStream.html">NullStream</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>
