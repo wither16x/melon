@@ -10,3 +10,4 @@ namespace Melon::Exceptions
 #include "Internal/Exceptions/BufferOverflow.hpp"
 #include "Internal/Exceptions/OutOfRange.hpp"
 #include "Internal/Exceptions/FileNotFound.hpp"
+#include "Internal/Exceptions/NullStream.hpp"
