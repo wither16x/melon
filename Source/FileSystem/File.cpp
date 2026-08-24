@@ -3,6 +3,8 @@
 #include <Internal/Exceptions/NullStream.hpp>
 #include <String.hpp>
 
+#include <stdio.h>
+
 namespace Melon::FileSystem
 {
         File::File(const String::String &path, const String::String &modes)
@@ -30,6 +32,15 @@ namespace Melon::FileSystem
                         fclose(self.stream);
                         self.stream = nullptr;
                 }
+        }
+
+        Memory::Buffer<char> File::readLine(this File &self, Typing::USize length)
+        {
+                char *p = new char[length];
+                fgets(p, length, self.stream);
+                Memory::Buffer<char> buffer(p, length);
+                delete[] p;
+                return buffer;
         }
 
         bool File::isOpen(this const File &self)

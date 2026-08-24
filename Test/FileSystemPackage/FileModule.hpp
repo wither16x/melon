@@ -61,12 +61,20 @@ namespace Melon::Test
                         TARWI_EXPECT(caught);
                 }
 
+                TARWI_UNIT(unitReadLine)
+                {
+                        FileSystem::File file(RESOURCES_PATH"/Line.txt", "r");
+                        Memory::Buffer<char> buf = file.readLine(255);
+                        TARWI_EXPECT(strcmp(buf.get(), "Hello! I am a file!\n") == 0);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
                         TARWI_CALL_UNIT(unitOpenClose);
                         TARWI_CALL_UNIT(unitFileNotFound);
                         TARWI_CALL_UNIT(unitNullStream);
+                        TARWI_CALL_UNIT(unitReadLine);
                 }
         };
 } // namespace Melon::Test

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../String.hpp"
+#include "../Memory/Buffer.hpp"
 
 #include <stdio.h>
 
@@ -26,6 +27,11 @@ namespace Melon::FileSystem
 
                 /// @brief Close the file if it is open.
                 void close(this File &self);
+
+                /// @brief Read a line from the file.
+                /// @param length character count
+                /// @return buffer containing the read bytes
+                Memory::Buffer<char> readLine(this File &self, Typing::USize length);
 
                 /// @brief Checks if the file is open.
                 ///
