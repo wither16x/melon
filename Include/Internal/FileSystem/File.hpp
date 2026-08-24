@@ -28,6 +28,11 @@ namespace Melon::FileSystem
                 /// @brief Close the file if it is open.
                 void close(this File &self);
 
+                /// @brief Read bytes from the file.
+                /// @param bytes bytes count
+                /// @return buffer containing the read bytes
+                Memory::Buffer<char> read(this File &self, Typing::USize bytes);
+
                 /// @brief Read a line from the file.
                 /// @param length character count
                 /// @return buffer containing the read bytes

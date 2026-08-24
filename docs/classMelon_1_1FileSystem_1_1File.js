@@ -5,5 +5,6 @@ var classMelon_1_1FileSystem_1_1File =
     [ "~File", "classMelon_1_1FileSystem_1_1File.html#af03335f59b3448632bf0a400dfa2e4c3", null ],
     [ "close", "classMelon_1_1FileSystem_1_1File.html#a90bf3221bb8a43a6836eea44e4284852", null ],
     [ "isOpen", "classMelon_1_1FileSystem_1_1File.html#ad3e5459466d1e424d7230e0632ead164", null ],
+    [ "read", "classMelon_1_1FileSystem_1_1File.html#ab4cffce28c8cc1e76525b431c17ca8d2", null ],
     [ "readLine", "classMelon_1_1FileSystem_1_1File.html#a74a3e9cf9bedbb90adb909c602570c1e", null ]
 ];

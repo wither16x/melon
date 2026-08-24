@@ -4,6 +4,7 @@
 #include <String.hpp>
 
 #include <stdio.h>
+#include <unistd.h>
 
 namespace Melon::FileSystem
 {
@@ -32,6 +33,15 @@ namespace Melon::FileSystem
                         fclose(self.stream);
                         self.stream = nullptr;
                 }
+        }
+
+        Memory::Buffer<char> File::read(this File &self, Typing::USize bytes)
+        {
+                char *p = new char[bytes];
+                ::read(fileno(self.stream), p, bytes);
+                Memory::Buffer<char> buf(p, bytes);
+                delete[] p;
+                return buf;
         }
 
         Memory::Buffer<char> File::readLine(this File &self, Typing::USize length)
