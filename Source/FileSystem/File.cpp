@@ -3,6 +3,8 @@
 #include <Internal/Exceptions/NullStream.hpp>
 #include <String.hpp>
 
+#include <utility>
+
 #include <stdio.h>
 #include <unistd.h>
 
@@ -50,7 +52,7 @@ namespace Melon::FileSystem
                 Typing::USize lf_count = 0;
                 Memory::Buffer<char> buf;
 
-                fseek(self.stream, 0, SEEK_SET);
+                self.seek(0, SeekOrigin::Begin);
 
                 while (lf_count < lineno) {
                         ch = fgetc(self.stream);
@@ -68,6 +70,11 @@ namespace Melon::FileSystem
                 }
 
                 return buf;
+        }
+
+        void File::seek(this File &self, long offset, SeekOrigin origin)
+        {
+                fseek(self.stream, offset, std::to_underlying(origin));
         }
 
         bool File::isOpen(this const File &self)

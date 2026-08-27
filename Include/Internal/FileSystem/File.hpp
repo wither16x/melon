@@ -7,6 +7,14 @@
 
 namespace Melon::FileSystem
 {
+        /// @brief All possible values for File::seek().
+        enum class SeekOrigin
+        {
+                Begin           = SEEK_SET,     ///< Beginning of the file
+                Curr            = SEEK_CUR,     ///< Current cursor position
+                End             = SEEK_END      ///<End of the file
+        };
+
         /// @brief Representation of a file stream.
         class File
         {
@@ -39,6 +47,11 @@ namespace Melon::FileSystem
                 /// @param lineno 0-based line number
                 /// @return buffer containing the read bytes
                 Memory::Buffer<char> readLine(this File &self, Typing::USize lineno);
+
+                /// @brief Seek to a certain position in the file.
+                /// @param offset offset from origin
+                /// @param origin seek from here
+                void seek(this File &self, long offset, SeekOrigin origin);
 
                 /// @brief Checks if the file is open.
                 ///
