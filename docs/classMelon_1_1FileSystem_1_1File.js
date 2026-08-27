@@ -7,5 +7,6 @@ var classMelon_1_1FileSystem_1_1File =
     [ "isOpen", "classMelon_1_1FileSystem_1_1File.html#ad3e5459466d1e424d7230e0632ead164", null ],
     [ "read", "classMelon_1_1FileSystem_1_1File.html#ab4cffce28c8cc1e76525b431c17ca8d2", null ],
     [ "readLine", "classMelon_1_1FileSystem_1_1File.html#aac5c76a1c0afbb1884a9e7f232ae9de9", null ],
-    [ "seek", "classMelon_1_1FileSystem_1_1File.html#a9c99d544f449f7b1d2e33c98fec28b00", null ]
+    [ "seek", "classMelon_1_1FileSystem_1_1File.html#a9c99d544f449f7b1d2e33c98fec28b00", null ],
+    [ "write", "classMelon_1_1FileSystem_1_1File.html#add29f53ff7064b9cb84db84a05fd6cb9", null ]
 ];

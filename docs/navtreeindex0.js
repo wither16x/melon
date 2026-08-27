@@ -47,6 +47,7 @@ var NAVTREEINDEX0 =
 "classMelon_1_1FileSystem_1_1File.html#aac5c76a1c0afbb1884a9e7f232ae9de9":[1,0,0,1,0,6],
 "classMelon_1_1FileSystem_1_1File.html#ab4cffce28c8cc1e76525b431c17ca8d2":[1,0,0,1,0,5],
 "classMelon_1_1FileSystem_1_1File.html#ad3e5459466d1e424d7230e0632ead164":[1,0,0,1,0,4],
+"classMelon_1_1FileSystem_1_1File.html#add29f53ff7064b9cb84db84a05fd6cb9":[1,0,0,1,0,8],
 "classMelon_1_1FileSystem_1_1File.html#af03335f59b3448632bf0a400dfa2e4c3":[1,0,0,1,0,2],
 "classMelon_1_1Memory_1_1Buffer.html":[0,0,0,1,0],
 "classMelon_1_1Memory_1_1Buffer.html":[1,0,0,2,0],

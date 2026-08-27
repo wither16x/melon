@@ -53,6 +53,11 @@ namespace Melon::FileSystem
                 /// @param origin seek from here
                 void seek(this File &self, long offset, SeekOrigin origin);
 
+                /// @brief Write bytes to a file.
+                /// @param buf bytes to write
+                /// @param bytes byte count
+                void write(this File &self, const Memory::Buffer<char> &buf, Typing::USize bytes);
+
                 /// @brief Checks if the file is open.
                 ///
                 /// If the stream is not null, then it is considered as open.

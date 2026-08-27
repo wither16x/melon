@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Internal/Memory/Buffer.hpp"
+#include "Internal/Memory/CString.hpp"
 #include <Tarwi.hpp>
 #include <TarwiGlobals.hpp>
 
@@ -18,13 +20,13 @@ namespace Melon::Test
 
                 TARWI_UNIT(unitCheckRaii)
                 {
-                        FileSystem::File file(RESOURCES_PATH"/Empty.txt", "rw");
+                        FileSystem::File file(RESOURCES_PATH"/Empty.txt", "r");
                         TARWI_EXPECT(file.isOpen());
                 }
 
                 TARWI_UNIT(unitOpenClose)
                 {
-                        FileSystem::File file(RESOURCES_PATH"/Empty.txt", "rw");
+                        FileSystem::File file(RESOURCES_PATH"/Empty.txt", "r");
                         bool is_open_before_close = file.isOpen();
                         file.close();
                         bool is_open_after_close = file.isOpen();
@@ -36,7 +38,7 @@ namespace Melon::Test
                         bool caught = false;
 
                         try {
-                                FileSystem::File file(RESOURCES_PATH"/Invisible.txt", "rw");
+                                FileSystem::File file(RESOURCES_PATH"/Invisible.txt", "r");
                         } catch (const Exceptions::FileNotFound &e) {
                                 TARWI_OUTPUT("caught exception: %s\n", e.what());
                                 caught = true;
@@ -100,6 +102,16 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitWrite)
+                {
+                        FileSystem::File file(RESOURCES_PATH"/ToWrite.txt", "r+");
+
+                        Memory::CString data = "I wrote this!";
+                        file.write({data.get(), data.length()}, data.length());
+
+                        TARWI_EXPECT(strcmp(file.read(data.length()).get(), data.get()) == 0);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
@@ -109,6 +121,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitReadLine);
                         TARWI_CALL_UNIT(unitRead);
                         TARWI_CALL_UNIT(unitReadSeveralLines);
+                        TARWI_CALL_UNIT(unitWrite);
                 }
         };
 } // namespace Melon::Test

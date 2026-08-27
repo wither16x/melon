@@ -40,6 +40,8 @@ namespace Melon::FileSystem
         Memory::Buffer<char> File::read(this File &self, Typing::USize bytes)
         {
                 char *p = new char[bytes];
+
+                self.seek(0, SeekOrigin::Begin);
                 ::read(fileno(self.stream), p, bytes);
                 Memory::Buffer<char> buf(p, bytes);
                 delete[] p;
@@ -75,6 +77,11 @@ namespace Melon::FileSystem
         void File::seek(this File &self, long offset, SeekOrigin origin)
         {
                 fseek(self.stream, offset, std::to_underlying(origin));
+        }
+
+        void File::write(this File &self, const Memory::Buffer<char> &buf, Typing::USize bytes)
+        {
+                ::write(fileno(self.stream), buf.get(), bytes);
         }
 
         bool File::isOpen(this const File &self)

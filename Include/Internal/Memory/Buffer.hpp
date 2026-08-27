@@ -35,7 +35,7 @@ namespace Melon::Memory
                         this->data = new T[size];
                         memcpy(this->data, data, size);
                 }
-
+                
                 /// @brief Copy constructor.
                 /// @param other buffer to copy data to
                 Buffer(const Buffer<T> &other)
