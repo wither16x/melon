@@ -132,8 +132,8 @@ void&#160;</td><td class="memItemRight"><b>close</b> (this <a class="el" href="#
 <tr class="memdesc:a90bf3221bb8a43a6836eea44e4284852"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the file if it is open. <br /></td></tr>
 <tr class="memitem:ab4cffce28c8cc1e76525b431c17ca8d2" id="r_ab4cffce28c8cc1e76525b431c17ca8d2"><td class="memItemLeft"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer</a>&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab4cffce28c8cc1e76525b431c17ca8d2">read</a> (this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> bytes)</td></tr>
 <tr class="memdesc:ab4cffce28c8cc1e76525b431c17ca8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read bytes from the file.  <br /></td></tr>
-<tr class="memitem:a74a3e9cf9bedbb90adb909c602570c1e" id="r_a74a3e9cf9bedbb90adb909c602570c1e"><td class="memItemLeft"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer</a>&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a74a3e9cf9bedbb90adb909c602570c1e">readLine</a> (this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> length)</td></tr>
-<tr class="memdesc:a74a3e9cf9bedbb90adb909c602570c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a line from the file.  <br /></td></tr>
+<tr class="memitem:aac5c76a1c0afbb1884a9e7f232ae9de9" id="r_aac5c76a1c0afbb1884a9e7f232ae9de9"><td class="memItemLeft"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer</a>&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aac5c76a1c0afbb1884a9e7f232ae9de9">readLine</a> (this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> lineno)</td></tr>
+<tr class="memdesc:aac5c76a1c0afbb1884a9e7f232ae9de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a line from the file.  <br /></td></tr>
 <tr class="memitem:ad3e5459466d1e424d7230e0632ead164" id="r_ad3e5459466d1e424d7230e0632ead164"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad3e5459466d1e424d7230e0632ead164">isOpen</a> (this const <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self)</td></tr>
 <tr class="memdesc:ad3e5459466d1e424d7230e0632ead164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the file is open.  <br /></td></tr>
 </table>
@@ -246,8 +246,8 @@ void&#160;</td><td class="memItemRight"><b>close</b> (this <a class="el" href="#
 
 </div>
 </div>
-<a id="a74a3e9cf9bedbb90adb909c602570c1e" name="a74a3e9cf9bedbb90adb909c602570c1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74a3e9cf9bedbb90adb909c602570c1e">&#9670;&#160;</a></span>readLine()</h2>
+<a id="aac5c76a1c0afbb1884a9e7f232ae9de9" name="aac5c76a1c0afbb1884a9e7f232ae9de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5c76a1c0afbb1884a9e7f232ae9de9">&#9670;&#160;</a></span>readLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,15 +260,15 @@ void&#160;</td><td class="memItemRight"><b>close</b> (this <a class="el" href="#
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a></td>          <td class="paramname"><span class="paramname"><em>lineno</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Read a line from the file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>The \n is not preserved. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">length</td><td>character count </td></tr>
+    <tr><td class="paramname">lineno</td><td>0-based line number </td></tr>
   </table>
   </dd>
 </dl>

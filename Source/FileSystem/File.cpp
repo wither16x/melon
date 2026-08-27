@@ -44,13 +44,30 @@ namespace Melon::FileSystem
                 return buf;
         }
 
-        Memory::Buffer<char> File::readLine(this File &self, Typing::USize length)
+        Memory::Buffer<char> File::readLine(this File &self, Typing::USize lineno)
         {
-                char *p = new char[length];
-                fgets(p, length, self.stream);
-                Memory::Buffer<char> buffer(p, length);
-                delete[] p;
-                return buffer;
+                int ch = '\0';
+                Typing::USize lf_count = 0;
+                Memory::Buffer<char> buf;
+
+                fseek(self.stream, 0, SEEK_SET);
+
+                while (lf_count < lineno) {
+                        ch = fgetc(self.stream);
+
+                        if (ch == EOF)
+                                return buf;
+
+                        if (ch == '\n')
+                                ++lf_count;
+                }
+
+                while ((ch = fgetc(self.stream)) != EOF and ch != '\n') {
+                        buf.resize(buf.size() + 1);
+                        buf[buf.size() - 1] = static_cast<char>(ch);
+                }
+
+                return buf;
         }
 
         bool File::isOpen(this const File &self)

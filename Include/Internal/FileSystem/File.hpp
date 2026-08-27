@@ -34,9 +34,11 @@ namespace Melon::FileSystem
                 Memory::Buffer<char> read(this File &self, Typing::USize bytes);
 
                 /// @brief Read a line from the file.
-                /// @param length character count
+                ///
+                /// The \\n is not preserved.
+                /// @param lineno 0-based line number
                 /// @return buffer containing the read bytes
-                Memory::Buffer<char> readLine(this File &self, Typing::USize length);
+                Memory::Buffer<char> readLine(this File &self, Typing::USize lineno);
 
                 /// @brief Checks if the file is open.
                 ///

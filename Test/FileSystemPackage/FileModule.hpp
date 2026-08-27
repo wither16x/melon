@@ -64,8 +64,8 @@ namespace Melon::Test
                 TARWI_UNIT(unitReadLine)
                 {
                         FileSystem::File file(RESOURCES_PATH"/Line.txt", "r");
-                        Memory::Buffer<char> buf = file.readLine(255);
-                        TARWI_EXPECT(strcmp(buf.get(), "Hello! I am a file!\n") == 0);
+                        Memory::Buffer<char> buf = file.readLine(0);
+                        TARWI_EXPECT(strcmp(buf.get(), "Hello! I am a file!") == 0);
                 }
 
                 TARWI_UNIT(unitRead)
@@ -81,6 +81,25 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitReadSeveralLines)
+                {
+                        FileSystem::File file(RESOURCES_PATH"/Lines.txt", "r");
+
+                        auto line0 = file.readLine(0);
+                        auto line4 = file.readLine(4);
+                        auto line2 = file.readLine(2);
+                        auto line1 = file.readLine(1);
+                        auto line3 = file.readLine(3);
+
+                        TARWI_EXPECT(
+                                strcmp(line0.get(), "First line.") == 0 and
+                                strcmp(line1.get(), "Second line.") ==0 and
+                                strcmp(line2.get(), "Third line.") == 0 and
+                                strcmp(line3.get(), "Fourth line.") == 0 and
+                                strcmp(line4.get(), "Fifth line.") == 0
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckRaii);
@@ -89,6 +108,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitNullStream);
                         TARWI_CALL_UNIT(unitReadLine);
                         TARWI_CALL_UNIT(unitRead);
+                        TARWI_CALL_UNIT(unitReadSeveralLines);
                 }
         };
 } // namespace Melon::Test
