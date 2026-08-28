@@ -22,9 +22,22 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitFormatString)
+                {
+                        String::String firstname = "John";
+                        String::String lastname = "Doe";
+                        String::String hello = Fmt::formatString(
+                                "Hello! My name is %s %s!",
+                                firstname, lastname
+                        );
+
+                        TARWI_EXPECT(hello == "Hello! My name is John Doe!");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitFormatChar);
+                        TARWI_CALL_UNIT(unitFormatString);
                 }
         };
 } // namespace Melon::Test

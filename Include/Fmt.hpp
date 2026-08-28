@@ -4,8 +4,18 @@
 
 #include <type_traits>
 
+#define IF_TYPE_EQ(T1, T2) if constexpr (std::is_same<std::remove_cvref_t<T1>, T2>::value)
+
 namespace Melon::Fmt
 {
+        /// @brief All characters used by formatArgs().
+        enum class FormatChar : char
+        {
+                Percent         = '%',
+                Char            = 'c',
+                String          = 's'
+        };
+
         /// @brief Format a string.
         /// @param out output string
         /// @param fmt string to format
@@ -13,7 +23,7 @@ namespace Melon::Fmt
         /// @param arg argument
         /// @param args arguments
         template<typename T, typename... ARGS>
-        void formatArgs(String::String &out, String::String &fmt, Typing::USize &idx, T &&arg, ARGS &&...args)
+        void formatArgs(String::String &out, const String::String &fmt, Typing::USize &idx, T &&arg, ARGS &&...args)
         {
                 for (; idx < fmt.length(); ++idx) {
                         if (fmt[idx] != '%') {
@@ -25,14 +35,19 @@ namespace Melon::Fmt
                         if (idx >= fmt.length())
                                 return;
 
-                        switch (fmt[idx]) {
-                        case '%':
+                        switch (static_cast<FormatChar>(fmt[idx])) {
+                        case FormatChar::Percent:
                                 out.appendChar('%');
                                 break;
 
-                        case 'c':
-                                if constexpr (std::is_same<std::remove_cvref_t<T>, char>::value)
+                        case FormatChar::Char:
+                                IF_TYPE_EQ(T, char)
                                         out.appendChar(arg);
+                                break;
+
+                        case FormatChar::String:
+                                IF_TYPE_EQ(T, String::String)
+                                        out += arg;
                                 break;
 
                         default:
@@ -53,7 +68,7 @@ namespace Melon::Fmt
         /// @param str string to format
         /// @param args values
         template<typename... ARGS>
-        String::String formatString(String::String &str, ARGS &&... args)
+        String::String formatString(const String::String &str, ARGS &&... args)
         {
                 String::String new_str;
                 Typing::USize idx = 0;
