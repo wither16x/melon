@@ -38,6 +38,18 @@ namespace Melon::String
                 /// @return internal vector length
                 Typing::USize length(this const String &self);
 
+                /// @brief Gets the base of the string vector.
+                /// @return pointer to base
+                const char *begin(this const String &self);
+
+                /// @brief Gets the end of the string vector.
+                /// @return pointer to end
+                const char *end(this const String &self);
+
+                /// @brief Appends a character to the string.
+                /// @param ch character to append
+                void appendChar(this String &self, char ch);
+
                 /// @brief Gets a character from its index.
                 /// @param index position of the character
                 /// @return character

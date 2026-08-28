@@ -48,6 +48,23 @@ namespace Melon::String
                 return strlen(self.chars.data());
         }
 
+        const char *String::begin(this const String &self)
+        {
+                return self.chars.begin();
+        }
+
+        const char *String::end(this const String &self)
+        {
+                return self.chars.end();
+        }
+
+        void String::appendChar(this String &self, char ch)
+        {
+                self.chars.popBack();
+                self.chars.pushBack(ch);
+                self.chars.pushBack('\0');
+        }
+
         char &String::operator [](this String &self, Typing::USize index)
         {
                 return self.chars[index];
