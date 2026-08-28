@@ -132,6 +132,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adb05e3b9accc562aa7fef1ebe91a2242"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a raw buffer which contains the string characters.  <br /></td></tr>
 <tr class="memitem:a6f915379341221c6ba0ba15f2cc63f18" id="r_a6f915379341221c6ba0ba15f2cc63f18"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6f915379341221c6ba0ba15f2cc63f18">length</a> (this const String &amp;self)</td></tr>
 <tr class="memdesc:a6f915379341221c6ba0ba15f2cc63f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the length of the string.  <br /></td></tr>
+<tr class="memitem:a12be43c46fd64d98095937d1dfe08557" id="r_a12be43c46fd64d98095937d1dfe08557"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a12be43c46fd64d98095937d1dfe08557">begin</a> (this const String &amp;self)</td></tr>
+<tr class="memdesc:a12be43c46fd64d98095937d1dfe08557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the base of the string vector.  <br /></td></tr>
+<tr class="memitem:ae82a411cf7d1bef6749410311e6f8f3a" id="r_ae82a411cf7d1bef6749410311e6f8f3a"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#ae82a411cf7d1bef6749410311e6f8f3a">end</a> (this const String &amp;self)</td></tr>
+<tr class="memdesc:ae82a411cf7d1bef6749410311e6f8f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the end of the string vector.  <br /></td></tr>
+<tr class="memitem:a8032da1ffc754935a33d28322c7c318d" id="r_a8032da1ffc754935a33d28322c7c318d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8032da1ffc754935a33d28322c7c318d">appendChar</a> (this String &amp;self, char ch)</td></tr>
+<tr class="memdesc:a8032da1ffc754935a33d28322c7c318d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a character to the string.  <br /></td></tr>
 <tr class="memitem:a5587032c94d16a1bdd62847c9e257111" id="r_a5587032c94d16a1bdd62847c9e257111"><td class="memItemLeft">char &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a5587032c94d16a1bdd62847c9e257111">operator[]</a> (this String &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
 <tr class="memdesc:a5587032c94d16a1bdd62847c9e257111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a character from its index.  <br /></td></tr>
 <tr class="memitem:ad399f9341ea8923e9499f4ed72dbfae8" id="r_ad399f9341ea8923e9499f4ed72dbfae8"><td class="memItemLeft">const char &amp;&#160;</td><td class="memItemRight"><a class="el" href="#ad399f9341ea8923e9499f4ed72dbfae8">operator[]</a> (this const String &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
@@ -236,6 +242,75 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a8032da1ffc754935a33d28322c7c318d" name="a8032da1ffc754935a33d28322c7c318d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8032da1ffc754935a33d28322c7c318d">&#9670;&#160;</a></span>appendChar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Melon::String::String::appendChar </td>
+          <td>(</td>
+          <td class="paramtype">this String &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>ch</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends a character to the string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>character to append </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a12be43c46fd64d98095937d1dfe08557" name="a12be43c46fd64d98095937d1dfe08557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12be43c46fd64d98095937d1dfe08557">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * Melon::String::String::begin </td>
+          <td>(</td>
+          <td class="paramtype">this const String &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the base of the string vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to base </dd></dl>
+
+</div>
+</div>
+<a id="ae82a411cf7d1bef6749410311e6f8f3a" name="ae82a411cf7d1bef6749410311e6f8f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae82a411cf7d1bef6749410311e6f8f3a">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * Melon::String::String::end </td>
+          <td>(</td>
+          <td class="paramtype">this const String &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the end of the string vector. </p>
+<dl class="section return"><dt>Returns</dt><dd>pointer to end </dd></dl>
+
+</div>
+</div>
 <a id="a6f915379341221c6ba0ba15f2cc63f18" name="a6f915379341221c6ba0ba15f2cc63f18"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f915379341221c6ba0ba15f2cc63f18">&#9670;&#160;</a></span>length()</h2>
 

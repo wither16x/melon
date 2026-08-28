@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nullstream_0',['NullStream',['../classMelon_1_1Exceptions_1_1NullStream.html#ae10d0020d2f0c7801663b0b806b5bc1a',1,'Melon::Exceptions::NullStream']]]
+  ['move_0',['move',['../classMelon_1_1Memory_1_1Buffer.html#a3f5d1858e5f58d1a6ad7a41016dd6f92',1,'Melon::Memory::Buffer']]]
 ];

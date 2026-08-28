@@ -5,6 +5,7 @@
 #include <VectorPackage/Package.hpp>
 #include <StringPackage/Package.hpp>
 #include <FileSystemPackage/Package.hpp>
+#include <FmtPackage/Package.hpp>
 
 int main()
 {
@@ -22,6 +23,9 @@ int main()
 
         Melon::Test::FileSystemPackage filesystem_package;
         TARWI_RUN_PACKAGE(filesystem_package);
+
+        Melon::Test::FmtPackage fmt_package;
+        TARWI_RUN_PACKAGE(fmt_package);
 
         return 0;
 }

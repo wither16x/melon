@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['file_0',['File',['../classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789',1,'Melon::FileSystem::File::File(const String::String &amp;path, const String::String &amp;modes)'],['../classMelon_1_1FileSystem_1_1File.html#a73d28cc5f5c2e8daabd944fc1a30e788',1,'Melon::FileSystem::File::File(FILE *stream)']]],
-  ['filenotfound_1',['FileNotFound',['../classMelon_1_1Exceptions_1_1FileNotFound.html#aa7fbe6cd099cd5d8cb0be6ce86184a6e',1,'Melon::Exceptions::FileNotFound']]]
+  ['emplaceback_0',['emplaceBack',['../classMelon_1_1Vector_1_1Vector.html#a921c81811f31b8203cd9ff67e77e8389',1,'Melon::Vector::Vector']]],
+  ['end_1',['end',['../classMelon_1_1Memory_1_1Buffer.html#ac9d56132582d17822153cd278022df96',1,'Melon::Memory::Buffer::end()'],['../classMelon_1_1Memory_1_1CString.html#a4550f992623c29aab670290e03bf171c',1,'Melon::Memory::CString::end()'],['../classMelon_1_1String_1_1String.html#ae82a411cf7d1bef6749410311e6f8f3a',1,'Melon::String::String::end()'],['../classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d',1,'Melon::Vector::Vector::end()']]]
 ];

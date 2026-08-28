@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['get_0',['get',['../classMelon_1_1Memory_1_1Buffer.html#a15b3a15f9d08fb0a50ddfa76a3dcbc6a',1,'Melon::Memory::Buffer::get()'],['../classMelon_1_1Memory_1_1CString.html#a1e1c2047d6d9750b083d257f30426529',1,'Melon::Memory::CString::get()']]]
+  ['file_0',['File',['../classMelon_1_1FileSystem_1_1File.html',1,'Melon::FileSystem::File'],['../classMelon_1_1FileSystem_1_1File.html#a935802573d5beba59f0064555d61e789',1,'Melon::FileSystem::File::File(const String::String &amp;path, const String::String &amp;modes)'],['../classMelon_1_1FileSystem_1_1File.html#a73d28cc5f5c2e8daabd944fc1a30e788',1,'Melon::FileSystem::File::File(FILE *stream)']]],
+  ['filenotfound_1',['FileNotFound',['../classMelon_1_1Exceptions_1_1FileNotFound.html',1,'Melon::Exceptions::FileNotFound'],['../classMelon_1_1Exceptions_1_1FileNotFound.html#aa7fbe6cd099cd5d8cb0be6ce86184a6e',1,'Melon::Exceptions::FileNotFound::FileNotFound()']]]
 ];
