@@ -34,10 +34,24 @@ namespace Melon::Test
                         TARWI_EXPECT(hello == "Hello! My name is John Doe!");
                 }
 
+                TARWI_UNIT(unitFormatSignedInt)
+                {
+                        String::String name = "John Doe";
+                        int age = 42;
+
+                        String::String hello = Fmt::formatString(
+                                "Hello! My name is %s and I am %d years old!",
+                                name, age
+                        );
+
+                        TARWI_EXPECT(hello == "Hello! My name is John Doe and I am 42 years old!");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitFormatChar);
                         TARWI_CALL_UNIT(unitFormatString);
+                        TARWI_CALL_UNIT(unitFormatSignedInt);
                 }
         };
 } // namespace Melon::Test

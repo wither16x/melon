@@ -1,6 +1,7 @@
 #pragma once
 
 #include "String.hpp"
+#include "Conversion.hpp"
 
 #include <type_traits>
 
@@ -13,7 +14,8 @@ namespace Melon::Fmt
         {
                 Percent         = '%',
                 Char            = 'c',
-                String          = 's'
+                String          = 's',
+                SignedInt       = 'd'
         };
 
         /// @brief Format a string.
@@ -25,6 +27,8 @@ namespace Melon::Fmt
         template<typename T, typename... ARGS>
         void formatArgs(String::String &out, const String::String &fmt, Typing::USize &idx, T &&arg, ARGS &&...args)
         {
+                char buf[65];
+
                 for (; idx < fmt.length(); ++idx) {
                         if (fmt[idx] != '%') {
                                 out.appendChar(fmt[idx]);
@@ -48,6 +52,11 @@ namespace Melon::Fmt
                         case FormatChar::String:
                                 IF_TYPE_EQ(T, String::String)
                                         out += arg;
+                                break;
+
+                        case FormatChar::SignedInt:
+                                IF_TYPE_EQ(T, int)
+                                        out += Conversion::intToString(arg, Conversion::Base::Decimal);
                                 break;
 
                         default:

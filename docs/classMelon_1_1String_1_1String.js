@@ -20,5 +20,6 @@ var classMelon_1_1String_1_1String =
     [ "operator[]", "classMelon_1_1String_1_1String.html#ad399f9341ea8923e9499f4ed72dbfae8", null ],
     [ "operator[]", "classMelon_1_1String_1_1String.html#a5587032c94d16a1bdd62847c9e257111", null ],
     [ "raw", "classMelon_1_1String_1_1String.html#adb05e3b9accc562aa7fef1ebe91a2242", null ],
+    [ "reverse", "classMelon_1_1String_1_1String.html#a30b3a0315a5ec68dc30ae5ab4344bf5c", null ],
     [ "substract", "classMelon_1_1String_1_1String.html#ac9be64320132e02c0594d398cd93c4ad", null ]
 ];
