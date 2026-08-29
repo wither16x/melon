@@ -1,8 +1,16 @@
 var namespaces_dup =
 [
     [ "Melon", null, [
+      [ "Conversion", "namespaceMelon_1_1Conversion.html", "namespaceMelon_1_1Conversion" ],
       [ "Exceptions", "namespaceMelon_1_1Exceptions.html", "namespaceMelon_1_1Exceptions" ],
+      [ "FileSystem", "namespaceMelon_1_1FileSystem.html", "namespaceMelon_1_1FileSystem" ],
+      [ "Fmt", "namespaceMelon_1_1Fmt.html", "namespaceMelon_1_1Fmt" ],
       [ "Memory", "namespaceMelon_1_1Memory.html", "namespaceMelon_1_1Memory" ],
+      [ "Print", "namespaceMelon_1_1Print.html", [
+        [ "print", "namespaceMelon_1_1Print.html#aee9c4376e970b3c74501f3b320055401", null ],
+        [ "println", "namespaceMelon_1_1Print.html#aaf1756659f0bc2a6e901bfd469c856da", null ]
+      ] ],
+      [ "String", "namespaceMelon_1_1String.html", "namespaceMelon_1_1String" ],
       [ "Typing", "namespaceMelon_1_1Typing.html", [
         [ "Int16", "namespaceMelon_1_1Typing.html#aaefef88591c010903b38788aee335b01", null ],
         [ "Int32", "namespaceMelon_1_1Typing.html#ad71927750fa617dbe237e12f87acf169", null ],
@@ -16,6 +24,7 @@ var namespaces_dup =
         [ "Uint8", "namespaceMelon_1_1Typing.html#a45ddff1a95fbf25846f49a23830dbdc5", null ],
         [ "UPointer", "namespaceMelon_1_1Typing.html#a515effa72822091382618d163ea40568", null ],
         [ "USize", "namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce", null ]
-      ] ]
+      ] ],
+      [ "Vector", "namespaceMelon_1_1Vector.html", "namespaceMelon_1_1Vector" ]
     ] ]
 ];

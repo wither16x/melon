@@ -1,7 +1,7 @@
 var annotated_dup =
 [
     [ "Melon", null, [
-      [ "Conversion", null, [
+      [ "Conversion", "namespaceMelon_1_1Conversion.html", [
         [ "BinaryValue", "structMelon_1_1Conversion_1_1BinaryValue.html", null ],
         [ "OctalValue", "structMelon_1_1Conversion_1_1OctalValue.html", null ],
         [ "HexadecimalValue", "structMelon_1_1Conversion_1_1HexadecimalValue.html", null ]
@@ -12,10 +12,10 @@ var annotated_dup =
         [ "NullStream", "classMelon_1_1Exceptions_1_1NullStream.html", "classMelon_1_1Exceptions_1_1NullStream" ],
         [ "OutOfRange", "classMelon_1_1Exceptions_1_1OutOfRange.html", "classMelon_1_1Exceptions_1_1OutOfRange" ]
       ] ],
-      [ "FileSystem", null, [
+      [ "FileSystem", "namespaceMelon_1_1FileSystem.html", [
         [ "File", "classMelon_1_1FileSystem_1_1File.html", "classMelon_1_1FileSystem_1_1File" ]
       ] ],
-      [ "Fmt", null, [
+      [ "Fmt", "namespaceMelon_1_1Fmt.html", [
         [ "IsSpecialValue", "structMelon_1_1Fmt_1_1IsSpecialValue.html", null ],
         [ "IsSpecialValue&lt; Conversion::BinaryValue&lt; T &gt; &gt;", "structMelon_1_1Fmt_1_1IsSpecialValue_3_01Conversion_1_1BinaryValue_3_01T_01_4_01_4.html", null ],
         [ "IsSpecialValue&lt; Conversion::OctalValue&lt; T &gt; &gt;", "structMelon_1_1Fmt_1_1IsSpecialValue_3_01Conversion_1_1OctalValue_3_01T_01_4_01_4.html", null ],
@@ -25,10 +25,10 @@ var annotated_dup =
         [ "Buffer", "classMelon_1_1Memory_1_1Buffer.html", "classMelon_1_1Memory_1_1Buffer" ],
         [ "CString", "classMelon_1_1Memory_1_1CString.html", "classMelon_1_1Memory_1_1CString" ]
       ] ],
-      [ "String", null, [
+      [ "String", "namespaceMelon_1_1String.html", [
         [ "String", "classMelon_1_1String_1_1String.html", "classMelon_1_1String_1_1String" ]
       ] ],
-      [ "Vector", null, [
+      [ "Vector", "namespaceMelon_1_1Vector.html", [
         [ "Vector", "classMelon_1_1Vector_1_1Vector.html", "classMelon_1_1Vector_1_1Vector" ]
       ] ]
     ] ]

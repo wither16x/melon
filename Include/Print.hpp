@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 
+/// @brief Contains functions to display text.
 namespace Melon::Print
 {
         /// @brief Print a formatted string to the standard output stream.

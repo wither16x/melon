@@ -5,6 +5,7 @@
 #include <type_traits>
 #include <utility>
 
+/// @brief Contains functions to convert types into other types.
 namespace Melon::Conversion
 {
         /// @brief All conversion functions that take integers should support these bases.

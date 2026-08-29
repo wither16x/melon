@@ -3,6 +3,7 @@
 #include "Internal/Memory/Buffer.hpp"
 #include "Typing.hpp"
 
+/// @brief Contains dynamic vector manipulation features.
 namespace Melon::Vector
 {
         /// @brief A linear dynamic generic container.

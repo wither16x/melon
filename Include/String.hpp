@@ -3,6 +3,7 @@
 #include "Vector.hpp"
 #include "Typing.hpp"
 
+/// @brief Contains dynamic strings related features.
 namespace Melon::String
 {
         /// @brief A dynamic string.

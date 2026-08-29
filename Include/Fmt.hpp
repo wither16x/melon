@@ -7,6 +7,7 @@
 #include <concepts>
 #include <type_traits>
 
+/// @brief Contains functions for string formatting.
 namespace Melon::Fmt
 {
         /// @brief Default behaviour for every type T.
