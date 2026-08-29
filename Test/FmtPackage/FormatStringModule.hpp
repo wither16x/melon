@@ -5,6 +5,7 @@
 
 #include <String.hpp>
 #include <Fmt.hpp>
+#include <climits>
 
 namespace Melon::Test
 {
@@ -69,6 +70,12 @@ namespace Melon::Test
                         TARWI_EXPECT(bin == "x = 0b100011" and oct == "x = 0o43" and hex == "x = 0x23");
                 }
 
+                TARWI_UNIT(unitLongTypes)
+                {
+                        String::String hello = Fmt::formatString("%d", LONG_LONG_MAX);
+                        TARWI_EXPECT(hello == "9223372036854775807");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitFormatChar);
@@ -76,6 +83,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitFormatSignedInt);
                         TARWI_CALL_UNIT(unitFormatUnsignedInt);
                         TARWI_CALL_UNIT(unitBinaryOctalHexadecimal);
+                        TARWI_CALL_UNIT(unitLongTypes);
                 }
         };
 } // namespace Melon::Test

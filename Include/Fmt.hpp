@@ -59,26 +59,46 @@ namespace Melon::Fmt
                         case FormatChar::SignedInt:
                                 IF_TYPE_EQ(T, int)
                                         out += Conversion::intToString<int>(arg, Conversion::Base::Decimal);
+                                IF_TYPE_EQ(T, long)
+                                        out += Conversion::intToString<long>(arg, Conversion::Base::Decimal);
+                                IF_TYPE_EQ(T, long long)
+                                        out += Conversion::intToString<long long>(arg, Conversion::Base::Decimal);
                                 break;
 
                         case FormatChar::UnsignedInt:
                                 IF_TYPE_EQ(T, unsigned int)
                                         out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Decimal);
+                                IF_TYPE_EQ(T, unsigned long)
+                                        out += Conversion::uintToString<unsigned long>(arg, Conversion::Base::Decimal);
+                                IF_TYPE_EQ(T, unsigned long long)
+                                        out += Conversion::uintToString<unsigned long long>(arg, Conversion::Base::Decimal);
                                 break;
 
                         case FormatChar::Binary:
                                 IF_TYPE_EQ(T, unsigned int)
                                         out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Binary);
+                                IF_TYPE_EQ(T, unsigned long)
+                                        out += Conversion::uintToString<unsigned long>(arg, Conversion::Base::Binary);
+                                IF_TYPE_EQ(T, unsigned long long)
+                                        out += Conversion::uintToString<unsigned long long>(arg, Conversion::Base::Binary);
                                 break;
 
                         case FormatChar::Octal:
                                 IF_TYPE_EQ(T, unsigned int)
                                         out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Octal);
+                                IF_TYPE_EQ(T, unsigned long)
+                                        out += Conversion::uintToString<unsigned long>(arg, Conversion::Base::Octal);
+                                IF_TYPE_EQ(T, unsigned long long)
+                                        out += Conversion::uintToString<unsigned long long>(arg, Conversion::Base::Octal);
                                 break;
 
                         case FormatChar::Hexadecimal:
                                 IF_TYPE_EQ(T, unsigned int)
                                         out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Hexadecimal);
+                                IF_TYPE_EQ(T, unsigned long)
+                                        out += Conversion::uintToString<unsigned long>(arg, Conversion::Base::Hexadecimal);
+                                IF_TYPE_EQ(T, unsigned long long)
+                                        out += Conversion::uintToString<unsigned long long>(arg, Conversion::Base::Hexadecimal);
                                 break;
 
                         default:
@@ -99,7 +119,7 @@ namespace Melon::Fmt
         /// @param str string to format
         /// @param args values
         template<typename... ARGS>
-        String::String formatString(const String::String &str, ARGS &&... args)
+        String::String formatString(const String::String &str, ARGS &&...args)
         {
                 String::String new_str;
                 Typing::USize idx = 0;
