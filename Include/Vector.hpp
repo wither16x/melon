@@ -124,6 +124,19 @@ namespace Melon::Vector
                         }
                 }
 
+                /// @brief Erases object at a given position in the vector.
+                /// @param index object position
+                void erase(this Vector<T> &self, Typing::USize index)
+                {
+                        if (index >= self.obj_count)
+                                throw Exceptions::OutOfRange(index, self.obj_count);
+
+                        for (Typing::USize i = index; i < self.obj_count - 1; i++)
+                                self.buf[i] = self.buf[i + 1];
+
+                        --self.obj_count;
+                }
+
                 /// @brief Clears the vector.
                 void clear(this Vector<T> &self)
                 {
