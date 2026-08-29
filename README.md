@@ -21,7 +21,12 @@ If you wish to see more examples, have a look at the [Examples](Examples) direct
 ```sh
 git clone https://github.com/wither16x/melon
 ```
-**Step 2:** build the sources
+**Step 2:** download dependencies
+```sh
+chmod +x Dependencies.sh
+./Dependencies.sh
+```
+**Step 3:** build the sources
 ```sh
 make # make clean if needed
 ```
@@ -40,3 +45,16 @@ If you wish to build and run some programs made with Melon, run the following co
 make -C Examples/ExampleName # e.g. HelloWorld
 ./Examples/ExampleName/Build/hello_world # e.g. HelloWorld/Build/hello_world
 ```
+## Testing
+You can also run unit tests:
+```sh
+make -C Test
+./Test/Build/Test
+```
+Developpers can run:
+```sh
+./Dev.sh
+```
+directly. This script recompiles the sources, recompiles and run the tests and builds the documentation.
+## Documentation
+Online documentation can be found at https://wither16x.github.io/melon.
