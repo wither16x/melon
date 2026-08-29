@@ -7,5 +7,9 @@ var searchData=
   ['intpointer_4',['IntPointer',['../namespaceMelon_1_1Typing.html#ac8abfa69e05110102620014b1031b81e',1,'Melon::Typing']]],
   ['isempty_5',['isEmpty',['../classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5',1,'Melon::Vector::Vector']]],
   ['isize_6',['ISize',['../namespaceMelon_1_1Typing.html#a3c501a24fdfa94a5ed9ceb854d953480',1,'Melon::Typing']]],
-  ['isopen_7',['isOpen',['../classMelon_1_1FileSystem_1_1File.html#ad3e5459466d1e424d7230e0632ead164',1,'Melon::FileSystem::File']]]
+  ['isopen_7',['isOpen',['../classMelon_1_1FileSystem_1_1File.html#ad3e5459466d1e424d7230e0632ead164',1,'Melon::FileSystem::File']]],
+  ['isspecialvalue_8',['IsSpecialValue',['../structMelon_1_1Fmt_1_1IsSpecialValue.html',1,'Melon::Fmt']]],
+  ['isspecialvalue_3c_20conversion_3a_3abinaryvalue_3c_20t_20_3e_20_3e_9',['IsSpecialValue&lt; Conversion::BinaryValue&lt; T &gt; &gt;',['../structMelon_1_1Fmt_1_1IsSpecialValue_3_01Conversion_1_1BinaryValue_3_01T_01_4_01_4.html',1,'Melon::Fmt']]],
+  ['isspecialvalue_3c_20conversion_3a_3ahexadecimalvalue_3c_20t_20_3e_20_3e_10',['IsSpecialValue&lt; Conversion::HexadecimalValue&lt; T &gt; &gt;',['../structMelon_1_1Fmt_1_1IsSpecialValue_3_01Conversion_1_1HexadecimalValue_3_01T_01_4_01_4.html',1,'Melon::Fmt']]],
+  ['isspecialvalue_3c_20conversion_3a_3aoctalvalue_3c_20t_20_3e_20_3e_11',['IsSpecialValue&lt; Conversion::OctalValue&lt; T &gt; &gt;',['../structMelon_1_1Fmt_1_1IsSpecialValue_3_01Conversion_1_1OctalValue_3_01T_01_4_01_4.html',1,'Melon::Fmt']]]
 ];

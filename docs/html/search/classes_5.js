@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['string_0',['String',['../classMelon_1_1String_1_1String.html',1,'Melon::String']]]
+  ['nullstream_0',['NullStream',['../classMelon_1_1Exceptions_1_1NullStream.html',1,'Melon::Exceptions']]]
 ];

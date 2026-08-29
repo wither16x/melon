@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vector_0',['Vector',['../classMelon_1_1Vector_1_1Vector.html',1,'Melon::Vector']]],
-  ['vector_3c_20char_20_3e_1',['Vector&lt; char &gt;',['../classMelon_1_1Vector_1_1Vector.html',1,'Melon::Vector']]]
+  ['octalvalue_0',['OctalValue',['../structMelon_1_1Conversion_1_1OctalValue.html',1,'Melon::Conversion']]],
+  ['outofrange_1',['OutOfRange',['../classMelon_1_1Exceptions_1_1OutOfRange.html',1,'Melon::Exceptions']]]
 ];

@@ -15,7 +15,7 @@ namespace Melon::Test
 
                 TARWI_UNIT(unitFormatChar)
                 {
-                        String::String str = "The fifth letter of the alphabet is %c.";
+                        String::String str = "The fifth letter of the alphabet is {}.";
                         str = Fmt::formatString(str, 'e');
 
                         TARWI_EXPECT(
@@ -28,7 +28,7 @@ namespace Melon::Test
                         String::String firstname = "John";
                         String::String lastname = "Doe";
                         String::String hello = Fmt::formatString(
-                                "Hello! My name is %s %s!",
+                                "Hello! My name is {} {}!",
                                 firstname, lastname
                         );
 
@@ -41,7 +41,7 @@ namespace Melon::Test
                         int age = 42;
 
                         String::String hello = Fmt::formatString(
-                                "Hello! My name is %s and I am %d years old!",
+                                "Hello! My name is {} and I am {} years old!",
                                 name, age
                         );
 
@@ -52,7 +52,7 @@ namespace Melon::Test
                 {
                         unsigned int age = 65;
                         String::String hello = Fmt::formatString(
-                                "I'm very old because I'm %u years old.",
+                                "I'm very old because I'm {} years old.",
                                 age
                         );
 
@@ -63,16 +63,16 @@ namespace Melon::Test
                 {
                         unsigned int x = 35;
 
-                        String::String bin = Fmt::formatString("x = 0b%b", x);
-                        String::String oct = Fmt::formatString("x = 0o%o", x);
-                        String::String hex = Fmt::formatString("x = 0x%x", x);
+                        String::String bin = Fmt::formatString("x = 0b{}", Conversion::bin(x));
+                        String::String oct = Fmt::formatString("x = 0o{}", Conversion::oct(x));
+                        String::String hex = Fmt::formatString("x = 0x{}", Conversion::hex(x));
 
                         TARWI_EXPECT(bin == "x = 0b100011" and oct == "x = 0o43" and hex == "x = 0x23");
                 }
 
                 TARWI_UNIT(unitLongTypes)
                 {
-                        String::String hello = Fmt::formatString("%d", LONG_LONG_MAX);
+                        String::String hello = Fmt::formatString("{}", LONG_LONG_MAX);
                         TARWI_EXPECT(hello == "9223372036854775807");
                 }
 

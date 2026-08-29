@@ -2,25 +2,61 @@
 
 #include "String.hpp"
 #include "Conversion.hpp"
+#include "Typing.hpp"
 
+#include <concepts>
 #include <type_traits>
-
-#define IF_TYPE_EQ(T1, T2) if constexpr (std::is_same<std::remove_cvref_t<T1>, T2>::value)
 
 namespace Melon::Fmt
 {
-        /// @brief All characters used by formatArgs().
-        enum class FormatChar : char
-        {
-                Percent         = '%',
-                Char            = 'c',
-                String          = 's',
-                SignedInt       = 'd',
-                UnsignedInt     = 'u',
-                Binary          = 'b',
-                Octal           = 'o',
-                Hexadecimal     = 'x'
-        };
+        /// @brief Default behaviour for every type T.
+        ///
+        /// By default, every type T is not a special value, so we inherit from
+        /// std::false_type.
+        template<typename T>
+        struct IsSpecialValue : std::false_type
+        {};
+
+        /// @brief Partial template specialization for Conversion::BinaryValue<T>.
+        template<typename T>
+        struct IsSpecialValue<Conversion::BinaryValue<T>> : std::true_type
+        {};
+
+        /// @brief Partial template specialization for Conversion::OctalValue<T>.
+        template<typename T>
+        struct IsSpecialValue<Conversion::OctalValue<T>> : std::true_type
+        {};
+
+        /// @brief Partial template specialization for Conversion::HexadecimalValue<T>.
+        template<typename T>
+        struct IsSpecialValue<Conversion::HexadecimalValue<T>> : std::true_type
+        {};
+
+        /// @brief Alias to avoid typing IsSpecialValue<T>::value.
+        template<typename T>
+        inline constexpr bool IsSpecialValueV = IsSpecialValue<std::remove_cvref_t<T>>::value;
+
+        /// @brief Makes sure that T is supported by formatArgs().
+        template<typename T>
+        concept Formattable =
+                std::same_as<std::remove_cvref_t<T>, char>
+                or std::same_as<std::remove_cvref_t<T>, String::String>
+                or std::same_as<std::remove_cvref_t<T>, int>
+                or std::same_as<std::remove_cvref_t<T>, long>
+                or std::same_as<std::remove_cvref_t<T>, long long>
+                or std::same_as<std::remove_cvref_t<T>, unsigned int>
+                or std::same_as<std::remove_cvref_t<T>, unsigned long>
+                or std::same_as<std::remove_cvref_t<T>, unsigned long long>
+                or std::same_as<std::remove_cvref_t<T>, Typing::Int8>
+                or std::same_as<std::remove_cvref_t<T>, Typing::Int16>
+                or std::same_as<std::remove_cvref_t<T>, Typing::Int32>
+                or std::same_as<std::remove_cvref_t<T>, Typing::Int64>
+                or std::same_as<std::remove_cvref_t<T>, Typing::Uint8>
+                or std::same_as<std::remove_cvref_t<T>, Typing::Uint16>
+                or std::same_as<std::remove_cvref_t<T>, Typing::Uint32>
+                or std::same_as<std::remove_cvref_t<T>, Typing::Uint64>
+                or IsSpecialValueV<T>
+        ;
 
         /// @brief Format a string.
         /// @param out output string
@@ -28,11 +64,11 @@ namespace Melon::Fmt
         /// @param idx index in the string
         /// @param arg argument
         /// @param args arguments
-        template<typename T, typename... ARGS>
-        void formatArgs(String::String &out, const String::String &fmt, Typing::USize &idx, T &&arg, ARGS &&...args)
+        template<Formattable T, typename... ARGS>
+        constexpr void formatArgs(String::String &out, const String::String &fmt, Typing::USize &idx, T &&arg, ARGS &&...args)
         {
                 for (; idx < fmt.length(); ++idx) {
-                        if (fmt[idx] != '%') {
+                        if (fmt[idx] != '{') {
                                 out.appendChar(fmt[idx]);
                                 continue;
                         }
@@ -41,81 +77,51 @@ namespace Melon::Fmt
                         if (idx >= fmt.length())
                                 return;
 
-                        switch (static_cast<FormatChar>(fmt[idx])) {
-                        case FormatChar::Percent:
-                                out.appendChar('%');
-                                break;
-
-                        case FormatChar::Char:
-                                IF_TYPE_EQ(T, char)
+                        if (fmt[idx] == '}') {
+                                // "{}" found, so we expect a parameter
+                                if constexpr (std::is_same<std::remove_cvref_t<T>, char>::value) {
                                         out.appendChar(arg);
-                                break;
-
-                        case FormatChar::String:
-                                IF_TYPE_EQ(T, String::String)
+                                } else if constexpr (std::is_same<std::remove_cvref_t<T>, String::String>::value)
                                         out += arg;
-                                break;
+                                else if constexpr (
+                                        std::is_same<std::remove_cvref_t<T>, int>::value
+                                        or std::is_same<std::remove_cvref_t<T>, long>::value
+                                        or std::is_same<std::remove_cvref_t<T>, long long>::value
+                                ) {
+                                        out += Conversion::intToString<std::remove_cvref_t<T>>(arg, Conversion::Base::Decimal);
+                                } else if constexpr (
+                                        std::is_same<std::remove_cvref_t<T>, unsigned int>::value
+                                        or std::is_same<std::remove_cvref_t<T>, unsigned long>::value
+                                        or std::is_same<std::remove_cvref_t<T>, unsigned long long>::value
+                                ) {
+                                        out += Conversion::uintToString<std::remove_cvref_t<T>>(arg, Conversion::Base::Decimal);
+                                } else if constexpr (IsSpecialValueV<T>) {
+                                        using InnerType = std::remove_cvref_t<decltype(arg.value)>;
+                                        out += Conversion::uintToString<InnerType>(arg.value, std::remove_cvref_t<T>::base);
+                                }
 
-                        case FormatChar::SignedInt:
-                                IF_TYPE_EQ(T, int)
-                                        out += Conversion::intToString<int>(arg, Conversion::Base::Decimal);
-                                IF_TYPE_EQ(T, long)
-                                        out += Conversion::intToString<long>(arg, Conversion::Base::Decimal);
-                                IF_TYPE_EQ(T, long long)
-                                        out += Conversion::intToString<long long>(arg, Conversion::Base::Decimal);
-                                break;
-
-                        case FormatChar::UnsignedInt:
-                                IF_TYPE_EQ(T, unsigned int)
-                                        out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Decimal);
-                                IF_TYPE_EQ(T, unsigned long)
-                                        out += Conversion::uintToString<unsigned long>(arg, Conversion::Base::Decimal);
-                                IF_TYPE_EQ(T, unsigned long long)
-                                        out += Conversion::uintToString<unsigned long long>(arg, Conversion::Base::Decimal);
-                                break;
-
-                        case FormatChar::Binary:
-                                IF_TYPE_EQ(T, unsigned int)
-                                        out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Binary);
-                                IF_TYPE_EQ(T, unsigned long)
-                                        out += Conversion::uintToString<unsigned long>(arg, Conversion::Base::Binary);
-                                IF_TYPE_EQ(T, unsigned long long)
-                                        out += Conversion::uintToString<unsigned long long>(arg, Conversion::Base::Binary);
-                                break;
-
-                        case FormatChar::Octal:
-                                IF_TYPE_EQ(T, unsigned int)
-                                        out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Octal);
-                                IF_TYPE_EQ(T, unsigned long)
-                                        out += Conversion::uintToString<unsigned long>(arg, Conversion::Base::Octal);
-                                IF_TYPE_EQ(T, unsigned long long)
-                                        out += Conversion::uintToString<unsigned long long>(arg, Conversion::Base::Octal);
-                                break;
-
-                        case FormatChar::Hexadecimal:
-                                IF_TYPE_EQ(T, unsigned int)
-                                        out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Hexadecimal);
-                                IF_TYPE_EQ(T, unsigned long)
-                                        out += Conversion::uintToString<unsigned long>(arg, Conversion::Base::Hexadecimal);
-                                IF_TYPE_EQ(T, unsigned long long)
-                                        out += Conversion::uintToString<unsigned long long>(arg, Conversion::Base::Hexadecimal);
-                                break;
-
-                        default:
-                                break;
-                        }
-
-                        if constexpr (sizeof...(ARGS) > 0) {
                                 ++idx;
-                                formatArgs(out, fmt, idx, static_cast<ARGS &&>(args)...);
+                                if constexpr (sizeof...(ARGS) > 0) {
+                                        formatArgs(out, fmt, idx, static_cast<ARGS &&>(args)...);
+                                } else {
+                                        for (; idx < fmt.length(); ++idx)
+                                                out.appendChar(fmt[idx]);
+                                }
                                 return;
                         }
                 }
         }
 
+        /// @brief Overload to allow formatString() to compile without format arguments.
+        constexpr void formatArgs(String::String &out, const String::String &fmt, Typing::USize &idx)
+        {
+                for (; idx < fmt.length(); ++idx)
+                        out.appendChar(fmt[idx]);
+        }
+
         /// @brief Format a string.
         ///
-        /// This function uses a printf-like formatting syntax.
+        /// Expected format: "This is a parameter: {} and here is another one: {}", a, b
         /// @param str string to format
         /// @param args values
         template<typename... ARGS>
@@ -124,12 +130,7 @@ namespace Melon::Fmt
                 String::String new_str;
                 Typing::USize idx = 0;
 
-                if constexpr (sizeof...(ARGS) > 0) {
-                        formatArgs(new_str, str, idx, static_cast<ARGS &&>(args)...);
-                } else {
-                        for (; idx < str.length(); idx++)
-                                new_str.appendChar(str[idx]);
-                }
+                formatArgs(new_str, str, idx, static_cast<ARGS &&>(args)...);
 
                 return new_str;
         }
