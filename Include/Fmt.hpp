@@ -27,8 +27,6 @@ namespace Melon::Fmt
         template<typename T, typename... ARGS>
         void formatArgs(String::String &out, const String::String &fmt, Typing::USize &idx, T &&arg, ARGS &&...args)
         {
-                char buf[65];
-
                 for (; idx < fmt.length(); ++idx) {
                         if (fmt[idx] != '%') {
                                 out.appendChar(fmt[idx]);
