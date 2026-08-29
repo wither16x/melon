@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Melon: Namespace Members</title>
+<title>Melon: Melon::Input Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', codefold.init);
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacemembers_func.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('namespaceMelon_1_1Input.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -108,26 +108,62 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacemembe
 </div>
 </div>
 
+<div class="header">
+  <div class="headertitle"><div class="title">Melon::Input Namespace Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented namespace functions with links to the namespaces they belong to:</div><ul>
-<li>baseToString()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Conversion.html#a7ab67d4abf190101ae7e5f615c058ae2">Melon::Conversion</a></li>
-<li>bin()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Conversion.html#afb7e1ba5a3f62293c4d54e8fe46c8359">Melon::Conversion</a></li>
-<li>formatArgs()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Fmt.html#a66d93d1fac79a20a084c46fd5f046fd6">Melon::Fmt</a></li>
-<li>formatString()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Fmt.html#ad5ddb3e2e4b578af28dcf9790ad806a3">Melon::Fmt</a></li>
-<li>hex()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Conversion.html#a21d23648fe22b5b5d5c691fadef96ad7">Melon::Conversion</a></li>
-<li>input()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Input.html#abe17392088a5f0dc880c964f554e51f4">Melon::Input</a></li>
-<li>intToString()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Conversion.html#a2db39162039fd5d5703086edee80a805">Melon::Conversion</a></li>
-<li>oct()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Conversion.html#a1f317daa3321a446329ee7c4baba5c03">Melon::Conversion</a></li>
-<li>print()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Print.html#aee9c4376e970b3c74501f3b320055401">Melon::Print</a></li>
-<li>println()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Print.html#aaf1756659f0bc2a6e901bfd469c856da">Melon::Print</a></li>
-<li>uintToString()&#160;:&#160;<a class="el" href="namespaceMelon_1_1Conversion.html#abc7d737f9b48bfa114eaed171a4c67c9">Melon::Conversion</a></li>
-</ul>
+
+<p>Contains functions to interact with the user from the standard input stream.  
+<a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:abe17392088a5f0dc880c964f554e51f4" id="r_abe17392088a5f0dc880c964f554e51f4"><td class="memItemLeft"><a class="el" href="classMelon_1_1String_1_1String.html">String::String</a>&#160;</td><td class="memItemRight"><a class="el" href="#abe17392088a5f0dc880c964f554e51f4">input</a> (const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;str)</td></tr>
+<tr class="memdesc:abe17392088a5f0dc880c964f554e51f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asks the user to type a null-terminated string.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains functions to interact with the user from the standard input stream. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="abe17392088a5f0dc880c964f554e51f4" name="abe17392088a5f0dc880c964f554e51f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe17392088a5f0dc880c964f554e51f4">&#9670;&#160;</a></span>input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> Melon::Input::input </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Asks the user to type a null-terminated string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>string to print before the user types </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>user text </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><b>Melon</b></li><li class="navelem"><a href="namespaceMelon_1_1Input.html">Input</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>

@@ -5,6 +5,9 @@ var namespaces_dup =
       [ "Exceptions", "namespaceMelon_1_1Exceptions.html", "namespaceMelon_1_1Exceptions" ],
       [ "FileSystem", "namespaceMelon_1_1FileSystem.html", "namespaceMelon_1_1FileSystem" ],
       [ "Fmt", "namespaceMelon_1_1Fmt.html", "namespaceMelon_1_1Fmt" ],
+      [ "Input", "namespaceMelon_1_1Input.html", [
+        [ "input", "namespaceMelon_1_1Input.html#abe17392088a5f0dc880c964f554e51f4", null ]
+      ] ],
       [ "Memory", "namespaceMelon_1_1Memory.html", "namespaceMelon_1_1Memory" ],
       [ "Print", "namespaceMelon_1_1Print.html", [
         [ "print", "namespaceMelon_1_1Print.html#aee9c4376e970b3c74501f3b320055401", null ],
