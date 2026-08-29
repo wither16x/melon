@@ -6,6 +6,7 @@
 #include <StringPackage/Package.hpp>
 #include <FileSystemPackage/Package.hpp>
 #include <FmtPackage/Package.hpp>
+#include <ConversionPackage/Package.hpp>
 
 int main()
 {
@@ -26,6 +27,9 @@ int main()
 
         Melon::Test::FmtPackage fmt_package;
         TARWI_RUN_PACKAGE(fmt_package);
+
+        Melon::Test::ConversionPackage conversion_package;
+        TARWI_RUN_PACKAGE(conversion_package);
 
         return 0;
 }
