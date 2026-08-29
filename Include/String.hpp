@@ -53,22 +53,22 @@ namespace Melon::String
 
                 /// @brief Reverse the string.
                 /// @return self
-                String &reverse(this String &self);
+                String reverse(this String &self);
 
                 /// @brief Removes all occurences of ch at the left of the string.
                 /// @param ch character to remove, =' ' by default
                 /// @return self  
-                String &ltrim(this String &self, char ch = ' ');
+                String ltrim(this String &self, char ch = ' ');
 
                 /// @brief Removes all occurences of ch at the right of the string.
                 /// @param ch character to remove, =' ' by default
                 /// @return self
-                String &rtrim(this String &self, char ch = ' ');
+                String rtrim(this String &self, char ch = ' ');
 
                 /// @brief Removes all occurences of ch at the left and the right of the string.
                 /// @param ch character to remove, =' ' by default
                 /// @return self
-                String &trim(this String &self, char ch = ' ');
+                String trim(this String &self, char ch = ' ');
 
                 /// @brief Gets a character from its index.
                 /// @param index position of the character

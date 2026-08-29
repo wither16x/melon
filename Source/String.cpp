@@ -65,55 +65,60 @@ namespace Melon::String
                 self.chars.pushBack('\0');
         }
 
-        String &String::reverse(this String &self)
+        String String::reverse(this String &self)
         {
+                String new_string = self;
+
                 Typing::USize l = 0;
-                Typing::USize r = self.length() - 1;
+                Typing::USize r = new_string.length() - 1;
                 char t;
 
                 while (l < r) {
-                        t = self[l];
-                        self[l] = self[r];
-                        self[r] = t;
+                        t = new_string[l];
+                        new_string[l] = new_string[r];
+                        new_string[r] = t;
 
                         ++l;
                         --r;
                 }
 
-                return self;
+                return new_string;
         }
 
-        String &String::ltrim(this String &self, char ch)
+        String String::ltrim(this String &self, char ch)
         {
+                String new_string = self;
                 Typing::USize i = 0;
 
-                while (self[i] == ch)
-                        self.chars.erase(i);
+                while (new_string[i] == ch)
+                        new_string.chars.erase(i);
 
-                return self;
+                return new_string;
         }
 
-        String &String::rtrim(this String &self, char ch)
+        String String::rtrim(this String &self, char ch)
         {
-                Typing::USize i = self.length() - 1;
+                String new_string = self;
+                Typing::USize i = new_string.length() - 1;
 
                 while (i > 0) {
-                        if (self[i] == ch)
+                        if (new_string[i] == ch)
                                 --i;
                         else
                                 break;
                 }
 
-                self[i + 1] = '\0';
+                new_string[i + 1] = '\0';
 
-                return self;
+                return new_string;
         }
 
-        String &String::trim(this String &self, char ch)
+        String String::trim(this String &self, char ch)
         {
-                self.ltrim(ch);
-                self.rtrim(ch);
-                return self;
+                String new_string = self;
+                new_string = new_string.ltrim(ch);
+                new_string = new_string.rtrim(ch);
+                return new_string;
         }
 
         char &String::operator [](this String &self, Typing::USize index)

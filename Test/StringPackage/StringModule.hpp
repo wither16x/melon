@@ -107,9 +107,9 @@ namespace Melon::Test
                         String::String o = "bananaooooo";
                         String::String left_right = "     trim_it  ";
 
-                        whitespaces.ltrim();
-                        o.rtrim('o');
-                        left_right.trim();
+                        whitespaces = whitespaces.ltrim();
+                        o = o.rtrim('o');
+                        left_right = left_right.trim();
 
                         TARWI_EXPECT(
                                 whitespaces == "abc"
