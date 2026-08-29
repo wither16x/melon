@@ -58,12 +58,24 @@ namespace Melon::Test
                         TARWI_EXPECT(hello == "I'm very old because I'm 65 years old.");
                 }
 
+                TARWI_UNIT(unitBinaryOctalHexadecimal)
+                {
+                        unsigned int x = 35;
+
+                        String::String bin = Fmt::formatString("x = 0b%b", x);
+                        String::String oct = Fmt::formatString("x = 0o%o", x);
+                        String::String hex = Fmt::formatString("x = 0x%x", x);
+
+                        TARWI_EXPECT(bin == "x = 0b100011" and oct == "x = 0o43" and hex == "x = 0x23");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitFormatChar);
                         TARWI_CALL_UNIT(unitFormatString);
                         TARWI_CALL_UNIT(unitFormatSignedInt);
                         TARWI_CALL_UNIT(unitFormatUnsignedInt);
+                        TARWI_CALL_UNIT(unitBinaryOctalHexadecimal);
                 }
         };
 } // namespace Melon::Test

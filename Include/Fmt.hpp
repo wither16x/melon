@@ -16,7 +16,10 @@ namespace Melon::Fmt
                 Char            = 'c',
                 String          = 's',
                 SignedInt       = 'd',
-                UnsignedInt     = 'u'
+                UnsignedInt     = 'u',
+                Binary          = 'b',
+                Octal           = 'o',
+                Hexadecimal     = 'x'
         };
 
         /// @brief Format a string.
@@ -61,6 +64,21 @@ namespace Melon::Fmt
                         case FormatChar::UnsignedInt:
                                 IF_TYPE_EQ(T, unsigned int)
                                         out += Conversion::uintToString(arg, Conversion::Base::Decimal);
+                                break;
+
+                        case FormatChar::Binary:
+                                IF_TYPE_EQ(T, unsigned int)
+                                        out += Conversion::uintToString(arg, Conversion::Base::Binary);
+                                break;
+
+                        case FormatChar::Octal:
+                                IF_TYPE_EQ(T, unsigned int)
+                                        out += Conversion::uintToString(arg, Conversion::Base::Octal);
+                                break;
+
+                        case FormatChar::Hexadecimal:
+                                IF_TYPE_EQ(T, unsigned int)
+                                        out += Conversion::uintToString(arg, Conversion::Base::Hexadecimal);
                                 break;
 
                         default:
