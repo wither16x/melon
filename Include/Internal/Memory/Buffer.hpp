@@ -41,6 +41,7 @@ namespace Melon::Memory
                 Buffer(const Buffer<T> &other)
                 {
                         this->__size = other.__size;
+                        this->data = new T[this->__size ? this->__size : 1];
                         memcpy(this->data, other.data, this->__size);
                 }
 
@@ -48,8 +49,9 @@ namespace Melon::Memory
                 /// @param other buffer to move data and size to
                 Buffer(Buffer<T> &&other)
                 {
-                        memcpy(this->data, other.data, other.__size);
                         this->__size = other.__size;
+                        this->data = new T[this->__size ? this->__size : 1];
+                        memcpy(this->data, other.data, other.__size);
 
                         memset(other.data, 0, other.__size);
                         other.__size = 0;
@@ -259,6 +261,8 @@ namespace Melon::Memory
                 Buffer<T> &operator =(this Buffer<T> &self, const Buffer<T> &other)
                 {
                         if (self != other) {
+                                delete[] self.data;
+                                self.data = new T[other.__size ? other.__size : 1];
                                 self.__size = other.__size;
                                 memcpy(self.data, other.data, other.__size);
                         }
@@ -271,6 +275,8 @@ namespace Melon::Memory
                 Buffer<T> &operator =(this Buffer<T> &self, Buffer<T> &&other)
                 {
                         if (self != other) {
+                                delete[] self.data;
+                                self.data = new T[other.__size ? other.__size : 1];
                                 memcpy(self.data, other.data, other.__size);
                                 self.__size = other.__size;
 
