@@ -25,7 +25,7 @@ CXX_OBJS := $(patsubst $(SRC)/%,$(BUILD)/%,$(CXX_SRCS:.cpp=.o))
 OBJS := $(ASM_OBJS) $(CXX_OBJS)
 TARGET := $(BUILD)/libmelon.a
 
-.PHONY: all clean re install build-install
+.PHONY: all clean re install-local install-global
 
 all: $(TARGET)
 
@@ -46,7 +46,8 @@ clean:
 
 re: clean all
 
-install:
+install-local:
 	./Install.sh $(INSTALL_DIR)
 
-build-install: re install
+install-global:
+	./Install.sh
