@@ -32,10 +32,17 @@ namespace Melon::Test
                         );
                 }
 
+                TARWI_UNIT(unitUintToString)
+                {
+                        String::String str = Conversion::uintToString(15, Conversion::Base::Hexadecimal);
+                        TARWI_EXPECT(str == "f");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitIntToString);
                         TARWI_CALL_UNIT(unitBaseToString);
+                        TARWI_CALL_UNIT(unitUintToString);
                 }
         };
 } // namespace Melon::Test

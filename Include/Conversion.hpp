@@ -23,4 +23,9 @@ namespace Melon::Conversion
         /// @param base base
         /// @return new string
         String::String intToString(int value, Base base);
+
+        /// @brief Convert an unsigned integer to a String::String.
+        /// @param value unsigned integer to convert
+        /// @return corresponding string
+        String::String uintToString(unsigned int value, Base base);
 } // namespace Melon::Conversion
