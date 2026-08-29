@@ -83,6 +83,36 @@ namespace Melon::String
                 return self;
         }
 
+        String &String::ltrim(this String &self, char ch)
+        {
+                Typing::USize i = 0;
+
+                while (self[i] == ch)
+                        self.chars.erase(i);
+
+                return self;
+        }
+
+        String &String::rtrim(this String &self, char ch)
+        {
+                Typing::USize i = 0;
+
+                while (self[i] != ch)
+                        ++i;
+
+                while (self[i] == ch)
+                        self.chars.erase(i);
+
+                return self;
+        }
+
+        String &String::trim(this String &self, char ch)
+        {
+                self.ltrim(ch);
+                self.rtrim(ch);
+                return self;
+        }
+
         char &String::operator [](this String &self, Typing::USize index)
         {
                 return self.chars[index];

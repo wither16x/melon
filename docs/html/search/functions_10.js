@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uinttostring_0',['uintToString',['../namespaceMelon_1_1Conversion.html#abc7d737f9b48bfa114eaed171a4c67c9',1,'Melon::Conversion']]]
+  ['trim_0',['trim',['../classMelon_1_1String_1_1String.html#a3b428f83927fb824ac4961ce96f6a8f6',1,'Melon::String::String']]]
 ];

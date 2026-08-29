@@ -7,6 +7,7 @@ var classMelon_1_1String_1_1String =
     [ "begin", "classMelon_1_1String_1_1String.html#a12be43c46fd64d98095937d1dfe08557", null ],
     [ "end", "classMelon_1_1String_1_1String.html#ae82a411cf7d1bef6749410311e6f8f3a", null ],
     [ "length", "classMelon_1_1String_1_1String.html#a6f915379341221c6ba0ba15f2cc63f18", null ],
+    [ "ltrim", "classMelon_1_1String_1_1String.html#abe6517c06219e10dd67170b48109b758", null ],
     [ "operator!=", "classMelon_1_1String_1_1String.html#a08e9756ad2fe05ff9d0258974dc71a1f", null ],
     [ "operator+", "classMelon_1_1String_1_1String.html#aaabcd17055f119427e0438a4c1cf5df5", null ],
     [ "operator+=", "classMelon_1_1String_1_1String.html#ac6b30b3bcf3eef23b031a008aee5f219", null ],
@@ -21,5 +22,7 @@ var classMelon_1_1String_1_1String =
     [ "operator[]", "classMelon_1_1String_1_1String.html#a5587032c94d16a1bdd62847c9e257111", null ],
     [ "raw", "classMelon_1_1String_1_1String.html#adb05e3b9accc562aa7fef1ebe91a2242", null ],
     [ "reverse", "classMelon_1_1String_1_1String.html#a30b3a0315a5ec68dc30ae5ab4344bf5c", null ],
-    [ "substract", "classMelon_1_1String_1_1String.html#ac9be64320132e02c0594d398cd93c4ad", null ]
+    [ "rtrim", "classMelon_1_1String_1_1String.html#a61e4eba91735a55105e6d5be6cc30178", null ],
+    [ "substract", "classMelon_1_1String_1_1String.html#ac9be64320132e02c0594d398cd93c4ad", null ],
+    [ "trim", "classMelon_1_1String_1_1String.html#a3b428f83927fb824ac4961ce96f6a8f6", null ]
 ];

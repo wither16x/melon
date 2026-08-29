@@ -10,6 +10,7 @@ var classMelon_1_1Vector_1_1Vector =
     [ "data", "classMelon_1_1Vector_1_1Vector.html#a82a8121b0ffd2a0c06f9f6a09052b11b", null ],
     [ "emplaceBack", "classMelon_1_1Vector_1_1Vector.html#a921c81811f31b8203cd9ff67e77e8389", null ],
     [ "end", "classMelon_1_1Vector_1_1Vector.html#ada06e924fb890340d4365fb997831c2d", null ],
+    [ "erase", "classMelon_1_1Vector_1_1Vector.html#a2fcd639f247602c681053d1da7571dfe", null ],
     [ "isEmpty", "classMelon_1_1Vector_1_1Vector.html#ad887a62a38d16ff54bc5a8bb60e801a5", null ],
     [ "length", "classMelon_1_1Vector_1_1Vector.html#aba2a91d90549b0cf1bd54df51d8c6934", null ],
     [ "operator=", "classMelon_1_1Vector_1_1Vector.html#a83f794b90b06fbe7e88150e673a6ce48", null ],

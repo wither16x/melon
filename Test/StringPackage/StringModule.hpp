@@ -101,6 +101,23 @@ namespace Melon::Test
                         TARWI_EXPECT(firstname == "John");
                 }
 
+                TARWI_UNIT(unitTrim)
+                {
+                        String::String whitespaces = "   abc";
+                        String::String o = "bananaooooo";
+                        String::String left_right = "     trim_it  ";
+
+                        whitespaces.ltrim();
+                        o.rtrim('o');
+                        left_right.trim();
+
+                        TARWI_EXPECT(
+                                whitespaces == "abc"
+                                and o == "banana"
+                                and left_right == "trim_it"
+                        );
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitCheckInit);
@@ -113,6 +130,7 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitAddition);
                         TARWI_CALL_UNIT(unitAssignmentAddition);
                         TARWI_CALL_UNIT(unitSubstraction);
+                        TARWI_CALL_UNIT(unitTrim);
                 }
         };
 } // namespace Melon::Test
