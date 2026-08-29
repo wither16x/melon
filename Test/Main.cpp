@@ -7,6 +7,7 @@
 #include <FileSystemPackage/Package.hpp>
 #include <FmtPackage/Package.hpp>
 #include <ConversionPackage/Package.hpp>
+#include <PrintPackage/Package.hpp>
 
 int main()
 {
@@ -30,6 +31,9 @@ int main()
 
         Melon::Test::ConversionPackage conversion_package;
         TARWI_RUN_PACKAGE(conversion_package);
+
+        Melon::Test::PrintPackage print_package;
+        TARWI_RUN_PACKAGE(print_package);
 
         return 0;
 }
