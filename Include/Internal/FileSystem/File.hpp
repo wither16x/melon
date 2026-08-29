@@ -52,6 +52,10 @@ namespace Melon::FileSystem
                 /// @return buffer containing the read bytes
                 Memory::Buffer<char> readLine(this File &self, Typing::USize lineno);
 
+                /// @brief Gets the file descriptor of this stream.
+                /// @return file descriptor
+                int descriptor(this const File &self);
+
                 /// @brief Seek to a certain position in the file.
                 /// @param offset offset from origin
                 /// @param origin seek from here
