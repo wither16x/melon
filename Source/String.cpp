@@ -95,13 +95,16 @@ namespace Melon::String
 
         String &String::rtrim(this String &self, char ch)
         {
-                Typing::USize i = 0;
+                Typing::USize i = self.length() - 1;
 
-                while (self[i] != ch)
-                        ++i;
+                while (i > 0) {
+                        if (self[i] == ch)
+                                --i;
+                        else
+                                break;
+                }
 
-                while (self[i] == ch)
-                        self.chars.erase(i);
+                self[i + 1] = '\0';
 
                 return self;
         }
