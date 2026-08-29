@@ -34,7 +34,10 @@ namespace Melon::Test
 
                 TARWI_UNIT(unitUintToString)
                 {
-                        String::String str = Conversion::uintToString(15, Conversion::Base::Hexadecimal);
+                        String::String str = Conversion::uintToString(
+                                static_cast<unsigned int>(15),
+                                Conversion::Base::Hexadecimal
+                        );
                         TARWI_EXPECT(str == "f");
                 }
 

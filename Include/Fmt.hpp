@@ -58,27 +58,27 @@ namespace Melon::Fmt
 
                         case FormatChar::SignedInt:
                                 IF_TYPE_EQ(T, int)
-                                        out += Conversion::intToString(arg, Conversion::Base::Decimal);
+                                        out += Conversion::intToString<int>(arg, Conversion::Base::Decimal);
                                 break;
 
                         case FormatChar::UnsignedInt:
                                 IF_TYPE_EQ(T, unsigned int)
-                                        out += Conversion::uintToString(arg, Conversion::Base::Decimal);
+                                        out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Decimal);
                                 break;
 
                         case FormatChar::Binary:
                                 IF_TYPE_EQ(T, unsigned int)
-                                        out += Conversion::uintToString(arg, Conversion::Base::Binary);
+                                        out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Binary);
                                 break;
 
                         case FormatChar::Octal:
                                 IF_TYPE_EQ(T, unsigned int)
-                                        out += Conversion::uintToString(arg, Conversion::Base::Octal);
+                                        out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Octal);
                                 break;
 
                         case FormatChar::Hexadecimal:
                                 IF_TYPE_EQ(T, unsigned int)
-                                        out += Conversion::uintToString(arg, Conversion::Base::Hexadecimal);
+                                        out += Conversion::uintToString<unsigned int>(arg, Conversion::Base::Hexadecimal);
                                 break;
 
                         default:
