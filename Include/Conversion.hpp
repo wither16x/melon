@@ -5,9 +5,6 @@
 namespace Melon::Conversion
 {
         /// @brief All conversion functions that take integers should support these bases.
-        ///
-        /// If a base is not supported, the function should throw an exception.
-        /// TODO: add Exceptions::UnsupportedBase
         enum class Base
         {
                 Binary          = 2,
@@ -15,6 +12,11 @@ namespace Melon::Conversion
                 Decimal         = 10,
                 Hexadecimal     = 16
         };
+
+        /// @brief Convert a base to a raw string.
+        /// @param base base to convert
+        /// @return corresponding string
+        const char *baseToString(Base base);
 
         /// @brief Convert an integer to a String::String.
         /// @param value integer to convert
