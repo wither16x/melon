@@ -144,11 +144,19 @@ namespace Melon::Vector
                         self.obj_count = 0;
                 }
 
-                /// @brief Gets a pointer to the internal buffer.
-                /// @return constant pointer to the internal buffer
+                /// @brief Gets a pointer to the internal buffer storage.
+                /// @return constant pointer to the internal buffer storage
                 const T *data(this const Vector<T> &self)
                 {
                         return self.buf.get();
+                }
+
+                /// @brief Gets a copy of the internal buffer.
+                /// @return copy of the internal buffer
+                Memory::Buffer<T> toBuffer(this const Vector<T> &self)
+                {
+                        Memory::Buffer<T> result(self.buf.get(), self.buf.size());
+                        return result;
                 }
 
                 /// @brief Gets the length of the vector.
