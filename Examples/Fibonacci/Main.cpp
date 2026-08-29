@@ -24,9 +24,6 @@ int main()
 {
         auto sequence = fib(15);
 
-        for (auto n : sequence) {
-                // due to the way Vector::Vector extends itself
-                if (n != 0)
-                        Print::println("{}", n);
-        }
+        for (auto n : sequence)
+                Print::println("{}", n);
 }
