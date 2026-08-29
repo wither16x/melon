@@ -39,7 +39,11 @@ namespace Melon::FileSystem
                 /// @brief Read bytes from the file.
                 /// @param bytes bytes count
                 /// @return buffer containing the read bytes
-                Memory::Buffer<char> read(this File &self, Typing::USize bytes);
+                Memory::Buffer<char> readBytes(this File &self, Typing::USize bytes);
+
+                /// @brief Read until EOF.
+                /// @return buffer containing the read bytes
+                Memory::Buffer<char> read(this File &self);
 
                 /// @brief Read a line from the file.
                 ///

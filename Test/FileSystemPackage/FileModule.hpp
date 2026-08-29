@@ -70,10 +70,10 @@ namespace Melon::Test
                         TARWI_EXPECT(strcmp(buf.get(), "Hello! I am a file!") == 0);
                 }
 
-                TARWI_UNIT(unitRead)
+                TARWI_UNIT(unitReadBytes)
                 {
                         FileSystem::File file(RESOURCES_PATH"/Message.txt", "r");
-                        Memory::Buffer<char> content = file.read(512);
+                        Memory::Buffer<char> content = file.readBytes(512);
                         TARWI_EXPECT(strcmp(content.get(),
                         "Hey!\n"
                         "\n"
@@ -109,7 +109,19 @@ namespace Melon::Test
                         Memory::CString data = "I wrote this!";
                         file.write({data.get(), data.length()}, data.length());
 
-                        TARWI_EXPECT(strcmp(file.read(data.length()).get(), data.get()) == 0);
+                        TARWI_EXPECT(strcmp(file.readBytes(data.length()).get(), data.get()) == 0);
+                }
+
+                TARWI_UNIT(unitRead)
+                {
+                        FileSystem::File file(RESOURCES_PATH"/Message.txt", "r");
+                        Memory::Buffer<char> data = file.read();
+                        TARWI_EXPECT(strcmp(data.get(),
+                        "Hey!\n"
+                        "\n"
+                        "If you read this, know that...\n"
+                        "Uh...\n"
+                        "I don't know T-T\n") == 0);
                 }
 
                 TARWI_MODULE_MAIN()
@@ -119,9 +131,10 @@ namespace Melon::Test
                         TARWI_CALL_UNIT(unitFileNotFound);
                         TARWI_CALL_UNIT(unitNullStream);
                         TARWI_CALL_UNIT(unitReadLine);
-                        TARWI_CALL_UNIT(unitRead);
+                        TARWI_CALL_UNIT(unitReadBytes);
                         TARWI_CALL_UNIT(unitReadSeveralLines);
                         TARWI_CALL_UNIT(unitWrite);
+                        TARWI_CALL_UNIT(unitRead);
                 }
         };
 } // namespace Melon::Test

@@ -37,7 +37,7 @@ namespace Melon::FileSystem
                 }
         }
 
-        Memory::Buffer<char> File::read(this File &self, Typing::USize bytes)
+        Memory::Buffer<char> File::readBytes(this File &self, Typing::USize bytes)
         {
                 char *p = new char[bytes];
 
@@ -46,6 +46,19 @@ namespace Melon::FileSystem
                 Memory::Buffer<char> buf(p, bytes);
                 delete[] p;
                 return buf;
+        }
+
+        Memory::Buffer<char> File::read(this File &self)
+        {
+                Vector::Vector<char> bytes;
+                char ch;
+
+                self.seek(0, SeekOrigin::Begin);
+
+                while ((ch = fgetc(self.stream)) != EOF)
+                        bytes.pushBack(ch);
+
+                return bytes.toBuffer();
         }
 
         Memory::Buffer<char> File::readLine(this File &self, Typing::USize lineno)
