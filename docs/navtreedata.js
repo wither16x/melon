@@ -54,7 +54,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BufferOverflow_8hpp_source.html",
-"namespaceMelon_1_1Conversion.html"
+"functions.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

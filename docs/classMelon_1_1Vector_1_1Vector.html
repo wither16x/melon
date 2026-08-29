@@ -146,7 +146,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight"><b>clear</b> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:af3ad7bc751f8ca71cc75675a6c481ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the vector. <br /></td></tr>
 <tr class="memitem:a82a8121b0ffd2a0c06f9f6a09052b11b" id="r_a82a8121b0ffd2a0c06f9f6a09052b11b"><td class="memItemLeft">const T *&#160;</td><td class="memItemRight"><a class="el" href="#a82a8121b0ffd2a0c06f9f6a09052b11b">data</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
-<tr class="memdesc:a82a8121b0ffd2a0c06f9f6a09052b11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the internal buffer.  <br /></td></tr>
+<tr class="memdesc:a82a8121b0ffd2a0c06f9f6a09052b11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a pointer to the internal buffer storage.  <br /></td></tr>
+<tr class="memitem:a8fef40b2492bb6bdd22306dcc1743c5f" id="r_a8fef40b2492bb6bdd22306dcc1743c5f"><td class="memItemLeft"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer</a>&lt; T &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a8fef40b2492bb6bdd22306dcc1743c5f">toBuffer</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
+<tr class="memdesc:a8fef40b2492bb6bdd22306dcc1743c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a copy of the internal buffer.  <br /></td></tr>
 <tr class="memitem:aba2a91d90549b0cf1bd54df51d8c6934" id="r_aba2a91d90549b0cf1bd54df51d8c6934"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#aba2a91d90549b0cf1bd54df51d8c6934">length</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
 <tr class="memdesc:aba2a91d90549b0cf1bd54df51d8c6934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the length of the vector.  <br /></td></tr>
 <tr class="memitem:ae1bae41e148e5e9450c82ca95b974a67" id="r_ae1bae41e148e5e9450c82ca95b974a67"><td class="memItemLeft"><a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae1bae41e148e5e9450c82ca95b974a67">capacity</a> (this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
@@ -391,8 +393,8 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Gets a pointer to the internal buffer. </p>
-<dl class="section return"><dt>Returns</dt><dd>constant pointer to the internal buffer </dd></dl>
+<p>Gets a pointer to the internal buffer storage. </p>
+<dl class="section return"><dt>Returns</dt><dd>constant pointer to the internal buffer storage </dd></dl>
 
 </div>
 </div>
@@ -824,6 +826,36 @@ template&lt;typename T&gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8fef40b2492bb6bdd22306dcc1743c5f" name="a8fef40b2492bb6bdd22306dcc1743c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fef40b2492bb6bdd22306dcc1743c5f">&#9670;&#160;</a></span>toBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer</a>&lt; T &gt; <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::toBuffer </td>
+          <td>(</td>
+          <td class="paramtype">this const <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets a copy of the internal buffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>copy of the internal buffer </dd></dl>
 
 </div>
 </div>
