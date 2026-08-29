@@ -87,6 +87,11 @@ namespace Melon::FileSystem
                 return buf;
         }
 
+        int File::descriptor(this const File &self)
+        {
+                return fileno(self.stream);
+        }
+
         void File::seek(this File &self, long offset, SeekOrigin origin)
         {
                 fseek(self.stream, offset, std::to_underlying(origin));
