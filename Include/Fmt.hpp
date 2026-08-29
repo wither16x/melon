@@ -15,7 +15,8 @@ namespace Melon::Fmt
                 Percent         = '%',
                 Char            = 'c',
                 String          = 's',
-                SignedInt       = 'd'
+                SignedInt       = 'd',
+                UnsignedInt     = 'u'
         };
 
         /// @brief Format a string.
@@ -55,6 +56,11 @@ namespace Melon::Fmt
                         case FormatChar::SignedInt:
                                 IF_TYPE_EQ(T, int)
                                         out += Conversion::intToString(arg, Conversion::Base::Decimal);
+                                break;
+
+                        case FormatChar::UnsignedInt:
+                                IF_TYPE_EQ(T, unsigned int)
+                                        out += Conversion::uintToString(arg, Conversion::Base::Decimal);
                                 break;
 
                         default:

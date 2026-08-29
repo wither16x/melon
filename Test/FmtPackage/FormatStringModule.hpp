@@ -47,11 +47,23 @@ namespace Melon::Test
                         TARWI_EXPECT(hello == "Hello! My name is John Doe and I am 42 years old!");
                 }
 
+                TARWI_UNIT(unitFormatUnsignedInt)
+                {
+                        unsigned int age = 65;
+                        String::String hello = Fmt::formatString(
+                                "I'm very old because I'm %u years old.",
+                                age
+                        );
+
+                        TARWI_EXPECT(hello == "I'm very old because I'm 65 years old.");
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitFormatChar);
                         TARWI_CALL_UNIT(unitFormatString);
                         TARWI_CALL_UNIT(unitFormatSignedInt);
+                        TARWI_CALL_UNIT(unitFormatUnsignedInt);
                 }
         };
 } // namespace Melon::Test
