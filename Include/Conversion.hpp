@@ -16,6 +16,51 @@ namespace Melon::Conversion
                 Hexadecimal     = 16
         };
 
+        /// @brief Used to treat values as binary values.
+        template<typename T>
+        struct BinaryValue
+        {
+                T value;
+                static constexpr Base base = Base::Binary;
+        };
+
+        /// @brief Used to treat values as octal values.
+        template<typename T>
+        struct OctalValue
+        {
+                T value;
+                static constexpr Base base = Base::Octal;
+        };
+
+        /// @brief Used to treat values as hexadecimal values.
+        template<typename T>
+        struct HexadecimalValue
+        {
+                T value;
+                static constexpr Base base = Base::Hexadecimal;
+        };
+
+        /// @brief Convert a value to a BinaryValue.
+        template<typename T>
+        BinaryValue<T> bin(T value)
+        {
+                return {value};
+        }
+
+        /// @brief Convert a value to an OctalValue.
+        template<typename T>
+        OctalValue<T> oct(T value)
+        {
+                return {value};
+        }
+
+        /// @brief Convert a value to a HexadecimalValue.
+        template<typename T>
+        HexadecimalValue<T> hex(T value)
+        {
+                return {value};
+        }
+
         /// @brief Convert a base to a raw string.
         /// @param base base to convert
         /// @return corresponding string
