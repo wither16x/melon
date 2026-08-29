@@ -65,6 +65,24 @@ namespace Melon::String
                 self.chars.pushBack('\0');
         }
 
+        String &String::reverse(this String &self)
+        {
+                Typing::USize l = 0;
+                Typing::USize r = self.length() - 1;
+                char t;
+
+                while (l < r) {
+                        t = self[l];
+                        self[l] = self[r];
+                        self[r] = t;
+
+                        ++l;
+                        --r;
+                }
+
+                return self;
+        }
+
         char &String::operator [](this String &self, Typing::USize index)
         {
                 return self.chars[index];

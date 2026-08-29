@@ -50,6 +50,10 @@ namespace Melon::String
                 /// @param ch character to append
                 void appendChar(this String &self, char ch);
 
+                /// @brief Reverse the string.
+                /// @return self
+                String &reverse(this String &self);
+
                 /// @brief Gets a character from its index.
                 /// @param index position of the character
                 /// @return character
