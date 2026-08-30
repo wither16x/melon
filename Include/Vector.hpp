@@ -77,7 +77,7 @@ namespace Melon::Vector
                 /// @return constant pointer to end of data
                 const T *end(this const Vector<T> &self)
                 {
-                        return self.buf.end();
+                        return self.buf.begin() + self.obj_count;
                 }
 
                 /// @brief Add an object to the end of the vector.
