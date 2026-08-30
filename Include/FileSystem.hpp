@@ -6,3 +6,4 @@ namespace Melon::FileSystem
 
 #include "Internal/FileSystem/File.hpp"
 #include "Internal/FileSystem/StdStreams.hpp"
+#include "Internal/FileSystem/Constants.hpp"
