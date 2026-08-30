@@ -1,7 +1,9 @@
+include ../radish_os/prefixes.mk
+
 INSTALL_DIR := $(HOME)/.local
 
 NASM := nasm
-CXX := clang++
+CXX := x86_64-radishos-clang++
 
 CFLAGS := -fno-lto \
 	-fno-pic \
@@ -9,7 +11,9 @@ CFLAGS := -fno-lto \
 	-Wall \
 	-Wextra \
 	-IInclude \
-	-std=c++23
+	-isystem $(LIBC_PREFIX) \
+	-std=c++23 \
+	-nostdlib
 
 SRC := Source
 BUILD := Build
