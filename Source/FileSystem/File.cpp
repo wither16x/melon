@@ -61,11 +61,11 @@ namespace Melon::FileSystem
                 return bytes.toBuffer();
         }
 
-        Memory::Buffer<char> File::readLine(this File &self, Typing::USize lineno)
+        String::String File::readLine(this File &self, Typing::USize lineno)
         {
                 int ch = '\0';
                 Typing::USize lf_count = 0;
-                Memory::Buffer<char> buf;
+                String::String str;
 
                 self.seek(0, SeekOrigin::Begin);
 
@@ -73,18 +73,16 @@ namespace Melon::FileSystem
                         ch = fgetc(self.stream);
 
                         if (ch == EOF)
-                                return buf;
+                                return str;
 
                         if (ch == '\n')
                                 ++lf_count;
                 }
 
-                while ((ch = fgetc(self.stream)) != EOF and ch != '\n') {
-                        buf.resize(buf.size() + 1);
-                        buf[buf.size() - 1] = static_cast<char>(ch);
-                }
+                while ((ch = fgetc(self.stream)) != EOF and ch != '\n')
+                        str.appendChar(ch);
 
-                return buf;
+                return str;
         }
 
         int File::descriptor(this const File &self)

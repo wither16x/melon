@@ -49,8 +49,8 @@ namespace Melon::FileSystem
                 ///
                 /// The \\n is not preserved.
                 /// @param lineno 0-based line number
-                /// @return buffer containing the read bytes
-                Memory::Buffer<char> readLine(this File &self, Typing::USize lineno);
+                /// @return string containing the line
+                String::String readLine(this File &self, Typing::USize lineno);
 
                 /// @brief Gets the file descriptor of this stream.
                 /// @return file descriptor
