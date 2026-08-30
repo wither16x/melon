@@ -24,6 +24,7 @@ namespace Melon::String
         {
                 this->chars = other.chars;
                 other.chars.clear();
+                other.chars.pushBack('\0');
         }
 
         String String::substract(this String &self, Typing::USize chars)
@@ -186,6 +187,7 @@ namespace Melon::String
                 if (self != other) {
                         self.chars = other.chars;
                         other.chars.clear();
+                        other.chars.pushBack('\0');
                 }
 
                 return self;

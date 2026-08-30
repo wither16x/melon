@@ -134,8 +134,8 @@ void&#160;</td><td class="memItemRight"><b>close</b> (this <a class="el" href="#
 <tr class="memdesc:aeede886e7b602e5b721e65338f17c79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read bytes from the file.  <br /></td></tr>
 <tr class="memitem:a46f29c00e0a8c15371d1df4c47806ede" id="r_a46f29c00e0a8c15371d1df4c47806ede"><td class="memItemLeft"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer</a>&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a46f29c00e0a8c15371d1df4c47806ede">read</a> (this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self)</td></tr>
 <tr class="memdesc:a46f29c00e0a8c15371d1df4c47806ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read until EOF.  <br /></td></tr>
-<tr class="memitem:aac5c76a1c0afbb1884a9e7f232ae9de9" id="r_aac5c76a1c0afbb1884a9e7f232ae9de9"><td class="memItemLeft"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer</a>&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aac5c76a1c0afbb1884a9e7f232ae9de9">readLine</a> (this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> lineno)</td></tr>
-<tr class="memdesc:aac5c76a1c0afbb1884a9e7f232ae9de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a line from the file.  <br /></td></tr>
+<tr class="memitem:abe59c4cbb7f863c793b2009da23328cc" id="r_abe59c4cbb7f863c793b2009da23328cc"><td class="memItemLeft"><a class="el" href="classMelon_1_1String_1_1String.html">String::String</a>&#160;</td><td class="memItemRight"><a class="el" href="#abe59c4cbb7f863c793b2009da23328cc">readLine</a> (this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> lineno)</td></tr>
+<tr class="memdesc:abe59c4cbb7f863c793b2009da23328cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a line from the file.  <br /></td></tr>
 <tr class="memitem:a445d20c69f5ffe9768e442f5ec6a32e3" id="r_a445d20c69f5ffe9768e442f5ec6a32e3"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a445d20c69f5ffe9768e442f5ec6a32e3">descriptor</a> (this const <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self)</td></tr>
 <tr class="memdesc:a445d20c69f5ffe9768e442f5ec6a32e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the file descriptor of this stream.  <br /></td></tr>
 <tr class="memitem:a9c99d544f449f7b1d2e33c98fec28b00" id="r_a9c99d544f449f7b1d2e33c98fec28b00"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9c99d544f449f7b1d2e33c98fec28b00">seek</a> (this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;self, long offset, <a class="el" href="namespaceMelon_1_1FileSystem.html#a2f997984bf9b4a0fbda3d31e8274fffb">SeekOrigin</a> origin)</td></tr>
@@ -294,14 +294,14 @@ void&#160;</td><td class="memItemRight"><b>close</b> (this <a class="el" href="#
 
 </div>
 </div>
-<a id="aac5c76a1c0afbb1884a9e7f232ae9de9" name="aac5c76a1c0afbb1884a9e7f232ae9de9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac5c76a1c0afbb1884a9e7f232ae9de9">&#9670;&#160;</a></span>readLine()</h2>
+<a id="abe59c4cbb7f863c793b2009da23328cc" name="abe59c4cbb7f863c793b2009da23328cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe59c4cbb7f863c793b2009da23328cc">&#9670;&#160;</a></span>readLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMelon_1_1Memory_1_1Buffer.html">Memory::Buffer</a>&lt; char &gt; Melon::FileSystem::File::readLine </td>
+          <td class="memname"><a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> Melon::FileSystem::File::readLine </td>
           <td>(</td>
           <td class="paramtype">this <a class="el" href="#a935802573d5beba59f0064555d61e789">File</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
@@ -320,7 +320,7 @@ void&#160;</td><td class="memItemRight"><b>close</b> (this <a class="el" href="#
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>buffer containing the read bytes </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>string containing the line </dd></dl>
 
 </div>
 </div>

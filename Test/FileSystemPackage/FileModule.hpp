@@ -66,8 +66,8 @@ namespace Melon::Test
                 TARWI_UNIT(unitReadLine)
                 {
                         FileSystem::File file(RESOURCES_PATH"/Line.txt", "r");
-                        Memory::Buffer<char> buf = file.readLine(0);
-                        TARWI_EXPECT(strcmp(buf.get(), "Hello! I am a file!") == 0);
+                        auto buf = file.readLine(0);
+                        TARWI_EXPECT(buf == "Hello! I am a file!");
                 }
 
                 TARWI_UNIT(unitReadBytes)
@@ -94,11 +94,11 @@ namespace Melon::Test
                         auto line3 = file.readLine(3);
 
                         TARWI_EXPECT(
-                                strcmp(line0.get(), "First line.") == 0 and
-                                strcmp(line1.get(), "Second line.") ==0 and
-                                strcmp(line2.get(), "Third line.") == 0 and
-                                strcmp(line3.get(), "Fourth line.") == 0 and
-                                strcmp(line4.get(), "Fifth line.") == 0
+                                line0 == "First line." and
+                                line1 == "Second line." and
+                                line2 == "Third line." and
+                                line3 == "Fourth line." and
+                                line4 == "Fifth line."
                         );
                 }
 

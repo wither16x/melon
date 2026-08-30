@@ -8,7 +8,7 @@ namespace Melon::Input
         {
                 Print::print("{}", str);
 
-                String::String answer = FileSystem::stdIn->readLine(0).get();
+                String::String answer = FileSystem::stdIn->readLine(0);
                 return answer;
         }
 } // namespace Melon::Input

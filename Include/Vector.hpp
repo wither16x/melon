@@ -209,7 +209,7 @@ namespace Melon::Vector
                 /// @return self
                 Vector<T> &operator =(this Vector<T> &self, const Vector<T> &other)
                 {
-                        if (self != other) {
+                        if (&self != &other) {
                                 self.buf = other.buf;
                                 self.__capacity = other.__capacity;
                                 self.obj_count = other.obj_count;
@@ -223,7 +223,7 @@ namespace Melon::Vector
                 /// @return self
                 Vector<T> &operator =(this Vector<T> &self, Vector<T> &&other)
                 {
-                        if (self != other) {
+                        if (&self != &other) {
                                 self.buf = std::move(other.buf);
                                 self.__capacity = other.__capacity;
                                 self.obj_count = other.obj_count;

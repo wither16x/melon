@@ -1,7 +1,7 @@
 BUILD := Build
 
 CXX := clang++
-CXXFLAGS := -fno-lto -fno-pic -fno-pie -std=c++23 -Wall -Wextra -I../Include -I.
+CXXFLAGS := -fno-lto -fno-pic -fno-pie -std=c++23 -Wall -Wextra -I../Include -I. -g
 
 SRCS := $(wildcard *.cpp)
 OBJS := $(patsubst %.cpp,$(BUILD)/%.o,$(SRCS))
