@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <sys/types.h>
 #include <stddef.h>
+#include <ctype.h>
 
 /// @brief Contains fixed-size types.
 ///
@@ -35,4 +36,14 @@ namespace Melon::Typing
         using UPointer          = uintptr_t;
         /// @brief Biggest unsigned type
         using USize             = size_t;
+
+        inline constexpr bool isSpace(char ch)
+        {
+                return isspace(ch);
+        }
+
+        inline constexpr bool isDigit(char ch)
+        {
+                return isdigit(ch);
+        }
 } // namespace Melon::Typing
