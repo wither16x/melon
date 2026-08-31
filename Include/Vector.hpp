@@ -3,6 +3,8 @@
 #include "Internal/Memory/Buffer.hpp"
 #include "Typing.hpp"
 
+#include <type_traits>
+
 /// @brief Contains dynamic vector manipulation features.
 namespace Melon::Vector
 {
@@ -138,9 +140,12 @@ namespace Melon::Vector
                 }
 
                 /// @brief Clears the vector.
+                ///
+                /// Destroys all objects in the vector and set its size to 0.
                 void clear(this Vector<T> &self)
                 {
-                        self.buf.set(0, self.buf.size());
+                        for (auto &obj : self)
+                                obj.~T();
                         self.obj_count = 0;
                 }
 

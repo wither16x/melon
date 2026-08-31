@@ -107,7 +107,7 @@ namespace Melon::Test
                         Vector::Vector<int> vec({12, 24, 48, 96});
                         vec.clear();
 
-                        TARWI_EXPECT(vec[0] == 0 and vec.length() == 0);
+                        TARWI_EXPECT(vec.isEmpty());
                 }
 
                 TARWI_UNIT(unitAssign)
