@@ -120,6 +120,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a4c7e1eda0adf92468536017cea76fe88" id="r_a4c7e1eda0adf92468536017cea76fe88"><td class="memItemLeft"><a id="a4c7e1eda0adf92468536017cea76fe88" name="a4c7e1eda0adf92468536017cea76fe88"></a>
+&#160;</td><td class="memItemRight"><b>Buffer</b> (<a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
 <tr class="memitem:a94e7c140bea779cb193d51912571ba43" id="r_a94e7c140bea779cb193d51912571ba43"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a94e7c140bea779cb193d51912571ba43">Buffer</a> (const T *data, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
 <tr class="memdesc:a94e7c140bea779cb193d51912571ba43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the buffer from existing raw memory.  <br /></td></tr>
 <tr class="memitem:a1a55ec1c4107d76c6ffb107612cea6ee" id="r_a1a55ec1c4107d76c6ffb107612cea6ee"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a1a55ec1c4107d76c6ffb107612cea6ee">Buffer</a> (const Buffer&lt; T &gt; &amp;other)</td></tr>
@@ -129,6 +131,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a808072abbab4497d0c0a7dac80af8aa0" id="r_a808072abbab4497d0c0a7dac80af8aa0"><td class="memItemLeft"><a id="a808072abbab4497d0c0a7dac80af8aa0" name="a808072abbab4497d0c0a7dac80af8aa0"></a>
 &#160;</td><td class="memItemRight"><b>~Buffer</b> ()</td></tr>
 <tr class="memdesc:a808072abbab4497d0c0a7dac80af8aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
+<tr class="memitem:ad65b3972a40a6104859df3e5dab210fb" id="r_ad65b3972a40a6104859df3e5dab210fb"><td class="memTemplParams" colspan="2"><a id="ad65b3972a40a6104859df3e5dab210fb" name="ad65b3972a40a6104859df3e5dab210fb"></a>
+template&lt;typename... ARGS&gt; </td></tr>
+<tr class="memitem:ad65b3972a40a6104859df3e5dab210fb template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><b>construct</b> (this Buffer&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index, ARGS &amp;&amp;...args)</td></tr>
+<tr class="memitem:ae966ecc74b001f9f0bec557830888426" id="r_ae966ecc74b001f9f0bec557830888426"><td class="memItemLeft"><a id="ae966ecc74b001f9f0bec557830888426" name="ae966ecc74b001f9f0bec557830888426"></a>
+void&#160;</td><td class="memItemRight"><b>destroy</b> (this Buffer&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
 <tr class="memitem:a1fc534b2ed9e9399f2d3979c5c26c260" id="r_a1fc534b2ed9e9399f2d3979c5c26c260"><td class="memItemLeft">Buffer&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a1fc534b2ed9e9399f2d3979c5c26c260">copy</a> (this const Buffer&lt; T &gt; &amp;self, Buffer&lt; T &gt; &amp;dest, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>
 <tr class="memdesc:a1fc534b2ed9e9399f2d3979c5c26c260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies some objects from here to another buffer.  <br /></td></tr>
 <tr class="memitem:a84b100c260ec0778cdf939711cb56f4e" id="r_a84b100c260ec0778cdf939711cb56f4e"><td class="memItemLeft">Buffer&lt; T &gt; &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a84b100c260ec0778cdf939711cb56f4e">set</a> (this Buffer&lt; T &gt; &amp;self, T c, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> size)</td></tr>

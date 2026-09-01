@@ -19,12 +19,23 @@ namespace Melon::Memory
                 T *data;
                 Typing::USize __size;
 
+                static T *allocate(Typing::USize size)
+                {
+                        if (size)
+                                return static_cast<T *>(::operator new(size * sizeof(T)));
+                        return nullptr;
+                }
+
         public:
                 Buffer()
                 {
-                        this->data = new T[1];
+                        this->data = nullptr;
                         this->__size = 0;
                 }
+
+                Buffer(Typing::USize size)
+                        : data(allocate(size)), __size(size)
+                {}
 
                 /// @brief Constructs the buffer from existing raw memory.
                 /// @param data memory to construct the buffer from
@@ -39,29 +50,39 @@ namespace Melon::Memory
                 /// @brief Copy constructor.
                 /// @param other buffer to copy data to
                 Buffer(const Buffer<T> &other)
-                {
-                        this->__size = other.__size;
-                        this->data = new T[this->__size ? this->__size : 1];
-                        memcpy(this->data, other.data, this->__size);
-                }
+                        : data(allocate(other.__size)), __size(other.__size)
+                {}
 
                 /// @brief Move constructor.
                 /// @param other buffer to move data and size to
                 Buffer(Buffer<T> &&other)
+                        : data(other.data), __size(other.__size)
                 {
-                        this->__size = other.__size;
-                        this->data = new T[this->__size ? this->__size : 1];
-                        memcpy(this->data, other.data, other.__size);
-
-                        memset(other.data, 0, other.__size);
                         other.__size = 0;
+                        other.data = nullptr;
                 }
 
                 /// @brief Destructor.
                 ~Buffer()
                 {
-                        if (this->data)
-                                delete[] this->data;
+                        ::operator delete(this->data);
+                }
+
+                template<typename... ARGS>
+                void construct(this Buffer<T> &self, Typing::USize index, ARGS &&...args)
+                {
+                        if (index >= self.__size)
+                                throw Exceptions::OutOfRange(index, self.__size);
+
+                        new (&self.data[index]) T(std::forward<ARGS>(args)...);
+                }
+
+                void destroy(this Buffer<T> &self, Typing::USize index)
+                {
+                        if (index >= self.__size)
+                                throw Exceptions::OutOfRange(index, self.__size);
+                        
+                        self.data[index].~T();
                 }
 
                 /// @brief Copies some objects from here to another buffer.
@@ -260,11 +281,10 @@ namespace Melon::Memory
                 /// @param other buffer to copy data to
                 Buffer<T> &operator =(this Buffer<T> &self, const Buffer<T> &other)
                 {
-                        if (self != other) {
-                                delete[] self.data;
-                                self.data = new T[other.__size ? other.__size : 1];
+                        if (&self != &other) {
+                                ::operator delete(self.data);
+                                self.data = allocate(other.__size);
                                 self.__size = other.__size;
-                                memcpy(self.data, other.data, other.__size);
                         }
 
                         return self;
@@ -274,13 +294,12 @@ namespace Melon::Memory
                 /// @param other buffer to move data and size to
                 Buffer<T> &operator =(this Buffer<T> &self, Buffer<T> &&other)
                 {
-                        if (self != other) {
-                                delete[] self.data;
-                                self.data = new T[other.__size ? other.__size : 1];
-                                memcpy(self.data, other.data, other.__size);
+                        if (&self != &other) {
+                                ::operator delete(self.data);
+                                self.data = other.data;
                                 self.__size = other.__size;
 
-                                memset(other.data, 0, other.__size);
+                                other.data = nullptr;
                                 other.__size = 0;
                         }
 

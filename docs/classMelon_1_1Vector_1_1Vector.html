@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('classMelon_1_1
 </div><!--header-->
 <div class="contents">
 
-<p>A linear dynamic generic container. TODO: if possible, support objects with no default constructor.  
+<p>A linear dynamic generic container.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Vector_8hpp_source.html">Vector.hpp</a>&gt;</code></p>
@@ -138,8 +138,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a921c81811f31b8203cd9ff67e77e8389" id="r_a921c81811f31b8203cd9ff67e77e8389"><td class="memTemplParams" colspan="2">template&lt;typename... ARGS&gt; </td></tr>
 <tr class="memitem:a921c81811f31b8203cd9ff67e77e8389 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a921c81811f31b8203cd9ff67e77e8389">emplaceBack</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, ARGS &amp;&amp;...args)</td></tr>
 <tr class="memdesc:a921c81811f31b8203cd9ff67e77e8389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an object and add it at the end of the vector.  <br /></td></tr>
-<tr class="memitem:aeb51f1abba19866dce1ee57c4702513c" id="r_aeb51f1abba19866dce1ee57c4702513c"><td class="memItemLeft">T &amp;&#160;</td><td class="memItemRight"><a class="el" href="#aeb51f1abba19866dce1ee57c4702513c">popBack</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
-<tr class="memdesc:aeb51f1abba19866dce1ee57c4702513c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the last object from the vector.  <br /></td></tr>
+<tr class="memitem:a7e9d815219e083613c04cc55c66b65da" id="r_a7e9d815219e083613c04cc55c66b65da"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#a7e9d815219e083613c04cc55c66b65da">popBack</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
+<tr class="memdesc:a7e9d815219e083613c04cc55c66b65da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the last object from the vector.  <br /></td></tr>
 <tr class="memitem:a2fcd639f247602c681053d1da7571dfe" id="r_a2fcd639f247602c681053d1da7571dfe"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2fcd639f247602c681053d1da7571dfe">erase</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self, <a class="el" href="namespaceMelon_1_1Typing.html#a2429ada77c523bea640978c88ce4f9ce">Typing::USize</a> index)</td></tr>
 <tr class="memdesc:a2fcd639f247602c681053d1da7571dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erases object at a given position in the vector.  <br /></td></tr>
 <tr class="memitem:af3ad7bc751f8ca71cc75675a6c481ad8" id="r_af3ad7bc751f8ca71cc75675a6c481ad8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af3ad7bc751f8ca71cc75675a6c481ad8">clear</a> (this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;self)</td></tr>
@@ -167,7 +167,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T&gt;<br />
-class Melon::Vector::Vector&lt; T &gt;</div><p>A linear dynamic generic container. TODO: if possible, support objects with no default constructor. </p>
+class Melon::Vector::Vector&lt; T &gt;</div><p>A linear dynamic generic container. </p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a97f75b55da38c8cb5b96435efe5a7d93" name="a97f75b55da38c8cb5b96435efe5a7d93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97f75b55da38c8cb5b96435efe5a7d93">&#9670;&#160;</a></span>Vector() <span class="overload">[1/4]</span></h2>
@@ -789,8 +789,8 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a id="aeb51f1abba19866dce1ee57c4702513c" name="aeb51f1abba19866dce1ee57c4702513c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb51f1abba19866dce1ee57c4702513c">&#9670;&#160;</a></span>popBack()</h2>
+<a id="a7e9d815219e083613c04cc55c66b65da" name="a7e9d815219e083613c04cc55c66b65da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e9d815219e083613c04cc55c66b65da">&#9670;&#160;</a></span>popBack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -801,7 +801,7 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">T &amp; <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::popBack </td>
+          <td class="memname">T <a class="el" href="classMelon_1_1Vector_1_1Vector.html">Melon::Vector::Vector</a>&lt; T &gt;::popBack </td>
           <td>(</td>
           <td class="paramtype">this <a class="el" href="#a97f75b55da38c8cb5b96435efe5a7d93">Vector</a>&lt; T &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
           <td></td>
