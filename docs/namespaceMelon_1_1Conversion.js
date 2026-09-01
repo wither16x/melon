@@ -9,5 +9,6 @@ var namespaceMelon_1_1Conversion =
     [ "hex", "namespaceMelon_1_1Conversion.html#a21d23648fe22b5b5d5c691fadef96ad7", null ],
     [ "intToString", "namespaceMelon_1_1Conversion.html#a2db39162039fd5d5703086edee80a805", null ],
     [ "oct", "namespaceMelon_1_1Conversion.html#a1f317daa3321a446329ee7c4baba5c03", null ],
+    [ "stringToInt", "namespaceMelon_1_1Conversion.html#aff4d5971e25e1efb0948c56c872023e8", null ],
     [ "uintToString", "namespaceMelon_1_1Conversion.html#abc7d737f9b48bfa114eaed171a4c67c9", null ]
 ];

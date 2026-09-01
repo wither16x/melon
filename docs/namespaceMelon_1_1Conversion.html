@@ -158,6 +158,10 @@ requires std::is_signed_v&lt;T&gt;</td></tr>
 requires std::is_unsigned_v&lt;T&gt;</td></tr>
 <tr class="memitem:abc7d737f9b48bfa114eaed171a4c67c9 template"><td class="memItemLeft"><a class="el" href="classMelon_1_1String_1_1String.html">String::String</a>&#160;</td><td class="memItemRight"><a class="el" href="#abc7d737f9b48bfa114eaed171a4c67c9">uintToString</a> (T value, <a class="el" href="#ab3951525625c3a334cbff17a8a7ab517">Base</a> base)</td></tr>
 <tr class="memdesc:abc7d737f9b48bfa114eaed171a4c67c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert an unsigned integer to a <a class="el" href="classMelon_1_1String_1_1String.html" title="A dynamic string.">String::String</a>.  <br /></td></tr>
+<tr class="memitem:aff4d5971e25e1efb0948c56c872023e8" id="r_aff4d5971e25e1efb0948c56c872023e8"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; <br />
+requires std::is_signed_v&lt;T&gt;</td></tr>
+<tr class="memitem:aff4d5971e25e1efb0948c56c872023e8 template"><td class="memItemLeft">T&#160;</td><td class="memItemRight"><a class="el" href="#aff4d5971e25e1efb0948c56c872023e8">stringToInt</a> (const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;str)</td></tr>
+<tr class="memdesc:aff4d5971e25e1efb0948c56c872023e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string into a signed integer.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains functions to convert types into other types. </p>
@@ -219,6 +223,35 @@ requires std::is_signed_v&lt;T&gt;</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>new string </dd></dl>
+
+</div>
+</div>
+<a id="aff4d5971e25e1efb0948c56c872023e8" name="aff4d5971e25e1efb0948c56c872023e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4d5971e25e1efb0948c56c872023e8">&#9670;&#160;</a></span>stringToInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; <br />
+requires std::is_signed_v&lt;T&gt;</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T Melon::Conversion::stringToInt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMelon_1_1String_1_1String.html">String::String</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a string into a signed integer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>string to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>corresponding integer </dd></dl>
 
 </div>
 </div>

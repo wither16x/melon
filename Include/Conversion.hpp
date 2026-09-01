@@ -5,6 +5,8 @@
 #include <type_traits>
 #include <utility>
 
+#include <stdlib.h>
+
 /// @brief Contains functions to convert types into other types.
 namespace Melon::Conversion
 {
@@ -124,5 +126,15 @@ namespace Melon::Conversion
                 }
 
                 return str.reverse();
+        }
+
+        /// @brief Convert a string into a signed integer.
+        /// @param str string to convert
+        /// @return corresponding integer
+        template<typename T>
+                requires std::is_signed_v<T>
+        T stringToInt(const String::String &str)
+        {
+                return atoi(str.raw());
         }
 } // namespace Melon::Conversion

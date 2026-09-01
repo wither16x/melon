@@ -41,11 +41,18 @@ namespace Melon::Test
                         TARWI_EXPECT(str == "f");
                 }
 
+                TARWI_UNIT(unitStringToInt)
+                {
+                        int x = Conversion::stringToInt<int>("1234");
+                        TARWI_EXPECT(x == 1234);
+                }
+
                 TARWI_MODULE_MAIN()
                 {
                         TARWI_CALL_UNIT(unitIntToString);
                         TARWI_CALL_UNIT(unitBaseToString);
                         TARWI_CALL_UNIT(unitUintToString);
+                        TARWI_CALL_UNIT(unitStringToInt);
                 }
         };
 } // namespace Melon::Test
